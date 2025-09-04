@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* --- Cài đặt biến màu sắc và các giá trị cơ bản --- */
+    /* --- Cài đặt biến màu sắc và các giá trị cơ bản --- */
         :root {
             --primary-color: #2e7d32;
             --secondary-color: #43a047;
@@ -26,14 +26,14 @@
             --font-size-xl: clamp(1rem, 3vw, 2rem);
         }
 
-        /* --- Thiết lập lại CSS và Body --- */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* --- Thiết lập lại CSS và Body --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     background-image: url('Background.webp');
@@ -41,515 +41,516 @@
     background-position: center;
     background-repeat: no-repeat;
     color: var(--text-color);
-
-    /* Quan trọng: bỏ cố định vh và chặn cuộn */
     display: flex;
     justify-content: center;
-    align-items: flex-start;   /* thay center -> flex-start để nội dung dồn từ trên xuống */
+    align-items: flex-start;
     width: 100%;
-    min-height: 100svh;        /* vh chuẩn mới cho mobile */
-    /* Fallback nếu trình duyệt chưa hỗ trợ svh: dùng biến --vh đặt bởi JS ở bước 4 */
+    min-height: 100svh;
     min-height: calc(var(--vh, 1vh) * 100);
-
-    overflow-y: auto;          /* cho phép cuộn dọc */
+    overflow-y: auto;
     position: relative;
+    padding-top: 1vh; /* Thêm padding để tránh nội dung bị che bởi các thành phần trên cùng */
+}
+
+/* --- Màn hình bắt đầu --- */
+.start-screen {
+    position: fixed; /* Đặt lại thành fixed để bao phủ toàn bộ màn hình */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 30;
+    background-image: url('Background0.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    transition: opacity 1s ease-in-out;
+}
+
+.start-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
         
-        /* --- Màn hình bắt đầu --- */
-        .start-screen {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            z-index: 30;
-            background-image: url('Background0.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 1rem;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .start-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .logo-container {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            z-index: 35;
-        }
-
-        .logo-container img {
-            width: clamp(60px, 10vw, 100px);
-            height: auto;
-            margin-bottom: 0.5rem;
-        }
-
-        .logo-container p {
-            font-size: var(--font-size-sm);
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .author-info {
-            position: absolute;
-            bottom: 0.5rem;
-            right: 1rem;
-            font-size: var(--font-size-sm);
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            z-index: 35;
-        }
-        
-        .game-title-img {
-            width: 90%;
-            max-width: 600px;
-            height: auto;
-            animation: fadeInScale 2s ease-in-out forwards;
-            margin-bottom: 1rem;
-        }
-        
-        .start-btn {
-            background-color: #4caf50;
-            color: white;
-            font-size: var(--font-size-lg);
-            padding: 0.75em 2em;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 9px #388e3c;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-family: 'Press Start 2P', cursive;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: fadeInScale 2s ease-in-out 0.5s forwards;
-            opacity: 0;
-        }
-
-        .start-btn:hover {
-            background-color: #43a047;
-            box-shadow: 0 7px #388e3c;
-            transform: translateY(2px);
-        }
-
-        .start-btn:active {
-            background-color: #388e3c;
-            box-shadow: 2px 2px #388e3c;
-            transform: translateY(7px);
-        }
-
-        /* --- Container chính của Game --- */
-        .container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        
-        /* Container chứa cả khung đồng hồ và số */
-        #clock-container {
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            width: clamp(80px, 10vw, 120px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Khung ảnh đồng hồ */
-        #clock-frame {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Phần hiển thị số giây */
-        #timer-container {
-            position: absolute;
-            top: 56%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        #timer {
-            font-size: var(--font-size-xl);
-            font-weight: bold;
-            color: #ffc107;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-        
-        .exit-btn {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            font-size: var(--font-size-sm);
-            padding: 0.5em 1.5em;
-            background-color: #f44336;
-            z-index: 25;
-            color: white; border: none; border-radius: 50px; cursor: pointer;
-            box-shadow: 0 5px #c62828; font-family: 'Press Start 2P', cursive;
-        }
-         .exit-btn:hover { background-color: #e53935; transform: translateY(2px); box-shadow: 0 3px #c62828;}
-         .exit-btn:active { background-color: #c62828; transform: translateY(4px); box-shadow: 0 1px #c62828;}
-
-
-        .quiz-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 8vh;
-        }
-        
-        .question-frame {
-            width: clamp(300px, 70vw, 800px);
-            height: 30vh;
-            max-height: 250px;
-            background-image: url('Cauhoi.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 4% 10%;
-            margin-bottom: 2rem;
-        }
-        
-        .question-card {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--text-color);
-            overflow-y: auto;
-        }
-
-        .question-text {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            line-height: 1.5;
-            white-space: pre-wrap;
-        }
-
-        /* Bố cục mặc định cho màn hình dọc (1 cột) */
-        .answers {
-            width: clamp(300px, 80vw, 900px);
-            display: grid;
-            grid-template-columns: 1fr; /* Mặc định 1 cột */
-            gap: 0.6rem;
-            z-index: 5;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        
-        /* Bố cục cho màn hình ngang (2 cột) */
-        @media (orientation: landscape) {
-            .answers {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        .answers.visible {
-            opacity: 1;
-        }
-        
-        .answer-btn {
-            background-color: transparent;
-            color: var(--text-color);
-            padding: 1rem;
-            text-align: center;
-            cursor: pointer;
-            font-size: clamp(0.9rem, 2.8vw, 1rem);
-            font-weight: 500;
-            width: 100%;
-            min-height: 72px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 1.4;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out, filter 0.2s, background-image 0.3s ease;
-            border: none;
-            background-image: url('Textbox.png');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .answer-btn.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .answer-btn:hover {
-            transform: translateY(-2px) scale(1.02);
-            filter: brightness(1.1);
-        }
-        
-        .answer-btn.correct {
-            background-image: url('Textbox_Correct.png');
-        }
-
-      .answer-btn.incorrect {
-            background-image: url('Textbox_Incorrect.png');
-        }
-        
-        .answer-btn.disabled { pointer-events: none; opacity: 0.8; }
-
-        /* --- Màn hình kết quả và các thành phần khác --- */
-        .results-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            z-index: 20;
-            animation: fadeIn 1s ease-in-out;
-        }
-        
-        .result-text {
-            font-size: var(--font-size-lg);
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .restart-btn {
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: var(--font-size-md);
-            margin-top: 1rem;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .restart-btn:hover { background-color: var(--primary-color); }
-        
-        .chibi-assistant {
-            position: absolute;
-            bottom: 5%;
-            right: 1%;
-            width: clamp(150px, 15vw, 250px);
-            height: auto;
-            z-index: 10;
-            pointer-events: none;
-        }
-        
-        .chibi-assistant video { width: 100%; height: auto; display: block; }
-        
-        .next-btn {
-            position: fixed;  
-            bottom: calc(env(safe-area-inset-bottom) + 12px);
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 999;  
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .next-btn img {
-            width: clamp(56px, 9vw, 90px);
-            height: auto;
-        }
-
-        .next-btn:hover { transform: translateX(-50%) scale(1.1); }
-
-        .overlay-answer {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.1);
-            width: clamp(300px, 70vw, 800px);
-            height: 32vh;
-            max-height: 350px;
-            background-image: url('Dapan.png');
-            background-size: 100% 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--text-color);
-            font-size: var(--font-size-lg);
-            font-weight: bold;
-            z-index: 15;
-            opacity: 0;
-            pointer-events: none;
-            padding: 4%;
-            overflow-y: auto;
-        }
-
-        .overlay-answer.active {
-            animation: zoomIn 0.5s ease-out forwards;
-            pointer-events: auto;
-        }
-
-        .overlay-text { white-space: pre-wrap; opacity: 0; }
-
-        /* --- Bảng hiển thị điểm (ĐÃ SỬA LỖI) --- */
-        #score-board {
-            position: absolute;
-            top: 8%;
-            right: 0%;
-            width: clamp(95px, 18vw, 140px);
-            z-index: 20;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        
-        #score-board.active {
-            opacity: 1;
-        }
-
-        .score-board-frame {
-            /* Hình ảnh này cung cấp kích thước cho container */
-            width: 100%;
-            height: auto;
-            display: block; /* Ngăn khoảng trống thừa bên dưới ảnh */
-        }
-        
-        .score-text-container {
-            /* Container này chứa văn bản và được định vị tuyệt đối đè lên trên khung ảnh */
-            position: absolute;
-            width: 100%;
-            top: 78%; /* Căn giữa khối văn bản theo chiều dọc */
-            left: 43%; /* Căn giữa theo chiều ngang */
-            transform: translate(-50%, -50%); /* Căn giữa khối một cách chính xác */
-            
-            /* Sử dụng flexbox để tạo kiểu cho văn bản bên trong khối này */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #correct-count {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(0.7rem, 1.5vw, 1.1rem);
-            font-weight: bold;
-            color: #007bff; /* Màu xanh dương (Blue) */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            line-height: 1.2;
-            margin: 0.1em 0;
-        }
-
-        #incorrect-count {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(0.7rem, 1.5vw, 1.1rem);
-            font-weight: bold;
-            color: #dc3545; /* Màu đỏ */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            line-height: 1.2;
-            margin: 0.1em 0;
-        }
-
-        /* --- Animations --- */
-        @keyframes fadeInScale {
-            0% { transform: scale(0.1); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translate(-50%, -40%); }
-            to { opacity: 1; transform: translate(-50%, -50%); }
-        }
-        @keyframes zoomIn {
-            0% { transform: translate(-50%, -50%) scale(0.1); opacity: 0; }
-            80% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        }
-        
-        #overlay-explanation {
-            font-size: var(--font-size-sm);
-            font-weight: normal; 
-            font-style: italic;
-            color: var(--text-color);
-            line-height: 1.5;
-            margin-top: 10px;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-
-        #overlay-answer-content {
-            /* Đảm bảo nội dung căn giữa và có khoảng cách */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 5%;
-            height: 100%;
-            width: 100%;
-        }
-        
-        /* --- Media Queries cho màn hình nhỏ hơn --- */
-               @media (max-height: 500px) {
-    .question-frame { height: 18vh; }
-    .answers { gap: 0.5rem; }
-    .answer-btn { min-height: 64px; }
-    .overlay-answer { height: 28vh; }
+.logo-container {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    z-index: 35;
 }
-        @media (max-width: 768px) {
-             .chibi-assistant {
-             display: none;
-                          }
-             .question-frame {
-                margin-bottom: 1rem;
-        height: 20vh;                 /* thấp hơn để tránh tràn */
-        width: clamp(280px, 88vw, 600px);
+
+.logo-container img {
+    width: clamp(60px, 10vw, 100px);
+    height: auto;
+    margin-bottom: 0.5vh;
+}
+
+.logo-container p {
+    font-size: clamp(0.6rem, 1.2vw, 0.9rem);
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    white-space: nowrap; /* Ngăn chữ bị xuống dòng */
+}
+
+.author-info {
+    position: absolute;
+    bottom: 0.5vh;
+    right: 1vw;
+    font-size: clamp(0.6rem, 1.2vw, 0.9rem);
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 35;
+    white-space: nowrap;
+}
+        
+.game-title-img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    animation: fadeInScale 2s ease-in-out forwards;
+    margin-bottom: 2rem;
+}
+        
+.start-btn {
+    background-color: #4caf50;
+    color: white;
+    font-size: var(--font-size-lg);
+    padding: 0.75em 2em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 9px #388e3c;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 2s ease-in-out 0.5s forwards;
+    opacity: 0;
+}
+
+.start-btn:hover {
+    background-color: #43a047;
+    box-shadow: 0 7px #388e3c;
+    transform: translateY(2px);
+}
+
+.start-btn:active {
+    background-color: #388e3c;
+    box-shadow: 2px 2px #388e3c;
+    transform: translateY(7px);
+}
+
+/* --- Container chính của Game --- */
+.container {
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vh 2vw 2vh; /* Cải thiện padding cho mobile */
+    position: relative;
+    overflow-x: hidden;
+}
+        
+/* Container chứa cả khung đồng hồ và số */
+#clock-container {
+    position: absolute;
+    top: 0vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: clamp(80px, 12vw, 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung ảnh đồng hồ */
+#clock-frame {
+    width: 100%;
+    height: auto;
+}
+
+/* Phần hiển thị số giây */
+#timer-container {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+        
+#timer {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+    font-weight: bold;
+    color: #ffc107;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+        
+.exit-btn {
+    position: absolute;
+    bottom: 2vh;
+    left: 1vw;
+    font-size: clamp(0.7rem, 2vw, 1rem);
+    padding: 0.5em 1.5em;
+    background-color: #f44336;
+    z-index: 25;
+    color: white; border: none; border-radius: 50px; cursor: pointer;
+    box-shadow: 0 5px #c62828; font-family: 'Press Start 2P', cursive;
+}
+.exit-btn:hover { background-color: #e53935; transform: translateY(2px); box-shadow: 0 3px #c62828;}
+.exit-btn:active { background-color: #c62828; transform: translateY(4px); box-shadow: 0 1px #c62828;}
+
+.quiz-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 12vh;
+    flex-grow: 1; /* Cho phép quiz-wrapper chiếm phần không gian còn lại */
+}
+        
+.question-frame {
+    width: clamp(300px, 80vw, 800px);
+    min-height: 150px;
+    height: auto;
+    background-image: url('Cauhoi.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 12%;
+    margin-bottom: 2rem;
+}
+        
+.question-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    overflow-y: auto;
+}
+
+.question-text {
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    padding: 0.5rem;
+}
+
+/* Bố cục mặc định cho màn hình dọc (1 cột) */
+.answers {
+    width: clamp(300px, 90vw, 900px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 0 1rem;
+}
+        
+/* Bố cục cho màn hình ngang (2 cột) */
+@media (orientation: landscape) {
+    .answers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+        
+.answers.visible {
+    opacity: 1;
+}
+        
+.answer-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+    font-weight: 500;
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, filter 0.2s, background-image 0.3s ease;
+    border: none;
+    background-image: url('Textbox.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.answer-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+        
+.answer-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.1);
+}
+        
+.answer-btn.correct {
+    background-image: url('Textbox_Correct.png');
+}
+
+.answer-btn.incorrect {
+    background-image: url('Textbox_Incorrect.png');
+}
+        
+.answer-btn.disabled { pointer-events: none; opacity: 0.8; }
+
+/* --- Màn hình kết quả và các thành phần khác --- */
+.results-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    animation: fadeIn 1s ease-in-out;
+}
+        
+.result-text {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.restart-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.restart-btn:hover { background-color: var(--primary-color); }
+        
+.chibi-assistant {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: clamp(150px, 20vw, 250px);
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+        
+.chibi-assistant video { width: 100%; height: auto; display: block; }
+        
+.next-btn {
+    position: fixed;  
+    bottom: calc(env(safe-area-inset-bottom) + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;  
+    transition: transform 0.2s ease-in-out;
+}
+
+.next-btn img {
+    width: clamp(56px, 9vw, 90px);
+    height: auto;
+}
+
+.next-btn:hover { transform: translateX(-50%) scale(1.1); }
+
+.overlay-answer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    width: clamp(300px, 80vw, 800px);
+    height: auto;
+    background-image: url('Dapan.png');
+    background-size: 100% 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    z-index: 15;
+    opacity: 0;
+    pointer-events: none;
+    padding: 4%;
+    overflow-y: auto;
+}
+
+.overlay-answer.active {
+    animation: zoomIn 0.5s ease-out forwards;
+    pointer-events: auto;
+}
+
+.overlay-text { 
+    white-space: pre-wrap; 
+    opacity: 0; 
+    line-height: 1.4;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
+}
+
+/* --- Bảng hiển thị điểm (ĐÃ SỬA LỖI) --- */
+#score-board {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    width: clamp(95px, 20vw, 140px);
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+        
+#score-board.active {
+    opacity: 1;
+}
+
+.score-board-frame {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+        
+.score-text-container {
+    position: absolute;
+    width: 100%;
+    top: 78%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#correct-count {
+    font-family: 'Press Start 2P', cursive;
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    margin: 0.1em 0;
+}
+
+#incorrect-count {
+    font-family: 'Press Start 2P', cursive;
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    font-weight: bold;
+    color: #dc3545;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    margin: 0.1em 0;
+}
+
+/* --- Animations --- */
+@keyframes fadeInScale {
+    0% { transform: scale(0.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+@keyframes zoomIn {
+    0% { transform: translate(-50%, -50%) scale(0.1); opacity: 0; }
+    80% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+        
+#overlay-explanation {
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    font-weight: normal; 
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#overlay-answer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    height: 100%;
+    width: 100%;
+}
+        
+/* --- Media Queries cho màn hình nhỏ hơn --- */
+@media (max-width: 768px) {
+    .chibi-assistant {
+        display: none;
+    }
+    .question-frame {
+        height: auto;
+        min-height: 120px;
+        width: clamp(280px, 90vw, 600px);
         padding: 5% 10%;
         margin-bottom: 0.75rem;
-            }
-            .overlay-answer {
-                height: 35vh;
-            }
-            .quiz-wrapper {
-                padding-top:9vh;
-            }
-            #score-board {
-                top: 10%;
-                width: clamp(100px, 20vw, 150px);
-            }
-            .container {
-                justify-content: flex-start;
-            }
-        }
+    }
+    .quiz-wrapper {
+        padding-top: 15vh;
+    }
+    #score-board {
+        top: 2vh;
+        width: clamp(100px, 25vw, 150px);
+    }
+    .exit-btn {
+        top: 2vh;
+    }
+    .logo-container {
+        top: 2vh;
+    }
+    .overlay-answer {
+        width: clamp(300px, 90vw, 800px);
+        padding: 8% 5%;
+    }
+}
     </style>
   <script src="questions.js"></script> 
 </head>
