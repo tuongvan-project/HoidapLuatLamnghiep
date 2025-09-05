@@ -940,18 +940,31 @@ body {
             startQuiz();
         });
 
-        nextBtn.addEventListener('click', () => {
-            clickSound.play();
-            nextBtn.style.display = 'none';
-            overlayAnswer.style.display = 'none';
-            overlayAnswer.classList.remove('active'); // Xóa class active để reset animation
-            overlayText.style.opacity = 0; // Ẩn text ngay lập tức
-            overlayText.textContent = ''; // Xóa nội dung text
-            overlayExplanation.style.opacity = 0; // Ẩn text ngay lập tức
-            overlayExplanation.textContent = ''; // Xóa nội dung text
-            currentQuestionIndex++;
-            showNextQuestion();
-        });
+       nextBtn.addEventListener('click', () => {
+    clickSound.play();
+    nextBtn.style.display = 'none';
+    
+    // Ẩn overlay và reset các thông tin
+    overlayAnswer.classList.remove('active');
+    overlayText.style.opacity = 0;
+    overlayText.textContent = '';
+    overlayExplanation.style.opacity = 0;
+    overlayExplanation.textContent = '';
+    
+    // Thêm hiệu ứng fade-out cho khung câu hỏi hiện tại
+    const quizWrapper = document.querySelector('.quiz-wrapper');
+    quizWrapper.classList.add('fade-out');
+
+    // Chờ hiệu ứng kết thúc rồi mới chuyển sang câu hỏi mới
+    setTimeout(() => {
+        // Reset lại vị trí và độ trong suốt
+        quizWrapper.classList.remove('fade-out');
+        quizWrapper.style.opacity = 1; // Đảm bảo hiện lại
+
+        currentQuestionIndex++;
+        showNextQuestion();
+    }, 1000); // 1000ms = 1 giây
+});
 
         function playChibiVideo(videoSrc) {
             chibiVideo.src = videoSrc;
