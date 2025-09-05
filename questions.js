@@ -281,10 +281,10 @@ const questions = [
         explanation: "trong 03 ngày làm việc kể từ ngày Hệ thống thông tin phân loại doanh nghiệp tự động phân loại doanh nghiệp Nhóm I, cơ quan tiếp nhận thông báo cho doanh nghiệp đăng ký, trong đó nêu rõ thời gian, nội dung cần xác minh. Trong 05 ngày làm việc kể từ ngày thông báo, cơ quan tiếp nhận tổ chức làm rõ tính chính xác của thông tin tự kê khai của doanh nghiệp và thông báo kết quả xác minh cho doanh nghiệp biết"
     },
     { 
-        question: "Khi doanh nghiệp được phân loại vào Nhóm II, điều này có ý nghĩa gì?", 
-        options: ["Được miễn xác nhận bảng kê", "Không được miễn xác nhận bảng kê", "Không phải kê khai hồ sơ", "Không phải chịu kiểm tra"], 
-        correct: "Không được miễn xác nhận bảng kê",
-        explanation: "Điều 42 Thông tư 26/2025/TT-BNNMT phân loại doanh nghiệp thành Nhóm I và Nhóm II. Nhóm I có độ tin cậy cao được miễn xác nhận bảng kê trong một số trường hợp, còn Nhóm II thì không được miễn. Do đó, doanh nghiệp Nhóm II vẫn phải thực hiện đầy đủ thủ tục về bảng kê lâm sản."
+        question: "Khi nào doanh nghiệp thuộc đối tượng tham gia phân loại doanh nghiệp được phân loại vào Nhóm II?", 
+        options: ["Chưa tuân thủ quy định pháp luật về bảo đảm gỗ hợp pháp và quy định về quản lý, truy xuất nguồn gốc lâm sản", "Tuân thủ đầy đủ quy định của pháp luật trong việc thành lập và hoạt động ít nhất 01 năm kể từ ngày đăng ký thành lập doanh nghiệp", "Tuân thủ chế độ báo cáo và lưu giữ hồ sơ gốc theo quy định của pháp luật", "Khi doanh nghiệp chỉ xuất khẩu gỗ sang thị trường ngoài EU"], 
+        correct: "Chưa tuân thủ quy định pháp luật về bảo đảm gỗ hợp pháp và quy định về quản lý, truy xuất nguồn gốc lâm sản",
+        explanation: "quy định tại Điều 12 Nghị định số 102/2020/NĐ-CP"
     },
     { 
         question: "Cơ quan nào có quyền tạm đình chỉ hoạt động chế biến gỗ khi phát hiện vi phạm nghiêm trọng?", 
