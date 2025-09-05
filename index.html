@@ -966,10 +966,34 @@ body {
     }, 1000); // 1000ms = 1 giây
 });
 
-        function playChibiVideo(videoSrc) {
-            chibiVideo.src = videoSrc;
-            chibiVideo.play().catch(e => console.log("Lỗi phát video chibi:", e));
-        }
+       function playChibiVideo(videoSrc) {
+    // Đặt lại các thuộc tính mặc định
+    chibiVideo.playbackRate = 1.0;
+    chibiVideo.onended = null;
+    chibiVideo.loop = false;
+
+    // Chuyển nguồn video
+    chibiVideo.src = videoSrc;
+
+    // Thiết lập hành vi cho từng loại video
+    if (videoSrc === 'Ask.mp4') {
+        chibiVideo.onended = () => {
+            playChibiVideo('Wait.mp4');
+        };
+    } else if (videoSrc === 'Wait.mp4') {
+        chibiVideo.loop = true;
+        chibiVideo.playbackRate = 0.6;
+    } else if (videoSrc === 'True.mp4' || videoSrc === 'Sad.mp4') {
+        chibiVideo.onended = () => {
+            playChibiVideo('Wait2.mp4');
+        };
+    } else if (videoSrc === 'Wait2.mp4') {
+        chibiVideo.loop = true;
+    }
+
+    // Bắt đầu phát video
+    chibiVideo.play().catch(e => console.log("Lỗi phát video chibi:", e));
+}
 function setRealVh() {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
