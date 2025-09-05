@@ -710,35 +710,43 @@ body {
             showNextQuestion();
         }
 
-        function showNextQuestion() {
-            if (currentQuestionIndex < totalQuestions) {
-                const q = shuffledQuestions[currentQuestionIndex];
-                
-                questionCardContainer.innerHTML = '';
-                answersContainer.innerHTML = '';
+       function showNextQuestion() {
+    if (currentQuestionIndex < totalQuestions) {
+        const q = shuffledQuestions[currentQuestionIndex];
+        
+        questionCardContainer.innerHTML = '';
+        answersContainer.innerHTML = '';
 
-                const questionElement = document.createElement('div');
-                questionElement.classList.add('question-card');
-                const questionTextElement = document.createElement('div');
-                questionTextElement.classList.add('question-text');
-                questionElement.appendChild(questionTextElement);
-                questionCardContainer.appendChild(questionElement);
+        const questionElement = document.createElement('div');
+        questionElement.classList.add('question-card');
+        const questionTextElement = document.createElement('div');
+        questionTextElement.classList.add('question-text');
+        questionElement.appendChild(questionTextElement);
+        questionCardContainer.appendChild(questionElement);
 
-                const answersElement = document.createElement('div');
-                answersElement.classList.add('answers');
-                answersElement.dataset.correctAnswer = q.correct;
-                answersContainer.appendChild(answersElement);
-                
-                playChibiVideo('Ask.mp4');
+        const answersElement = document.createElement('div');
+        answersElement.classList.add('answers');
+        answersElement.dataset.correctAnswer = q.correct;
+        answersContainer.appendChild(answersElement);
+        
+        playChibiVideo('Ask.mp4');
 
-                typeWriterEffect(questionTextElement, `Câu ${currentQuestionIndex + 1}: ${q.question}`, () => {
-                    createAndShowAnswers(answersElement, q.options);
-                });
-                
-            } else {
-                showResults();
-            }
+        // Bổ sung dòng code này để đảm bảo video luôn được phát trên mobile
+        const playPromise = chibiVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                // Autoplay bị chặn, không cần làm gì thêm vì logic video tiếp theo sẽ tự động chạy
+            });
         }
+
+        typeWriterEffect(questionTextElement, `Câu ${currentQuestionIndex + 1}: ${q.question}`, () => {
+            createAndShowAnswers(answersElement, q.options);
+        });
+        
+    } else {
+        showResults();
+    }
+}
 
         function createAndShowAnswers(answersElement, options) {
             const answerLabels = ['A', 'B', 'C', 'D'];
