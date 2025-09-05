@@ -76,34 +76,41 @@ const questions = [
         explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
     },
     { 
-        question: "Ai có thẩm quyền phê duyệt phương án khai thác của hộ gia đình, cá nhân?", 
+        question: "Ai có thẩm quyền phê duyệt phương án khai thác của hộ gia đình, cá nhân, cộng đồng dân cư ?", 
         options: ["Chủ tịch UBND cấp xã", "Giám đốc Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ", "Chi cục trưởng Chi cục Kiểm lâm"], 
         correct: "Chủ tịch UBND cấp xã",
-        explanation: "Điều 9 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác rừng trồng sản xuất của hộ gia đình, cá nhân được UBND cấp xã xem xét và phê duyệt. Điều này phù hợp với thẩm quyền quản lý đất đai, rừng sản xuất đã giao cho hộ gia đình tại địa phương. Các cơ quan cấp cao hơn không trực tiếp phê duyệt các phương án nhỏ lẻ này."
+        explanation: "Khoản 3 Điều 6 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác rừng trồng sản xuất của hộ gia đình, cá nhân được UBND cấp xã xem xét và phê duyệt. Điều này phù hợp với thẩm quyền quản lý đất đai, rừng sản xuất đã giao cho hộ gia đình tại địa phương. Các cơ quan cấp cao hơn không trực tiếp phê duyệt các phương án nhỏ lẻ này."
     },
+ { 
+        question: "Chủ lâm sản không phải trình cơ quan có thẩm quyền phê duyệt phương án khai thác trong trường hợp khai thác nào?", 
+        options: ["rừng SX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư", "Rừng PH là rừng trồng do chủ rừng, chủ lâm sản tự đầu tư", "Rừng SX là rừng trồng do nhà nước đại diện chủ sở hữu", "Khai thác tận dụng, tận thu gỗ loài TVR thông thường từ rừng tự nhiên"], 
+        correct: "rừng SX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư",
+        explanation: "Khoản 7 Điều 6 Thông tư 26/2025/TT-BNNMT quy định đối với khai thác RSX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư, chủ rừng  không phải trình phương án KT cho cơ quan có thẩm quyền."
+    },
+
     { 
         question: "Đối với khai thác động vật rừng thông thường từ tự nhiên, cơ quan nào phê duyệt phương án?", 
-        options: ["UBND cấp huyện", "Cơ quan Kiểm lâm sở tại", "Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ"], 
+        options: ["UBND cấp xã", "Cơ quan Kiểm lâm sở tại", "Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ"], 
         correct: "Cơ quan Kiểm lâm sở tại",
-        explanation: "Điều 11 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác động vật rừng thông thường từ tự nhiên phải được cơ quan Kiểm lâm sở tại phê duyệt. Điều này nhằm đảm bảo kiểm soát chặt chẽ, tránh việc khai thác tràn lan gây hại đến đa dạng sinh học. UBND cấp huyện hoặc Chính phủ không trực tiếp làm nhiệm vụ này."
+        explanation: "Điều 7 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác động vật rừng thông thường từ tự nhiên phải được cơ quan Kiểm lâm sở tại phê duyệt. Điều này nhằm đảm bảo kiểm soát chặt chẽ, tránh việc khai thác tràn lan gây hại đến đa dạng sinh học. UBND cấp xã hoặc Chính phủ không trực tiếp làm nhiệm vụ này."
     },
     { 
         question: "Thời hạn phê duyệt phương án khai thác động vật rừng thông thường từ tự nhiên là bao nhiêu ngày làm việc?", 
         options: ["03 ngày", "05 ngày", "06 ngày", "07 ngày"], 
-        correct: "06 ngày",
-        explanation: "Theo Điều 11 khoản 3 Thông tư 26/2025/TT-BNNMT, trong thời hạn 06 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xem xét và phê duyệt phương án. Mốc 6 ngày đảm bảo vừa có thời gian thẩm định vừa kịp tiến độ khai thác. Các mốc 3, 5 hoặc 7 ngày không phù hợp với văn bản."
+        correct: "06 ngày làm việc",
+        explanation: "Theo điểm c khoản 3 Điều 7 Thông tư 26/2025/TT-BNNMT, trong thời hạn 06 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xem xét và phê duyệt phương án. Mốc 6 ngày đảm bảo vừa có thời gian thẩm định vừa kịp tiến độ khai thác. Các mốc 3, 5 hoặc 7 ngày không phù hợp với văn bản."
     },
     { 
-        question: "Trong hồ sơ lâm sản có nguồn gốc khai thác trong nước, gỗ từ rừng tự nhiên cần có giấy tờ nào?", 
-        options: ["Bảng kê lâm sản có xác nhận Kiểm lâm", "Hóa đơn VAT", "Giấy phép xây dựng", "Quyết định đấu giá"], 
-        correct: "Bảng kê lâm sản có xác nhận Kiểm lâm",
-        explanation: "Điều 12 Thông tư 26/2025/TT-BNNMT quy định rõ hồ sơ gỗ từ rừng tự nhiên khai thác trong nước phải có Bảng kê lâm sản được cơ quan Kiểm lâm xác nhận. Đây là bằng chứng pháp lý về nguồn gốc hợp pháp của gỗ. Các loại giấy tờ như hóa đơn VAT hay quyết định đấu giá chỉ là chứng từ thương mại, không thay thế được."
+        question: "Trong hồ sơ lâm sản có nguồn gốc khai thác trong nước đối với gỗ khai thác từ rừng tự nhiên cần có giấy tờ nào?", 
+        options: ["Bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm", "Hóa đơn VAT", "Giấy phép vận chuyển lâm sản", "Bản sao Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm"], 
+        correct: "Bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâ",
+        explanation: "khoản 1 Điều 8 Thông tư 26/2025/TT-BNNMT quy định rõ hồ sơ gỗ từ rừng tự nhiên khai thác trong nước phải có bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại. Đây là bằng chứng pháp lý về nguồn gốc hợp pháp của gỗ. Các loại giấy tờ như hóa đơn VAT hay quyết định đấu giá chỉ là chứng từ thương mại, không thay thế được."
     },
     { 
-        question: "Hồ sơ nhập khẩu thực vật ngoài gỗ thuộc Phụ lục CITES cần có gì?", 
-        options: ["Giấy phép CITES nhập khẩu", "Giấy phép lái xe", "Biên bản kiểm lâm", "Quyết định phê duyệt dự án"], 
-        correct: "Giấy phép CITES nhập khẩu",
-        explanation: "Theo Điều 13 Thông tư 26/2025/TT-BNNMT, việc nhập khẩu thực vật ngoài gỗ thuộc danh mục CITES phải kèm theo Giấy phép CITES nhập khẩu do cơ quan quản lý CITES Việt Nam cấp. Đây là yêu cầu bắt buộc để bảo đảm tuân thủ các cam kết quốc tế. Các giấy tờ khác hoàn toàn không liên quan."
+        question: "Hồ sơ nhập khẩu gỗ thuộc Phụ lục CITES cần loại giấy tờ gì sau đây?", 
+        options: ["Bản sao giấy phép CITES xuất khẩu hoặc tái xuất khẩu", "Bản chính hoặc bản điện tử giấy phép CITES nhập khẩu", "Biên bản kiểm lâm", "Bảng kê lâm sản theo Thông tư 26/2025/TT-BNNMT"], 
+        correct: "Cả A và C",
+        explanation: "Theo Điều 7 Nghị định số 102/2020/NĐ-CP Khi làm thủ tục hải quan đối với lô hàng gỗ nhập khẩu chủ gỗ thuộc Phụ lục CITES phải xuất trình Bản sao giấy phép CITES xuất khẩu hoặc tái xuất khẩu do Cơ quan CITES nước xuất khẩu hoặc nước tái xuất khẩu cấp; Bản chính hoặc bản điện tử giấy phép CITES nhập khẩu do Cơ quan CITES Việt Nam cấp;."
     },
     { 
         question: "Hồ sơ lâm sản sau xử lý tịch thu gồm những giấy tờ nào?", 
