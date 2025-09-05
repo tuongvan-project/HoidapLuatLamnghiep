@@ -12,15 +12,15 @@ const questions = [
         explanation: "Điều 1 Thông tư 26/2025/TT-BNNMT nêu rõ phạm vi điều chỉnh bao gồm quản lý lâm sản; xử lý lâm sản, thủy sản là tài sản được xác lập quyền sở hữu toàn dân. Điều này có nghĩa Thông tư không chỉ tập trung vào rừng đặc dụng hay thủy sản riêng lẻ mà bao quát cả lâm sản, thủy sản khi đã trở thành tài sản toàn dân. Các phương án khác chỉ phản ánh một phần nhỏ, không đúng phạm vi điều chỉnh."
     },
     { 
-        question: "Thông tư 26/2025/TT-BNNMT áp dụng đối với đối tượng nào?", 
+        question: "Theo Thông tư 26/2025/TT-BNNMT khái niệm Sản phẩm gỗ là gì?", 
         options: [
-            "Chỉ cơ quan nhà nước", 
-            "Tổ chức, cá nhân, hộ kinh doanh, hộ gia đình, cộng đồng dân cư có hoạt động liên quan", 
-            "Chỉ doanh nghiệp chế biến gỗ", 
-            "Chỉ UBND cấp xã"
+            "Sản phẩm được làm từ tre, nứa hoặc các loại lâm sản ngoài gỗ để phục vụ đời sống hằng ngày.", 
+            "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm.", 
+            "Mọi nguyên liệu gỗ thô khai thác trực tiếp từ rừng chưa qua chế biến.", 
+            "Các sản phẩm thủ công mỹ nghệ từ đất, đá, kim loại nhưng có hình dáng giống gỗ"
         ], 
-        correct: "Tổ chức, cá nhân, hộ kinh doanh, hộ gia đình, cộng đồng dân cư có hoạt động liên quan",
-        explanation: "Điều 2 Thông tư 26/2025/TT-BNNMT xác định đối tượng áp dụng là tổ chức, cá nhân, hộ gia đình, hộ kinh doanh, cộng đồng dân cư có hoạt động liên quan đến quản lý, bảo vệ, chế biến, vận chuyển và kinh doanh lâm sản. Không chỉ riêng cơ quan nhà nước hay doanh nghiệp mà còn mở rộng đến mọi thành phần xã hội. Đây là điểm quan trọng nhằm huy động sự tham gia rộng rãi vào công tác quản lý lâm sản."
+        correct: "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm.",
+        explanation: "theo khoản 5 Điều 3 Thông tư 26/2025/TT-BNNMT: Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, 'cơ quan Kiểm lâm sở tại' được hiểu là gì?", 
@@ -37,7 +37,7 @@ const questions = [
         question: "Gỗ tròn theo Thông tư 26/2025/TT-BNNMT có đường kính đầu nhỏ tối thiểu bao nhiêu cm đối với rừng trồng?", 
         options: ["10 cm", "8 cm", "6 cm", "12 cm"], 
         correct: "6 cm",
-        explanation: "Theo Phụ lục kèm Thông tư 26/2025/TT-BNNMT, gỗ tròn được định nghĩa là gỗ chưa qua chế biến, có chiều dài tối thiểu 1 m và đường kính đầu nhỏ từ 6 cm trở lên đối với rừng trồng. Đây là tiêu chí kỹ thuật quan trọng để phân biệt gỗ tròn với gỗ nguyên liệu khác. Các con số 8, 10 hoặc 12 cm không đúng với quy định hiện hành."
+        explanation: "Theo Phụ lục kèm Thông tư 26/2025/TT-BNNMT, gỗ tròn được định nghĩa là gỗ chưa qua chế biến, có chiều dài tối thiểu 1 m và đường kính đầu nhỏ từ 6 cm trở lên đối với rừng trồng. Đây là tiêu chí kỹ thuật quan trọng để phân biệt gỗ tròn với gỗ quy cách khác. Các con số 8, 10 hoặc 12 cm không đúng với quy định hiện hành."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, sản phẩm nào sau đây không được coi là 'gỗ tròn'?", 
@@ -47,37 +47,37 @@ const questions = [
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, 'thực vật ngoài gỗ' gồm nhóm nào sau đây?", 
-        options: ["Tre, nứa, song, mây, nấm, củi...", "Gỗ tròn", "Gỗ xẻ", "Ngà voi"], 
-        correct: "Tre, nứa, song, mây, nấm, củi...",
-        explanation: "Khoản 4 Điều 3 Thông tư 26/2025/TT-BNNMT quy định 'thực vật ngoài gỗ' là nhóm lâm sản không phải gỗ, bao gồm tre, nứa, song, mây, lồ ô, nấm, củi và một số sản phẩm thực vật khác. Điều này phân biệt rõ giữa lâm sản gỗ và lâm sản phi gỗ. Các phương án khác như gỗ tròn, gỗ xẻ hay ngà voi không phải nhóm 'thực vật ngoài gỗ'."
+        options: ["Song, mây, tre, nứa, cau, dừa...; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa...", "Gỗ tròn", "Gỗ xẻ", "Ngà voi"], 
+        correct: "Song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ",
+        explanation: "Khoản 4 Điều 3 Thông tư 26/2025/TT-BNNMT quy định 'thực vật ngoài gỗ' Thực vật ngoài gỗ, bao gồm: các loài thuộc họ song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, sản phẩm nào được coi là 'sản phẩm của động vật'?", 
-        options: ["Thanh gỗ", "Trứng, da, xương, ngà, móng...", "Cây rừng trồng", "Củi"], 
+        question: "Sản phẩm nào được coi là 'sản phẩm của động vật rừng'?", 
+        options: ["Thanh gỗ", "Trứng, da, xương, ngà, móng...", "Cây rừng trồng", "Động vật rừng"], 
         correct: "Trứng, da, xương, ngà, móng...",
-        explanation: "Khoản 5 Điều 3 Thông tư 26/2025/TT-BNNMT định nghĩa sản phẩm của động vật bao gồm các bộ phận như trứng, da, lông, xương, sừng, ngà, móng, mật, tuyến... Đây là những bộ phận thu được từ động vật rừng. Các phương án khác như gỗ hay cây trồng không liên quan đến nhóm này."
+        explanation: "Khoản 3 Điều 3 Nghị định 35/2019/NĐ-CP của Chính phủ uy định xử phạt vi phạm hành chính trong lĩnh vực Lâm nghiệp giả thích từ ngữ thì Sản phẩm của động vật rừng là các loại sản phẩm có nguồn gốc từ các loại động vật đó ở dạng thô hoặc đã qua sơ chế, chế biến.."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, cơ quan nào có thẩm quyền xác nhận Bảng kê lâm sản?", 
         options: ["UBND cấp xã", "Sở Tài nguyên và Môi trường", "Cơ quan Kiểm lâm sở tại", "Công an huyện"], 
         correct: "Cơ quan Kiểm lâm sở tại",
-        explanation: "Điều 6 Thông tư 26/2025/TT-BNNMT quy định thẩm quyền xác nhận Bảng kê lâm sản thuộc cơ quan Kiểm lâm sở tại. Điều này nhằm đảm bảo tính chuyên môn và thẩm quyền pháp lý trong quản lý, kiểm soát nguồn gốc lâm sản. UBND xã, công an hay Sở Tài nguyên Môi trường không có chức năng này."
+        explanation: "khoản 5 Điều 5 Thông tư 26/2025/TT-BNNMT quy định thẩm quyền xác nhận Bảng kê lâm sản thuộc cơ quan Kiểm lâm sở tại. Điều này nhằm đảm bảo tính chuyên môn và thẩm quyền pháp lý trong quản lý, kiểm soát nguồn gốc lâm sản. UBND xã, công an hay Sở Tài nguyên Môi trường không có chức năng này."
     },
     { 
         question: "Trường hợp nào lâm sản không phải xác nhận Bảng kê lâm sản?", 
         options: ["Gỗ rừng tự nhiên", "Gỗ nguyên liệu của doanh nghiệp Nhóm I", "Động vật thuộc CITES", "Lâm sản quý hiếm"], 
         correct: "Gỗ nguyên liệu của doanh nghiệp Nhóm I",
-        explanation: "Theo Điều 8 Thông tư 26/2025/TT-BNNMT, doanh nghiệp được phân loại Nhóm I có uy tín và hồ sơ quản lý minh bạch thì gỗ nguyên liệu khi vận chuyển không cần xác nhận Bảng kê lâm sản. Đây là chính sách ưu đãi nhằm giảm thủ tục hành chính. Các trường hợp còn lại vẫn phải xác nhận vì tính chất nhạy cảm, quý hiếm."
+        explanation: "Theo khoản 4 Điều 5 Thông tư 26/2025/TT-BNNMT, Lâm sản không phải xác nhận Bảng kê lâm sản: gỗ nguyên liệu của doanh nghiệp Nhóm I theo quy định của Hệ thống bảo đảm gỗ hợp pháp Việt Nam; sản phẩm gỗ. Các trường hợp còn lại vẫn phải xác nhận vì tính chất nhạy cảm, quý hiếm."
     },
     { 
-        question: "Thời hạn cơ quan Kiểm lâm xác nhận Bảng kê lâm sản sau khi nhận đủ hồ sơ hợp lệ là bao lâu?", 
-        options: ["01 ngày", "02 ngày", "03 ngày", "05 ngày"], 
-        correct: "02 ngày",
-        explanation: "Điều 7 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
+        question: "Thời hạn cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản sau khi nhận đủ hồ sơ hợp lệ là bao lâu?", 
+        options: ["01 ngày làm việc", "02 ngày làm việc", "03 ngày", "05 ngày"], 
+        correct: "02 ngày làm việc",
+        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
     },
     { 
-        question: "Cơ quan nào có thẩm quyền phê duyệt phương án khai thác của hộ gia đình, cá nhân?", 
-        options: ["Chủ tịch UBND cấp xã", "Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ", "Chi cục Kiểm lâm"], 
+        question: "Ai có thẩm quyền phê duyệt phương án khai thác của hộ gia đình, cá nhân?", 
+        options: ["Chủ tịch UBND cấp xã", "Giám đốc Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ", "Chi cục trưởng Chi cục Kiểm lâm"], 
         correct: "Chủ tịch UBND cấp xã",
         explanation: "Điều 9 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác rừng trồng sản xuất của hộ gia đình, cá nhân được UBND cấp xã xem xét và phê duyệt. Điều này phù hợp với thẩm quyền quản lý đất đai, rừng sản xuất đã giao cho hộ gia đình tại địa phương. Các cơ quan cấp cao hơn không trực tiếp phê duyệt các phương án nhỏ lẻ này."
     },
