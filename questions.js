@@ -9,18 +9,18 @@ const questions = [
             "Chỉ quy định về thủy sản"
         ], 
         correct: "Quản lý lâm sản; xử lý lâm sản, thủy sản là tài sản xác lập quyền sở hữu toàn dân",
-        explanation: "Điều 1 Thông tư 26/2025/TT-BNNMT nêu rõ phạm vi điều chỉnh bao gồm quản lý lâm sản; xử lý lâm sản, thủy sản là tài sản được xác lập quyền sở hữu toàn dân. Điều này có nghĩa Thông tư không chỉ tập trung vào rừng đặc dụng hay thủy sản riêng lẻ mà bao quát cả lâm sản, thủy sản khi đã trở thành tài sản toàn dân. Các phương án khác chỉ phản ánh một phần nhỏ, không đúng phạm vi điều chỉnh."
+        explanation: "Điều 1 Thông tư 26/2025/TT-BNNMT nêu phạm vi điều chỉnh bao gồm quản lý lâm sản; xử lý lâm sản, thủy sản là tài sản được xác lập quyền sở hữu toàn dân. Không chỉ tập trung vào rừng đặc dụng hay thủy sản riêng lẻ mà bao quát cả lâm sản, thủy sản khi đã trở thành tài sản toàn dân. Các phương án khác chỉ phản ánh một phần nhỏ, không đúng phạm vi điều chỉnh."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT khái niệm Sản phẩm gỗ là gì?", 
         options: [
             "Sản phẩm được làm từ tre, nứa hoặc các loại lâm sản ngoài gỗ để phục vụ đời sống hằng ngày.", 
-            "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm.", 
+            "SP chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP.", 
             "Mọi nguyên liệu gỗ thô khai thác trực tiếp từ rừng chưa qua chế biến.", 
             "Các sản phẩm thủ công mỹ nghệ từ đất, đá, kim loại nhưng có hình dáng giống gỗ"
         ], 
-        correct: "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm.",
-        explanation: "theo khoản 5 Điều 3 Thông tư 26/2025/TT-BNNMT: Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của sản phẩm, khi lắp ráp có thể sử dụng được ngay theo công dụng của sản phẩm."
+        correct: "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của SP, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP.",
+        explanation: "theo quy định tại khoản 5 Điều 3 Thông tư 26/2025/TT-BNNMT."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, 'cơ quan Kiểm lâm sở tại' được hiểu là gì?", 
@@ -31,29 +31,29 @@ const questions = [
             "Công an huyện"
         ], 
         correct: "Hạt Kiểm lâm hoặc Kiểm lâm cấp tỉnh nơi không có Hạt Kiểm lâm",
-        explanation: "Khoản 2 Điều 3 Thông tư 26/2025/TT-BNNMT giải thích từ ngữ, trong đó 'cơ quan Kiểm lâm sở tại' bao gồm Hạt Kiểm lâm hoặc cơ quan Kiểm lâm cấp tỉnh ở nơi không có Hạt Kiểm lâm. Điều này đảm bảo tính linh hoạt trong quản lý khi ở một số địa phương chưa thành lập Hạt Kiểm lâm. Các phương án khác đều không chính xác vì hoặc quá hẹp (chỉ Hạt Kiểm lâm huyện) hoặc không đúng thẩm quyền (Công an)."
+        explanation: "Khoản 2 Điều 3 Thông tư 26/2025/TT-BNNMT giải thích 'cơ quan Kiểm lâm sở tại' bao gồm HKL hoặc cơ quan Kiểm lâm cấp tỉnh ở nơi không có HKL. Điều này đảm bảo tính linh hoạt trong quản lý khi ở một số địa phương chưa thành lập HKL. Các phương án khác đều không chính xác vì hoặc quá hẹp (chỉ Hạt Kiểm lâm huyện) hoặc không đúng thẩm quyền (Công an)."
     },
     { 
         question: "Gỗ tròn theo Thông tư 26/2025/TT-BNNMT có đường kính đầu nhỏ tối thiểu bao nhiêu cm đối với rừng trồng?", 
         options: ["10 cm", "8 cm", "6 cm", "12 cm"], 
         correct: "6 cm",
-        explanation: "Theo Phụ lục kèm Thông tư 26/2025/TT-BNNMT, gỗ tròn được định nghĩa là gỗ chưa qua chế biến, có chiều dài tối thiểu 1 m và đường kính đầu nhỏ từ 6 cm trở lên đối với rừng trồng. Đây là tiêu chí kỹ thuật quan trọng để phân biệt gỗ tròn với gỗ quy cách khác. Các con số 8, 10 hoặc 12 cm không đúng với quy định hiện hành."
+        explanation: "điểm c khoản 1 Điều 3 Thông tư 26/2025/TT-BNNMT, gỗ tròn là Gỗ rừng trồng, rừng tràm, rừng ngập mặn có đường kính đầu nhỏ từ 06 cm trở lên và chiều dài từ 01 m trở lên."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, sản phẩm nào sau đây không được coi là 'gỗ tròn'?", 
+        question: "Theo Thông tư 26/2025/TT-BNNMT, kiểu gỗ nào sau đây không được coi là 'gỗ tròn'?", 
         options: ["Gỗ nguyên khai cắt khúc", "Gỗ bóc vỏ", "Gỗ lóc lõi", "Gỗ xẻ thành thanh, tấm"], 
         correct: "Gỗ xẻ thành thanh, tấm",
-        explanation: "Điều 3 và phụ lục định nghĩa rõ: gỗ tròn là gỗ còn nguyên dạng, chưa qua chế biến thành thanh, tấm. Các loại gỗ bóc vỏ, gỗ nguyên khai, gỗ lóc lõi vẫn thuộc phạm vi gỗ tròn nếu đáp ứng tiêu chuẩn về kích thước. Trong khi đó, gỗ đã xẻ thành thanh, tấm được coi là gỗ xẻ, không còn là gỗ tròn."
+        explanation: "Khoản 2 Thông tư 26/2025/TT-BNNMT: Gỗ tròn là gỗ nguyên khai, còn nguyên hình dạng sau khai thác chưa cắt khúc hoặc đã cắt khúc, gỗ bóc vỏ, gỗ lóc lõi nếu đáp ứng tiêu chuẩn về kích thước. Trong khi đó, gỗ đã đã bị tác động thành hình dạng thanh, tấm, hộp, tròn, khối trụ đa giác hoặc hình thù khác được coi là gỗ xẻ, gỗ đẽo."
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, 'thực vật ngoài gỗ' gồm nhóm nào sau đây?", 
         options: ["Song, mây, tre, nứa, cau, dừa...; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa...", "Gỗ tròn", "Gỗ xẻ", "Ngà voi"], 
         correct: "Song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ",
-        explanation: "Khoản 4 Điều 3 Thông tư 26/2025/TT-BNNMT quy định 'thực vật ngoài gỗ' Thực vật ngoài gỗ, bao gồm: các loài thuộc họ song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ."
+        explanation: "Khoản 4 Điều 3 Thông tư 26/2025/TT-BNNMT quy định 'thực vật ngoài gỗ' bao gồm: các loài thuộc họ song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ."
     },
     { 
         question: "Sản phẩm nào được coi là 'sản phẩm của động vật rừng'?", 
-        options: ["Thanh gỗ", "Trứng, da, xương, ngà, móng...", "Cây rừng trồng", "Động vật rừng"], 
+        options: ["Thanh gỗ", "Trứng, da, xương, ngà, móng...", "Cây rừng trồng", "Cá thể động vật rừng"], 
         correct: "Trứng, da, xương, ngà, móng...",
         explanation: "Khoản 3 Điều 3 Nghị định 35/2019/NĐ-CP của Chính phủ uy định xử phạt vi phạm hành chính trong lĩnh vực Lâm nghiệp giả thích từ ngữ thì Sản phẩm của động vật rừng là các loại sản phẩm có nguồn gốc từ các loại động vật đó ở dạng thô hoặc đã qua sơ chế, chế biến.."
     },
@@ -65,7 +65,7 @@ const questions = [
     },
     { 
         question: "Trường hợp nào lâm sản không phải xác nhận Bảng kê lâm sản?", 
-        options: ["Gỗ rừng tự nhiên", "Gỗ nguyên liệu của doanh nghiệp Nhóm I", "Động vật thuộc CITES", "Lâm sản quý hiếm"], 
+        options: ["Gỗ rừng tự nhiên", "Gỗ nguyên liệu của doanh nghiệp Nhóm I", "Động vật thuộc CITES", "Lâm sản nguy cấp, quý hiếm"], 
         correct: "Gỗ nguyên liệu của doanh nghiệp Nhóm I",
         explanation: "Theo khoản 4 Điều 5 Thông tư 26/2025/TT-BNNMT, Lâm sản không phải xác nhận Bảng kê lâm sản: gỗ nguyên liệu của doanh nghiệp Nhóm I theo quy định của Hệ thống bảo đảm gỗ hợp pháp Việt Nam; sản phẩm gỗ. Các trường hợp còn lại vẫn phải xác nhận vì tính chất nhạy cảm, quý hiếm."
     },
@@ -75,19 +75,25 @@ const questions = [
         correct: "02 ngày làm việc",
         explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
     },
+   { 
+        question: "Trường hợp nào phải phê duyệt phương án khai thác?", 
+        options: ["Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ", "Khai thác cây trồng phân tán ngoài rừng do hộ gia đình tự trồng trên đất nông nghiệp", "Khai thác tận thu củi khô, cành gãy trong rừng sản xuất là rừng trồng sau bão", "Thực vật rừng ngoài gỗ trong rừng phòng hộ"], 
+        correct: "Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ",
+        explanation: "điểm c Khoản 2 Điều 6 Thông tư 26/2025/TT-BNNMT quy định khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ thuộc Trường hợp phê duyệt phương án khai thác"
+    },
     { 
         question: "Ai có thẩm quyền phê duyệt phương án khai thác của hộ gia đình, cá nhân, cộng đồng dân cư ?", 
         options: ["Chủ tịch UBND cấp xã", "Giám đốc Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ", "Chi cục trưởng Chi cục Kiểm lâm"], 
         correct: "Chủ tịch UBND cấp xã",
-        explanation: "Khoản 3 Điều 6 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác rừng trồng sản xuất của hộ gia đình, cá nhân được UBND cấp xã xem xét và phê duyệt. Điều này phù hợp với thẩm quyền quản lý đất đai, rừng sản xuất đã giao cho hộ gia đình tại địa phương. Các cơ quan cấp cao hơn không trực tiếp phê duyệt các phương án nhỏ lẻ này."
+        explanation: "Khoản 3 Điều 6 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác rừng trồng sản xuất của HGĐ, cá nhân được UBND cấp xã xem xét, phê duyệt. Điều này phù hợp với thẩm quyền quản lý đất đai, rừng sản xuất đã giao cho hộ gia đình tại địa phương."
     },
  { 
-        question: "Chủ lâm sản không phải trình cơ quan có thẩm quyền phê duyệt phương án khai thác trong trường hợp khai thác nào?", 
+
+        question: "Chủ lâm sản KHÔNG phải trình cơ quan có thẩm quyền phê duyệt phương án khai thác trong trường hợp khai thác nào?", 
         options: ["rừng SX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư", "Rừng PH là rừng trồng do chủ rừng, chủ lâm sản tự đầu tư", "Rừng SX là rừng trồng do nhà nước đại diện chủ sở hữu", "Khai thác tận dụng, tận thu gỗ loài TVR thông thường từ rừng tự nhiên"], 
         correct: "rừng SX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư",
-        explanation: "Khoản 7 Điều 6 Thông tư 26/2025/TT-BNNMT quy định đối với khai thác RSX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư, chủ rừng  không phải trình phương án KT cho cơ quan có thẩm quyền."
+        explanation: "Khoản 7 Điều 6 Thông tư 26/2025/TT-BNNMT quy định khai thác RSX là rừng trồng, cây rừng trồng trên đất ngoài quy hoạch LN, gỗ vườn nhà, cây phân tán do chủ rừng tự đầu tư, chủ rừng không phải trình phương án KT cho cơ quan có thẩm quyền."
     },
-
     { 
         question: "Đối với khai thác động vật rừng thông thường từ tự nhiên, cơ quan nào phê duyệt phương án?", 
         options: ["UBND cấp xã", "Cơ quan Kiểm lâm sở tại", "Sở Nông nghiệp và Môi trường", "Thủ tướng Chính phủ"], 
@@ -95,15 +101,21 @@ const questions = [
         explanation: "Điều 7 Thông tư 26/2025/TT-BNNMT quy định phương án khai thác động vật rừng thông thường từ tự nhiên phải được cơ quan Kiểm lâm sở tại phê duyệt. Điều này nhằm đảm bảo kiểm soát chặt chẽ, tránh việc khai thác tràn lan gây hại đến đa dạng sinh học. UBND cấp xã hoặc Chính phủ không trực tiếp làm nhiệm vụ này."
     },
     { 
+        question: "Trong thời gian bao lâu, kể từ ngày hoàn thành khai thác; chủ rừng, chủ lâm sản, chủ dự án hoặc tổ chức, cá nhân được giao khai thác gửi bản chính Bảng kê lâm sản đến cơ quan Kiểm lâm sở tại để theo dõi hoặc xác nhận Bảng kê lâm sản?", 
+        options: ["05 ngày làm việc", "05 ngày", "06 ngày", "07 ngày"], 
+        correct: "05 ngày làm việc",
+        explanation: "Theo điểm b khoản 9 Điều 6 Thông tư 26/2025/TT-BNNMT, Sau khai thác: trong thời hạn 05 ngày làm việc kể từ ngày hoàn thành khai thác; chủ rừng, chủ lâm sản, chủ dự án hoặc tổ chức, cá nhân được giao khai thác gửi bản chính Bảng kê lâm sản đến cơ quan Kiểm lâm sở tại để theo dõi hoặc xác nhận Bảng kê lâm sản đối với trường hợp quy định tại khoản 3 Điều 5 Thông tư này."
+    },
+ { 
         question: "Thời hạn phê duyệt phương án khai thác động vật rừng thông thường từ tự nhiên là bao nhiêu ngày làm việc?", 
         options: ["03 ngày", "05 ngày", "06 ngày", "07 ngày"], 
-        correct: "06 ngày làm việc",
+        correct: "06 ngày",
         explanation: "Theo điểm c khoản 3 Điều 7 Thông tư 26/2025/TT-BNNMT, trong thời hạn 06 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xem xét và phê duyệt phương án. Mốc 6 ngày đảm bảo vừa có thời gian thẩm định vừa kịp tiến độ khai thác. Các mốc 3, 5 hoặc 7 ngày không phù hợp với văn bản."
     },
     { 
-        question: "Trong hồ sơ lâm sản có nguồn gốc khai thác trong nước đối với gỗ khai thác từ rừng tự nhiên cần có giấy tờ nào?", 
+        question: "Quy định về hồ sơ lâm sản có nguồn gốc khai thác trong nước trường hợp gỗ khai thác từ rừng tự nhiên cần có loại giấy tờ nào sau đây?", 
         options: ["Bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm", "Hóa đơn VAT", "Giấy phép vận chuyển lâm sản", "Bản sao Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm"], 
-        correct: "Bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâ",
+        correct: "Bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm",
         explanation: "khoản 1 Điều 8 Thông tư 26/2025/TT-BNNMT quy định rõ hồ sơ gỗ từ rừng tự nhiên khai thác trong nước phải có bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại. Đây là bằng chứng pháp lý về nguồn gốc hợp pháp của gỗ. Các loại giấy tờ như hóa đơn VAT hay quyết định đấu giá chỉ là chứng từ thương mại, không thay thế được."
     },
     { 
@@ -114,159 +126,159 @@ const questions = [
     },
     { 
         question: "Hồ sơ lâm sản sau xử lý tịch thu gồm những giấy tờ nào?", 
-        options: ["Quyết định phê duyệt phương án xử lý và Bảng kê lâm sản", "Giấy khai sinh", "Hóa đơn điện nước", "Phiếu thu ngân sách"], 
-        correct: "Quyết định phê duyệt phương án xử lý và Bảng kê lâm sản",
-        explanation: "Điều 15 Thông tư 26/2025/TT-BNNMT quy định lâm sản sau xử lý tịch thu phải kèm theo Quyết định phê duyệt phương án xử lý và Bảng kê lâm sản do cơ quan Kiểm lâm lập. Đây là căn cứ chứng minh lâm sản đã được xử lý đúng pháp luật. Các giấy tờ dân sự hoặc hành chính khác không thay thế được."
+        options: ["QĐ phê duyệt phương án xử lý tài sản được xác lập quyền sở hữu toàn dân", "Hợp đồng mua bán lâm sản giữa tổ chức, cá nhân với cơ quan kiểm lâm.", "Giấy phép khai thác gỗ do UBND cấp xã cấp", "Bảng kê lâm sản chưa được cơ quan có thẩm quyền xác nhận"], 
+        correct: "QĐ phê duyệt phương án xử lý TS được xác lập quyền sở hữu toàn dân",
+        explanation: "Điều 10 Thông tư 26/2025/TT-BNNMT Hồ sơ lâm sản có nguồn gốc sau xử lý tịch thu gồm Phương án, Quyết định phê duyệt phương án xử lý tài sản được xác lập quyền sở hữu toàn dân và BKLS do cơ quan được giao xử lý tài sản lập."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, vận chuyển lâm sản trong nước cần có gì?", 
-        options: ["Bảng kê lâm sản", "Hộ chiếu", "Phiếu thu ngân sách", "Biên bản họp thôn"], 
-        correct: "Bảng kê lâm sản",
-        explanation: "Điều 16 Thông tư 26/2025/TT-BNNMT quy định việc vận chuyển lâm sản trong nước bắt buộc phải kèm theo Bảng kê lâm sản hợp pháp. Đây là giấy tờ chứng minh nguồn gốc lâm sản, tránh buôn bán gỗ lậu. Các giấy tờ như hộ chiếu hay biên bản thôn không có giá trị pháp lý trong trường hợp này."
+        question: "Hồ sơ lâm sản Gỗ loài thông thường khai thác từ rừng tự nhiên khi mua bán, chuyển giao quyền sở hữu, vận chuyển trong nước cần giấy tờ gì sau đây?", 
+        options: ["Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại", "Giấy chứng nhận quyền sử dụng đất nơi có rừng tự nhiên", "Phiếu thu ngân sách", "Biên bản họp thôn"], 
+        correct: "Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại",
+        explanation: "khoản 1 Điều 11 Thông tư 26/2025/TT-BNNMT quy định Hồ sơ lâm sản Gỗ loài thông thường khai thác từ rừng tự nhiên khi mua bán, chuyển giao quyền sở hữu, vận chuyển trong nước cần BKLS có xác nhận của cơ quan Kiểm lâm sở tại."
     },
     { 
-        question: "Đối với hồ sơ xuất khẩu gỗ thuộc Phụ lục CITES, cần giấy phép gì?", 
-        options: ["Giấy phép CITES xuất khẩu", "Giấy phép lao động", "Giấy chứng nhận đăng ký xe", "Hóa đơn điện"], 
-        correct: "Giấy phép CITES xuất khẩu",
-        explanation: "Điều 17 Thông tư 26/2025/TT-BNNMT quy định xuất khẩu gỗ và lâm sản thuộc danh mục CITES phải có Giấy phép CITES xuất khẩu do cơ quan có thẩm quyền cấp. Đây là điều kiện bắt buộc để bảo đảm tính hợp pháp trong thương mại quốc tế. Các loại giấy phép khác không liên quan đến hoạt động xuất khẩu lâm sản."
+        question: "Đối với hồ sơ xuất khẩu gỗ nguyên liệu, sản phẩm gỗ thuộc Phụ lục CITES, cần giấy phép gì?", 
+        options: ["bản sao hoặc bản điện tử Giấy phép CITES xuất khẩu", "Giấy phép xuất khẩu hàng hóa thông thường của Bộ Công Thương", "Giấy phép khai thác gỗ do cơ quan có thẩm quyền cấp", "Giấy chứng nhận kiểm dịch thực vật đối với gỗ"], 
+        correct: "bản sao hoặc bản điện tử Giấy phép CITES xuất khẩu",
+        explanation: "điểm b khoản 1 Điều 12 Thông tư 26/2025/TT-BNNMT quy định Hồ sơ lâm sản xuất khẩu phải có bản sao hoặc bản điện tử Giấy phép CITES xuất khẩu, tái xuất khẩu do Cơ quan quản lý CITES Việt Nam cấp;."
     },
     { 
-        question: "Cơ sở chế biến gỗ cần lưu giữ loại hồ sơ nào?", 
-        options: ["Hồ sơ nguồn gốc lâm sản, bảng kê, sổ theo dõi nhập xuất", "Giấy phép lái xe", "Giấy khai sinh", "Giấy chứng nhận tiêm chủng"], 
-        correct: "Hồ sơ nguồn gốc lâm sản, bảng kê, sổ theo dõi nhập xuất",
-        explanation: "Điều 18 Thông tư 26/2025/TT-BNNMT yêu cầu cơ sở chế biến gỗ phải lưu giữ hồ sơ về nguồn gốc lâm sản, Bảng kê và sổ theo dõi nhập xuất. Điều này giúp cơ quan quản lý dễ dàng kiểm tra, đối chiếu nguồn gốc nguyên liệu. Các loại giấy tờ cá nhân như giấy khai sinh hay tiêm chủng hoàn toàn không liên quan."
+        question: "Cơ sở chế biến, kinh doanh, cất giữ gỗ thực vật rừng, động vật rừng thông thường, động vật, thực vật thuộc Danh mục loài nguy cấp, quý, hiếm; động vật, thực vật hoang dã nguy cấp thuộc Phụ lục CITES cần lưu giữ loại hồ sơ về lâm sản nào?", 
+        options: ["Hồ sơ nguồn gốc lâm sản, bảng kê lâm sản, sổ theo dõi nhập xuất lâm sản", "Giấy chứng nhận quyền sử dụng đất, hợp đồng vay vốn ngân hàng, báo cáo tài chính năm", "Hồ sơ thiết kế xưởng chế biến, hợp đồng thuê lao động, biên bản kiểm tra an toàn cháy nổ", "Hồ sơ đăng ký kinh doanh, giấy chứng nhận vệ sinh an toàn thực phẩm"], 
+        correct: "Hồ sơ nguồn gốc lâm sản, bảng kê lâm sản, sổ theo dõi nhập xuất lâm sản",
+        explanation: "khoản 1 Điều 13 Thông tư 26/2025/TT-BNNMT yêu cầu cơ sở chế biến gỗ phải lưu giữ hồ sơ về nguồn gốc lâm sản, Bảng kê và sổ theo dõi nhập xuất. Điều này giúp cơ quan quản lý dễ dàng kiểm tra, đối chiếu nguồn gốc nguyên liệu. Các đáp án còn lại khác thuộc lĩnh vực quản lý nhà nước khác."
     },
     { 
-        question: "Cơ sở nuôi động vật thuộc Phụ lục CITES cần có gì?", 
-        options: ["Mã số cơ sở nuôi hoặc Giấy chứng nhận cơ sở bảo tồn đa dạng sinh học", "Giấy phép xây dựng", "Giấy chứng minh nhân dân", "Giấy khai sinh"], 
-        correct: "Mã số cơ sở nuôi hoặc Giấy chứng nhận cơ sở bảo tồn đa dạng sinh học",
-        explanation: "Điều 19 Thông tư 26/2025/TT-BNNMT quy định các cơ sở nuôi động vật thuộc Phụ lục CITES phải có Mã số cơ sở nuôi do cơ quan có thẩm quyền cấp, hoặc Giấy chứng nhận cơ sở bảo tồn đa dạng sinh học. Đây là điều kiện pháp lý để bảo đảm tính hợp pháp trong hoạt động nuôi sinh sản, nuôi sinh trưởng. Các giấy tờ như giấy phép xây dựng hay giấy khai sinh không có giá trị trong trường hợp này."
+        question: "Bản chính hồ sơ nguồn gốc động vật được khai thác trong nước, nhập khẩu đối với chủ cơ sở đồng thời là tổ chức, cá nhân trực tiếp khai thác, nhập khẩu hoặc bản chính hồ sơ lâm sản khi nhận chuyển giao quyền sở hữu từ tổ chức, cá nhân liền kề trước đó là hồ sơ lâm sản do cơ sở nào lưu giữ?", 
+        options: ["Cơ sở nuôi động vật rừng", "Cơ sở chế biến gỗ và lâm sản", "Cơ sở kinh doanh, buôn bán động vật cảnh", "Cơ sở nghiên cứu khoa học về động vật rừng"], 
+        correct: "Cơ sở nuôi động vật rừng",
+        explanation: "Khoản 2 Điều 13 Thông tư 26/2025/TT-BNNMT quy định các cơ sở nuôi động vật rừng phải lưu giữ Bản chính hồ sơ nguồn gốc động vật được khai thác trong nước, nhập khẩu đối với chủ cơ sở đồng thời là tổ chức, cá nhân trực tiếp khai thác, nhập khẩu hoặc bản chính hồ sơ lâm sản khi nhận chuyển giao quyền sở hữu từ tổ chức, cá nhân liền kề trước đó"
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, mẫu vật nào bắt buộc phải đánh dấu?", 
-        options: ["Động vật thuộc Phụ lục I CITES", "Mọi loài gỗ tròn", "Củi", "Nấm rừng"], 
-        correct: "Động vật thuộc Phụ lục I CITES",
-        explanation: "Điều 20 Thông tư 26/2025/TT-BNNMT quy định các mẫu vật thuộc Phụ lục I CITES (loài nguy cấp, quý, hiếm) phải được đánh dấu để quản lý, truy xuất nguồn gốc. Đây là yêu cầu bắt buộc nhằm ngăn chặn tình trạng buôn bán trái phép. Các loại như củi, nấm rừng hoặc gỗ tròn thông thường không bắt buộc đánh dấu."
+        options: ["Động vật rừng lớp thú thuộc Phụ lục I CITES", "Động vật thuộc Phụ lục II CITES", "Thực vật thuộc Phụ lục I CITES", "Động vật rừng thông thường được gây nuôi hợp pháp"], 
+        correct: "Động vật rừng lớp thú thuộc Phụ lục I CITES",
+        explanation: "Điều 14 Thông tư 26/2025/TT-BNNMT quy định đối tượng đánh dấu: Cá thể động vật rừng còn sống thuộc lớp thú, bao gồm: các loài nguy cấp, quý, hiếm thuộc Nhóm IB theo quy định của pháp luật Việt Nam; các loài thuộc Phụ lục I CITES."
     },
     { 
         question: "Việc đánh dấu mẫu vật có thể thực hiện bằng hình thức nào?", 
         options: ["Chip, vòng, thẻ, mã QR...", "Dấu vân tay", "Chữ ký điện tử", "Ảnh chụp"], 
         correct: "Chip, vòng, thẻ, mã QR...",
-        explanation: "Theo Điều 21 Thông tư 26/2025/TT-BNNMT, việc đánh dấu mẫu vật có thể thực hiện bằng gắn chip, vòng, thẻ, tem, mã vạch, mã QR hoặc các hình thức điện tử khác. Mục đích là quản lý bằng phương tiện hiện đại, dễ truy xuất. Các phương án như dấu vân tay, chữ ký điện tử hay ảnh chụp không phải là biện pháp đánh dấu hợp pháp cho mẫu vật."
+        explanation: "Theo khoản 2 Điều 14 Thông tư 26/2025/TT-BNNMT, việc đánh dấu mẫu vật có thể thực hiện bằng gắn chip, vòng, thẻ, tem, mã vạch, mã QR hoặc các hình thức điện tử khác. Mục đích là quản lý bằng phương tiện hiện đại, dễ truy xuất. Các phương án như dấu vân tay, chữ ký điện tử hay ảnh chụp không phải là biện pháp đánh dấu hợp pháp cho mẫu vật"
     },
     { 
         question: "Sau khi đánh dấu mẫu vật, chủ mẫu vật phải làm gì trong 01 ngày làm việc?", 
         options: ["Ghi thông tin vào sổ theo dõi đánh dấu mẫu vật", "Bán ra thị trường", "Xin cấp giấy chứng tử", "Không phải làm gì"], 
         correct: "Ghi thông tin vào sổ theo dõi đánh dấu mẫu vật",
-        explanation: "Điều 21 khoản 4 Thông tư 26/2025/TT-BNNMT yêu cầu chủ mẫu vật trong vòng 01 ngày làm việc kể từ khi đánh dấu phải ghi thông tin vào sổ theo dõi đánh dấu mẫu vật. Đây là cơ sở để cơ quan quản lý giám sát. Nếu không ghi nhận, mẫu vật có thể bị coi là không hợp pháp."
+        explanation: "điểm d khoản 2 Điều 14 Thông tư 26/2025/TT-BNNMT yêu cầu chủ mẫu vật trong vòng 01 ngày làm việc kể từ khi đánh dấu phải ghi thông tin vào sổ theo dõi đánh dấu mẫu vật. gửi Thông báo đánh dấu mẫu vật đến cơ quan Kiểm lâm sở tại để phục vụ theo dõi, quản lý"
     },
     { 
-        question: "Đối tượng nào phải chấp hành kiểm tra theo Thông tư 26/2025/TT-BNNMT?", 
-        options: ["Chỉ cơ quan Kiểm lâm", "Tổ chức, cá nhân có hoạt động khai thác, vận chuyển, chế biến, mua bán lâm sản", "Chỉ doanh nghiệp FDI", "Chỉ UBND tỉnh"], 
+        question: "Đối tượng nào phải chấp hành sự kiểm tra truy xuất nguồn gốc lâm sản theo Thông tư 26/2025/TT-BNNMT?", 
+        options: ["Cơ quan quản lý nhà nước về lâm nghiệp các cấp", "Tổ chức, cá nhân có hoạt động khai thác, vận chuyển, chế biến, mua bán lâm sản", "Tổ chức, cá nhân trồng rừng sản xuất bằng vốn tự có nhưng không khai thác, mua bán.", "Người dân địa phương sống gần rừng nhưng không tham gia hoạt động liên quan đến lâm sản"], 
         correct: "Tổ chức, cá nhân có hoạt động khai thác, vận chuyển, chế biến, mua bán lâm sản",
-        explanation: "Điều 23 Thông tư 26/2025/TT-BNNMT xác định đối tượng phải chấp hành kiểm tra bao gồm tất cả tổ chức, hộ gia đình, cá nhân có hoạt động khai thác, chế biến, vận chuyển, kinh doanh lâm sản. Không phân biệt loại hình kinh tế, miễn có liên quan đến lâm sản thì đều thuộc phạm vi quản lý."
+        explanation: "Điều 15 Thông tư 26/2025/TT-BNNMT: đối tượng phải chấp hành kiểm tra tổ chức, cá nhân, hộ kinh doanh, hộ gia đình, cộng đồng dân cư có hoạt động khai thác, vận chuyển, chế biến, sản xuất, mua bán, chuyển quyền sở hữu lâm sản, xuất khẩu, nhập khẩu, cất giữ lâm sản, nuôi động vật rừng, trồng thực vật rừng"
     },
     { 
-        question: "Có mấy hình thức kiểm tra lâm sản theo Thông tư 26/2025/TT-BNNMT?", 
+        question: "Có bao nhiêu hình thức kiểm tra lâm sản theo Thông tư 26/2025/TT-BNNMT?", 
         options: ["2 hình thức", "3 hình thức", "4 hình thức", "5 hình thức"], 
         correct: "3 hình thức",
-        explanation: "Điều 24 Thông tư 26/2025/TT-BNNMT quy định có 3 hình thức kiểm tra lâm sản: kiểm tra định kỳ, kiểm tra đột xuất và kiểm tra chuyên đề. Đây là ba công cụ quản lý chính để giám sát hoạt động liên quan đến lâm sản. Các phương án 2, 4 hoặc 5 hình thức không chính xác."
+        explanation: "khoản 2 Điều 15 Thông tư 26/2025/TT-BNNMT quy định có 3 hình thức kiểm tra lâm sản: Kiểm tra theo kế hoạch; Kiểm tra theo chuyên đề và Kiểm tra đột xuất."
     },
     { 
-        question: "Thẩm quyền ban hành quyết định kiểm tra thuộc về ai?", 
-        options: ["Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm cấp tỉnh, Hạt trưởng Hạt Kiểm lâm...", "Công an xã", "Chủ tịch UBND xã", "Doanh nghiệp gỗ"], 
-        correct: "Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm cấp tỉnh, Hạt trưởng Hạt Kiểm lâm...",
-        explanation: "Điều 25 Thông tư 26/2025/TT-BNNMT giao thẩm quyền ban hành quyết định kiểm tra cho Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm cấp tỉnh, Hạt trưởng Hạt Kiểm lâm. Đây là những cấp có thẩm quyền pháp lý. Các cơ quan như UBND xã hay công an xã không có thẩm quyền này."
+        question: "Thẩm quyền ban hành quyết định kiểm tra truy xuất nguồn gốc lâm sản của Kiểm lâm thuộc về ai?", 
+        options: ["Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm, Hạt trưởng Hạt Kiểm lâm...", "Trạm trưởng trạm Kiểm lâm", "Kiểm lâm viên", "Trưởng Công an xã"], 
+        correct: "Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm, Hạt trưởng Hạt Kiểm lâm...",
+        explanation: "khoản 7 Điều 16 Thông tư 26/2025/TT-BNNMT quy định: Cục trưởng Cục Lâm nghiệp và Kiểm lâm, Chi cục trưởng Chi cục Kiểm lâm vùng, Chi cục trưởng Chi cục Kiểm lâm cấp tỉnh, Đội trưởng Đội Kiểm lâm cơ động và phòng cháy chữa cháy rừng, Hạt trưởng Hạt Kiểm lâm."
     },
     { 
-        question: "Trước ngày nào hằng năm, cơ quan Kiểm lâm phải xây dựng kế hoạch kiểm tra năm sau?", 
-        options: ["30/11", "31/12", "01/01", "15/10"], 
-        correct: "30/11",
-        explanation: "Điều 26 Thông tư 26/2025/TT-BNNMT quy định trước ngày 30 tháng 11 hằng năm, cơ quan Kiểm lâm phải xây dựng và trình phê duyệt kế hoạch kiểm tra năm sau. Quy định này nhằm đảm bảo công tác kiểm tra có tính chủ động. Các mốc thời gian khác không đúng."
+        question: "Đối tượng được kiểm tra phải làm gì khi được kiểm tra lâm sản?", 
+        options: ["Chấp hành các yêu cầu kiểm tra của Tổ kiểm tra; xuất trình ngay hồ sơ lâm sản theo quy định và các tài liệu liên quan khác", "Chỉ chấp hành yêu cầu kiểm tra nếu có mặt chính quyền địa phương chứng kiến", "Nộp lại toàn bộ lâm sản đang quản lý cho cơ quan kiểm tra để xử lý", "Chỉ cần xuất trình giấy chứng minh nhân dân hoặc căn cước khi được yêu cầu"], 
+        correct: "Chấp hành các yêu cầu kiểm tra của Tổ kiểm tra; xuất trình ngay hồ sơ lâm sản theo quy định và các tài liệu liên quan khác",
+        explanation: "điểm e khoản 8 Điều 16 Thông tư 26/2025/TT-BNNMT quy định trách nhiệm của đối tượng được kiểm tra truy xuất nguồn gốc lâm sản."
     },
     { 
-        question: "Doanh nghiệp nào phải đăng ký phân loại theo Thông tư 26/2025/TT-BNNMT?", 
-        options: ["Doanh nghiệp có hoạt động trồng, khai thác, chế biến, nhập khẩu, xuất khẩu gỗ", "Doanh nghiệp thủy sản", "Doanh nghiệp vận tải", "Doanh nghiệp xây dựng"], 
+        question: "Doanh nghiệp nào thuộc diện đăng ký phân loại theo Thông tư 26/2025/TT-BNNMT?", 
+        options: ["Doanh nghiệp có hoạt động trồng, khai thác, chế biến, nhập khẩu, xuất khẩu gỗ", "Doanh nghiệp thủy sản", "Doanh nghiệp chỉ hoạt động dịch vụ vận tải hàng hóa nông lâm sản", "Doanh nghiệp chỉ cung cấp giống cây lâm nghiệp, phân bón, vật tư trồng rừng"], 
         correct: "Doanh nghiệp có hoạt động trồng, khai thác, chế biến, nhập khẩu, xuất khẩu gỗ",
-        explanation: "Điều 28 Thông tư 26/2025/TT-BNNMT quy định các doanh nghiệp có hoạt động liên quan trực tiếp đến lâm sản như trồng, khai thác, chế biến, nhập khẩu, xuất khẩu gỗ phải đăng ký phân loại. Các doanh nghiệp không hoạt động trong lĩnh vực lâm nghiệp như thủy sản, vận tải, xây dựng không thuộc diện này."
+        explanation: "khoản 1 Điều 17 Thông tư 26/2025/TT-BNNMT quy định các doanh nghiệp có hoạt động liên quan trực tiếp đến lâm sản như trồng, khai thác, chế biến, nhập khẩu, xuất khẩu gỗ thuộc diện đăng ký phân loại doanh nghiệp"
     },
     { 
         question: "Trong bao lâu kể từ ngày nhận hồ sơ hợp lệ, cơ quan có thẩm quyền phải ban hành Quyết định phê duyệt phương án khai thác?", 
-        options: ["05 ngày", "07 ngày", "10 ngày", "15 ngày"], 
-        correct: "07 ngày",
-        explanation: "Điều 29 Thông tư 26/2025/TT-BNNMT nêu rõ thời hạn giải quyết hồ sơ phương án khai thác là 07 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ. Đây là mốc thời gian phù hợp để cơ quan thẩm định và ra quyết định. Các mốc khác không đúng với quy định."
+        options: ["05 ngày làm việc", "07 ngày làm việc", "10 ngày", "15 ngày"], 
+        correct: "07 ngày làm việc",
+        explanation: "khoản 6 Điều 6 Thông tư 26/2025/TT-BNNMT nêu thời hạn giải quyết hồ sơ phương án khai thác là 07 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ.Trường hợp cần xác minh minh tính chính xác của hồ sơ	, trong thời hạn 03 ngày làm việc kể từ ngày nhận hồ sơ, cơ quan có thẩm quyền thông báo cho tổ chức, cá nhân nộp hồ sơ về việc xác minh"
     },
     { 
-        question: "Thông tin nào được sử dụng để xác minh tính trung thực trong phân loại doanh nghiệp?", 
-        options: ["Cổng thông tin đăng ký doanh nghiệp, cơ quan thuế, cơ quan môi trường...", "Trang Facebook cá nhân", "Thông tin quảng cáo", "Ý kiến cộng đồng"], 
-        correct: "Cổng thông tin đăng ký doanh nghiệp, cơ quan thuế, cơ quan môi trường...",
-        explanation: "Điều 30 Thông tư 26/2025/TT-BNNMT quy định việc xác minh thông tin phân loại doanh nghiệp phải căn cứ vào nguồn chính thống như Cổng thông tin đăng ký doanh nghiệp quốc gia, dữ liệu cơ quan thuế, cơ quan môi trường và các cơ quan quản lý nhà nước khác. Các nguồn như Facebook, quảng cáo hay ý kiến cộng đồng không phải căn cứ pháp lý."
+        question: "Những thông tin nào được sử dụng để xác minh tính trung thực trong phân loại doanh nghiệp?", 
+        options: ["Cổng thông tin đăng ký doanh nghiệp, cơ quan thuế, Kiểm lâm, cơ quan môi trường...", "Trang mạng xã hội của doanh nghiệp (Facebook, Zalo…)", "Ý kiến đánh giá của khách hàng mua bán lâm sản trên các sàn thương mại điện tử", "Thông tin quảng cáo của doanh nghiệp đăng trên báo chí, truyền hình"], 
+        correct: "Cổng thông tin đăng ký doanh nghiệp, cơ quan thuế, Kiểm lâm, cơ quan môi trường...",
+        explanation: "khoản 2 Điều 18 Thông tư 26/2025/TT-BNNMT quy định việc xác minh thông tin phân loại doanh nghiệp phải căn cứ vào nguồn chính thống như Cổng thông tin đăng ký doanh nghiệp quốc gia, dữ liệu cơ quan thuế, cơ quan môi trường và các cơ quan quản lý nhà nước khác. Các nguồn như Facebook, quảng cáo hay ý kiến cộng đồng không phải căn cứ pháp lý."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, trong trường hợp vận chuyển gỗ rừng tự nhiên mà không có Bảng kê lâm sản hợp lệ, hành vi này bị coi là gì?", 
-        options: ["Hợp pháp nếu có hóa đơn", "Vi phạm quy định về quản lý lâm sản", "Không vi phạm", "Chỉ vi phạm khi khối lượng > 2 m³"], 
-        correct: "Vi phạm quy định về quản lý lâm sản",
-        explanation: "Điều 31 Thông tư 26/2025/TT-BNNMT quy định rõ mọi trường hợp vận chuyển gỗ rừng tự nhiên mà không có Bảng kê lâm sản hợp lệ đều bị coi là vi phạm. Hóa đơn thương mại không thay thế được Bảng kê, và không có ngưỡng khối lượng miễn trừ. Đây là cơ sở để xử lý tình trạng vận chuyển gỗ lậu."
+        question: "Hình thức nào sau đây là hình thức công bố kết quả, chuyển loại, phân loại lại doanh nghiệp?", 
+        options: ["Thông báo kết quả phân loại doanh nghiệp trên Hệ thống thông tin phân loại doanh nghiệp.", "Đăng tải kết quả phân loại doanh nghiệp trên trang web riêng của từng doanh nghiệp", "Công bố kết quả phân loại qua bản tin thời sự của Đài Truyền hình Việt Nam", "Niêm yết công khai kết quả phân loại tại trụ sở UBND cấp xã nơi doanh nghiệp hoạt động"], 
+        correct: "Thông báo kết quả phân loại doanh nghiệp trên Hệ thống thông tin phân loại doanh nghiệp.",
+        explanation: "Ngoài ra Điều 19 Thông tư 26/2025/TT-BNNMT quy định Trường hợp không áp dụng được Hệ thống thông tin phân loại doanh nghiệp thì Cơ quan tiếp nhận xếp loại gửi Thông báo kết quả phân loại cho Cục Lâm nghiệp và Kiểm lâm để công bố kết quả trên trang thông tin điện tử"
     },
     { 
         question: "Hồ sơ nhập khẩu gỗ từ quốc gia có hiệp định VPA/FLEGT với Việt Nam cần kèm theo loại giấy phép nào?", 
         options: ["Giấy phép CITES", "Giấy phép FLEGT", "Giấy phép khai thác", "Giấy phép vận tải"], 
         correct: "Giấy phép FLEGT",
-        explanation: "Điều 32 Thông tư 26/2025/TT-BNNMT quy định rõ hồ sơ nhập khẩu gỗ từ các quốc gia đã ký Hiệp định Đối tác tự nguyện VPA/FLEGT với Việt Nam phải kèm theo Giấy phép FLEGT. Đây là chứng từ bảo đảm nguồn gốc hợp pháp của gỗ. Các loại giấy phép khác không áp dụng trong trường hợp này."
+        explanation: "Điều 7 Nghị định số 102/2020/NĐ-CP: Trường hợp gỗ nhập khẩu từ quốc gia, vùng lãnh thổ đã ký kết Hiệp định gỗ hợp pháp với EU và đang vận hành hệ thống cấp phép FLEGT: cần Bản sao giấy phép FLEGT xuất khẩu do cơ quan có thẩm quyền nước xuất khẩu cấp"
     },
     { 
-        question: "Nếu tổ chức khai thác gỗ rừng trồng sản xuất của hộ gia đình nhưng không lập phương án khai thác được UBND xã xác nhận thì hồ sơ lâm sản có hợp pháp không?", 
-        options: ["Hợp pháp vì là rừng trồng", "Không hợp pháp do thiếu phương án", "Chỉ hợp pháp nếu có hóa đơn", "Hợp pháp nếu có xác nhận thôn bản"], 
-        correct: "Không hợp pháp do thiếu phương án",
-        explanation: "Điều 33 Thông tư 26/2025/TT-BNNMT yêu cầu khai thác rừng trồng sản xuất phải có phương án khai thác được UBND xã xác nhận. Nếu không có, hồ sơ lâm sản không hợp pháp, kể cả khi đó là rừng trồng. Hóa đơn hay xác nhận thôn bản không thay thế được thủ tục này."
+        question: "Gỗ hợp pháp theo quy định tại Nghị định số 102/2020/NĐ-CP ngày 01/9/2020 sửa đổi, bổ sung năm 2024 được hiểu là gì?", 
+        options: ["Gỗ được khai thác, nhập khẩu, vận chuyển, mua bán, xuất khẩu phù hợp QĐ của PL Việt Nam", "Gỗ chỉ cần có nguồn gốc từ rừng trồng trong nước và có hóa đơn mua bán hợp lệ", "Gỗ được khai thác, mua bán hợp pháp trong lãnh thổ Việt Nam, không phụ thuộc điều ước quốc tế mà Việt Nam là thành viên", "Gỗ nhập khẩu từ bất kỳ quốc gia nào miễn có hợp đồng thương mại và chứng từ vận chuyển"], 
+        correct: "Gỗ được khai thác, nhập khẩu, vận chuyển, mua bán, xuất khẩu phù hợp QĐ của PL Việt Nam",
+        explanation: "khoản 1 Điều 3 Nghị định số 102/2020/NĐ-CP: Gỗ hợp pháp là gỗ được khai thác, nhập khẩu, vận chuyển, mua bán, chế biến, xuất khẩu phù hợp với quy định của pháp luật Việt Nam; Điều ước quốc tế mà Việt Nam là thành viên và pháp luật có liên quan của quốc gia nơi khai thác gỗ, trung chuyển và xuất khẩu gỗ vào Việt Nam."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, trong thời hạn bao nhiêu ngày kể từ khi kết thúc kiểm tra, cơ quan kiểm tra phải ban hành Kết luận kiểm tra?", 
-        options: ["05 ngày", "07 ngày", "10 ngày", "15 ngày"], 
-        correct: "07 ngày",
-        explanation: "Điều 34 Thông tư 26/2025/TT-BNNMT nêu rõ: trong vòng 07 ngày kể từ khi kết thúc kiểm tra, cơ quan kiểm tra phải ban hành Kết luận kiểm tra. Đây là mốc thời gian bảo đảm tính minh bạch và kịp thời. Các phương án khác không phù hợp với quy định."
+        question: "Gỗ thuộc Danh mục loài rủi ro nếu thuộc tiêu chí nào?", 
+        options: ["Gỗ thuộc Phụ lục CITES, Danh mục loài nguy cấp, quý, hiếm; loài lần đầu nhập khẩu; hoặc gỗ có nguy cơ tuyệt chủng", "Gỗ nhập khẩu có chứng từ hợp lệ nhưng không nằm trong bất kỳ Danh mục hạn chế nào của Việt Nam", "Gỗ khai thác trong nước đã được UBND cấp tỉnh phê duyệt phương án khai thác", "Gỗ thuộc nhóm thông thường, có nguồn gốc rõ ràng"], 
+        correct: "Gỗ thuộc Phụ lục CITES, Danh mục loài nguy cấp, quý, hiếm; loài lần đầu nhập khẩu; hoặc gỗ có nguy cơ tuyệt chủng",
+        explanation: "Quy định tại Điều 6 Nghị định số 102/2020/NĐ-CP"
     },
     { 
-        question: "Khi phát hiện sai lệch giữa Bảng kê lâm sản và thực tế, cơ quan Kiểm lâm phải xử lý thế nào?", 
-        options: ["Cho phép bổ sung giấy tờ", "Lập biên bản, xử lý theo pháp luật", "Không xử lý", "Chỉ cảnh báo"], 
-        correct: "Lập biên bản, xử lý theo pháp luật",
-        explanation: "Điều 35 Thông tư 26/2025/TT-BNNMT quy định nếu phát hiện sai lệch giữa Bảng kê lâm sản và thực tế, cơ quan Kiểm lâm phải lập biên bản và xử lý theo pháp luật. Đây là biện pháp nghiêm khắc nhằm răn đe hành vi gian dối. Việc chỉ cảnh báo hay cho bổ sung giấy tờ không đảm bảo tính ràng buộc pháp lý."
+        question: "Sau khi thực hiện xong thủ tục hải quan đối với lô hàng gỗ nhập khẩu, nếu chủ gỗ xuất trình hồ sơ bằng bản giấy cho cơ quan Hải quan nơi đăng ký tờ khai thì?", 
+        options: ["Cơ quan Hải quan trả lại hồ sơ gỗ nhập khẩu cho chủ gỗ để lưu giữ theo quy định", "Cơ quan Hải quan giữ lại toàn bộ hồ sơ gỗ nhập khẩu để lưu trữ vĩnh viễn", "Cơ quan Hải quan chuyển hồ sơ gỗ nhập khẩu sang cơ quan Kiểm lâm để quản lý", "Cơ quan Hải quan yêu cầu chủ gỗ nộp thêm bản điện tử dù đã nộp bản giấy"], 
+        correct: "Cơ quan Hải quan trả lại hồ sơ gỗ nhập khẩu cho chủ gỗ để lưu giữ theo quy định",
+        explanation: "quy định tại khoản 3 Điều 7 Nghị định số 102/2020/NĐ-CP về Hệ thống bảo đảm gỗ hợp pháp Việt Nam."
     },
     { 
-        question: "Trong trường hợp nào thủy sản khai thác bị tịch thu sẽ được xử lý như lâm sản tịch thu?", 
-        options: ["Khi là loài quý hiếm", "Khi thuộc đối tượng xác lập quyền sở hữu toàn dân", "Khi khối lượng lớn", "Khi vận chuyển không giấy tờ"], 
-        correct: "Khi thuộc đối tượng xác lập quyền sở hữu toàn dân",
-        explanation: "Điều 36 Thông tư 26/2025/TT-BNNMT quy định thủy sản bị tịch thu khi thuộc đối tượng xác lập quyền sở hữu toàn dân thì sẽ được xử lý như lâm sản tịch thu. Đây là sự thống nhất về cách quản lý tài nguyên bị tịch thu. Các trường hợp khác như khối lượng lớn hay không giấy tờ chỉ là dấu hiệu vi phạm chứ không phải tiêu chí xử lý."
+        question: "Trường hợp nào Lô hàng gỗ có nguồn gốc từ gỗ rừng trồng trong nước không phải Xác nhận nguồn gốc gỗ trước khi xuất khẩu?", 
+        options: ["Lô hàng của Doanh nghiệp nhóm I xuất khẩu sang thị trường ngoài EU", "Xuất khẩu sang thị trường EU nhưng chỉ với số lượng nhỏ", "Lô hàng gỗ xuất khẩu của chủ gỗ không phải là doanh nghiệp Nhóm I", "Xuất khẩu sang các nước có ký hiệp định thương mại song phương với Việt Nam"], 
+        correct: "Lô hàng của Doanh nghiệp nhóm I xuất khẩu sang thị trường ngoài EU",
+        explanation: "Điều 9 Nghị định số 102/2020/NĐ-CP quy định Đối tượng xác nhận: Lô hàng gỗ xuất khẩu của chủ gỗ không phải là doanh nghiệp Nhóm I. Lô hàng gỗ có nguồn gốc từ gỗ rừng trồng trong nước xuất khẩu sang thị trường ngoài EU thì không cần xác nhận"
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, ai chịu trách nhiệm lập và lưu giữ sổ theo dõi nhập xuất lâm sản?", 
-        options: ["UBND xã", "Doanh nghiệp, cơ sở chế biến", "Cơ quan Kiểm lâm", "Chi cục Thuế"], 
-        correct: "Doanh nghiệp, cơ sở chế biến",
-        explanation: "Điều 37 Thông tư 26/2025/TT-BNNMT quy định doanh nghiệp, cơ sở chế biến lâm sản có trách nhiệm lập và lưu giữ sổ theo dõi nhập xuất. Đây là nghĩa vụ để bảo đảm minh bạch và phục vụ công tác kiểm tra. UBND xã, Chi cục Thuế hay cơ quan Kiểm lâm chỉ có vai trò giám sát chứ không trực tiếp thực hiện."
+        options: ["Uỷ ban nhân dân cấp xã", "Doanh nghiệp, cơ sở chế biến lâm sản", "Cơ quan Kiểm lâm", "Chi cục Thuế"], 
+        correct: "Doanh nghiệp, cơ sở chế biến lâm sản",
+        explanation: "Điều 19 Thông tư 26/2025/TT-BNNMT quy định Hồ sơ lâm sản tại cơ sở chế biến, kinh doanh, cất giữ gỗ gồm Sổ theo dõi nhập, xuất lâm sản. Chủ lâm sản có trách nhiệm cập nhật đầy đủ, kịp thời các thông tin vào Sổ theo dõi nhập, xuất lâm sản khi nhập, xuất lâm sản"
     },
     { 
-        question: "Trong kiểm tra định kỳ doanh nghiệp chế biến gỗ, thời gian báo trước tối thiểu là bao lâu?", 
-        options: ["03 ngày", "05 ngày", "07 ngày", "10 ngày"], 
-        correct: "05 ngày",
-        explanation: "Điều 38 Thông tư 26/2025/TT-BNNMT nêu rõ việc kiểm tra định kỳ doanh nghiệp chế biến gỗ phải thông báo trước ít nhất 05 ngày. Điều này nhằm giúp doanh nghiệp chuẩn bị hồ sơ, sổ sách. Các mốc thời gian khác không đúng với quy định."
+        question: "Tổ chức, hộ kinh doanh phải báo cáo tình hình nhập, xuất lâm sản cho cơ quan Kiểm lâm sở tại định kỳ như thế nào?", 
+        options: ["Trước ngày 15 tháng 01 hằng năm", "Trước ngày 31 tháng 12 hằng năm", "Trước ngày 15 tháng 7 và 15 tháng 01 hằng năm", "Trước ngày 30 tháng 6 hằng năm"], 
+        correct: "Trước ngày 15 tháng 01 hằng năm",
+        explanation: "điểm c khoản 7 Điều 32 Thông tư 26/2025/TT-BNNMT quy định phải báo cáo tình hình nhập, xuất lâm sản theo định kỳ hằng năm trước ngày 15 tháng 01. Thời gian chốt số liệu báo cáo từ ngày 15 tháng 12 năm trước kỳ báo cáo đến ngày 14 tháng 12 của kỳ báo cáo. Trừ trường hợp cập nhật tình hình nhập, xuất lâm sản trên hệ thống quản lý, truy xuất nguồn gốc lâm sản"
     },
     { 
         question: "Nếu động vật rừng thuộc Phụ lục CITES được nuôi sinh sản hợp pháp, hồ sơ vận chuyển cần gì?", 
-        options: ["Chỉ bảng kê lâm sản", "Giấy phép CITES và chứng nhận cơ sở nuôi", "Giấy chứng nhận kiểm dịch thực vật", "Không cần giấy tờ"], 
-        correct: "Giấy phép CITES và chứng nhận cơ sở nuôi",
-        explanation: "Điều 39 Thông tư 26/2025/TT-BNNMT quy định động vật thuộc Phụ lục CITES nuôi sinh sản hợp pháp khi vận chuyển phải có Giấy phép CITES và chứng nhận cơ sở nuôi. Đây là bằng chứng hợp pháp để phân biệt với động vật khai thác trái phép. Các loại giấy tờ khác không đáp ứng yêu cầu."
+        options: ["Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại", "Hợp đồng mua bán động vật rừng giữa các hộ nuôi sinh sản", "Giấy chứng nhận kiểm dịch động vật thông thường do cơ quan thú y cấp", "Giấy cấp mã số cơ sở nuôi do cơ quan có thẩm quyền cấp"], 
+        correct: "Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại",
+        explanation: "Điều 11 Thông tư 26/2025/TT-BNNMT quy định Đối với lâm sản thuộc đối tượng phải xác nhận Bảng kê lâm sản khi vận chuyển phải có bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại"
     },
     { 
-        question: "Trong hồ sơ lâm sản tịch thu bán đấu giá, ngoài Quyết định phê duyệt xử lý còn cần gì?", 
-        options: ["Giấy phép xây dựng", "Hợp đồng mua bán hoặc hóa đơn bán hàng", "Phiếu chi", "Giấy khai sinh"], 
-        correct: "Hợp đồng mua bán hoặc hóa đơn bán hàng",
-        explanation: "Điều 40 Thông tư 26/2025/TT-BNNMT yêu cầu hồ sơ lâm sản tịch thu bán đấu giá phải kèm theo Hợp đồng mua bán hoặc hóa đơn bán hàng hợp pháp, ngoài Quyết định phê duyệt xử lý. Đây là chứng từ chứng minh việc chuyển nhượng tài sản tịch thu đúng quy định. Các loại giấy tờ khác không có giá trị pháp lý trong trường hợp này."
+        question: "Khi làm thủ tục hải quan đối với lô hàng gỗ xuất khẩu, ngoài bộ hồ sơ hải quan theo quy định của pháp luật về Hải quan, không phải là doanh nghiệp Nhóm I phải xuất trình cho cơ quan Hải quan nơi đăng ký tờ khai một trong các chứng từ gì sau đây?", 
+        options: ["Bảng kê gỗ xuất khẩu do chủ gỗ lập có xác nhận của cơ quan Kiểm lâm sở tại", "Giấy chứng nhận đăng ký kinh doanh có ngành nghề xuất khẩu gỗ", "Hợp đồng mua bán gỗ đã được công chứng tại phòng công chứng", "Giấy chứng nhận quyền sử dụng đất nơi trồng rừng cung cấp gỗ"], 
+        correct: "Bảng kê gỗ xuất khẩu do chủ gỗ lập có xác nhận của cơ quan Kiểm lâm sở tại",
+        explanation: "quy định tại Điều 10 Nghị định số 102/2020/NĐ-CP. Trường hợp gỗ thuộc Phụ lục CITES còn phải bổ sung Giấy phép CITES xuất khẩu do Cơ quan thẩm quyền quản lý CITES Việt Nam cấp."
     },
     { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, thời hạn xem xét, phân loại doanh nghiệp kể từ ngày nhận đủ hồ sơ là bao lâu?", 
-        options: ["15 ngày", "20 ngày", "25 ngày", "30 ngày"], 
-        correct: "30 ngày",
-        explanation: "Điều 41 Thông tư 26/2025/TT-BNNMT quy định thời hạn phân loại doanh nghiệp là 30 ngày kể từ ngày nhận đủ hồ sơ hợp lệ. Đây là thời gian để cơ quan quản lý xem xét, thẩm tra và đưa ra quyết định chính thức. Các mốc 15, 20 hoặc 25 ngày không đúng theo quy định."
+        question: "Theo trình tự phân loại doanh nghiệp, trường hợp có nghi ngờ những thông tin do doanh nghiệp tự kê khai hoặc nghi ngờ doanh nghiệp sử dụng tài liệu giả mạo cần xác minh làm rõ thì trong thời hạn bao lâu, cơ quan tiếp nhận tổ chức xác minh?", 
+        options: ["08 ngày làm việc", "10 ngày làm việc", "05 ngày làm việc", "03 ngày làm việc"], 
+        correct: "08 ngày làm việc",
+        explanation: "trong 03 ngày làm việc kể từ ngày Hệ thống thông tin phân loại doanh nghiệp tự động phân loại doanh nghiệp Nhóm I, cơ quan tiếp nhận thông báo cho doanh nghiệp đăng ký, trong đó nêu rõ thời gian, nội dung cần xác minh. Trong 05 ngày làm việc kể từ ngày thông báo, cơ quan tiếp nhận tổ chức làm rõ tính chính xác của thông tin tự kê khai của doanh nghiệp và thông báo kết quả xác minh cho doanh nghiệp biết"
     },
     { 
         question: "Khi doanh nghiệp được phân loại vào Nhóm II, điều này có ý nghĩa gì?", 
