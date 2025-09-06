@@ -25,6 +25,83 @@
             --font-size-lg: clamp(1.15rem, 2.25vw, 1.5rem);
             --font-size-xl: clamp(1rem, 3vw, 2rem);
         }
+/* --- Khai báo font chữ thứ nhất --- */
+@font-face {
+  font-family: 'End'; /* Đặt tên tùy ý cho font */
+  src: url('End.woff2') format('woff2'),
+       font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Giúp hiển thị nhanh hơn và tránh lỗi FOIT/FOUT */
+}
+/* --- Khai báo font chữ thứ hai --- */
+@font-face {
+  font-family: 'Result'; 
+  src: url('Result.woff2') format('woff2'),
+       font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+/* --- Khai báo font chữ thứ ba --- */
+@font-face {
+  font-family: 'Viettay'; 
+  src: url('Viettay.woff2') format('woff2'),
+       font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+/* --- Khai báo font chữ thứ tư --- */
+@font-face {
+  font-family: 'ViettayBold'; 
+  src: url('ViettayBold.woff2') format('woff2'),
+       font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+#evaluation-text {
+    font-family: 'End', sans-serif;
+    color: black; /* Ví dụ: màu xanh lá cây, phù hợp với màu chính của game */
+    
+    /* Chỉnh cỡ chữ */
+    font-size: clamp(1rem, 4vw, 2rem); /* Tùy chỉnh:
+                                           - 1.5rem: cỡ nhỏ nhất trên điện thoại
+                                           - 4vw: co giãn theo chiều rộng màn hình
+                                           - 2.5rem: cỡ lớn nhất trên máy tính */
+width: 100%; /* Chiếm toàn bộ chiều ngang của thẻ cha */
+    line-height: 1.2; /* Tùy chỉnh line-height để tránh tràn viền */
+    margin: 0; /* Xóa margin không mong muốn */
+    padding: 0; /* Xóa padding không mong muốn */
+}
+/* --- CSS cho khung nội dung About Me --- */
+#about-me-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Chiều rộng khung nội dung */
+    height: 60%; /* Chiều cao khung nội dung */
+    padding: 2% 5%; /* Khoảng cách lề bên trong khung */
+    text-align: center;
+    color: #433;
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     opacity: 0; /* Ẩn đi lúc đầu */
+    transition: opacity 0.5s ease; /* Hiệu ứng mờ ảo khi hiện ra */
+}
+
+.letter-title {
+font-family: 'ViettayBold', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.letter-body {
+font-family: 'Viettay', sans-serif;  
+ font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    line-height: 1.5;
+    white-space: pre-wrap; /* Giúp xuống dòng tự động và giữ khoảng cách */
+}
 
 /* --- Thiết lập lại CSS và Body --- */
 *, *::before, *::after {
@@ -389,7 +466,8 @@ body {
 }
         
 .result-text {
-    font-size: var(--font-size-lg);
+   font-family: 'Result', sans-serif; 
+font-size: var(--font-size-lg);
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
@@ -686,28 +764,221 @@ body {
 }
 .tray-btn:hover { transform: scale(1.1); }
 
-    #about-me-overlay {
-        position: absolute;
-        top: -100vh; /* Bắt đầu từ trên cùng */
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 40;
-        transition: top 0.5s ease-in-out;
-        width: 90%;
-        max-width: 600px;
-        display: none;
+   /* --- CSS CHO HIỆU ỨNG CUỘN GIẤY --- */
+@keyframes unroll {
+    from {
+        clip-path: inset(0 0 100% 0); /* Bắt đầu: bị che hoàn toàn từ dưới lên */
     }
+    to {
+        clip-path: inset(0 0 0% 0);   /* Kết thúc: hiện ra toàn bộ */
+    }
+}
 
-    #about-me-overlay.active {
-        top: 50%; /* Di chuyển vào giữa màn hình */
-        transform: translate(-50%, -50%);
-        display: block;
-    }
+#about-me-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 40;
+    
+    /* Trạng thái ẩn ban đầu */
+    opacity: 0;
+    pointer-events: none;
+    display: none; 
+}
+
+#about-me-overlay.active {
+    display: block; /* Hiển thị để animation chạy */
+    opacity: 1;
+    pointer-events: auto;
+    /* Áp dụng hiệu ứng cuộn giấy */
+    animation: unroll 0.8s ease-out forwards;
+}
 
     .about-me-img {
         width: 100%;
         height: auto;
     }
+    
+/* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
+#end-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#end-screen-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+#end-screen-container {
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    position: relative;
+    background-image: url('End.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    animation: fadeInScale 1s ease-in-out;
+}
+
+.result-frame {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: relative;
+    padding: 0 5%;
+}
+
+.result-box {
+   /* Đảm bảo flexbox hoạt động đúng để căn giữa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Giữ các thuộc tính hiện tại */
+    background-image: url('Sc.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 80px;
+    padding: 2% 10%;
+    margin-bottom: 1rem;
+}
+
+.result-text {
+   /* Đảm bảo text được căn giữa trong chính nó */
+    text-align: center;
+    /* Các thuộc tính khác giữ nguyên */
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    width: 100%;
+    width: 100%; /* Chiếm toàn bộ chiều ngang của thẻ cha */
+    line-height: 1.2; /* Tùy chỉnh line-height để tránh tràn viền */
+    margin: 0; /* Xóa margin không mong muốn */
+    padding: 0; /* Xóa padding không mong muốn */
+}
+.evaluation-box-top {
+   /* Đảm bảo nội dung được căn giữa hoàn hảo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Giữ các thuộc tính hiện tại */
+    width: clamp(250px, 80%, 400px);
+    height: auto;
+    background-image: url('Sc.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 80px;
+    padding: 2% 10%;
+    margin-bottom: 3rem;
+}
+
+#star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.star {
+    width: clamp(50px, 10vw, 70px); /* Đã Tăng Kích Thước */
+    height: auto;
+    margin: 0 5px;
+}
+
+#end-buttons-container {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#end-replay-btn, #end-exit-btn {
+    font-size: var(--font-size-md);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px #388e3c;
+    font-weight: 700;
+}
+
+#end-replay-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+#end-exit-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+#end-replay-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #388e3c;
+}
+
+#end-exit-btn:hover {
+    background-color: #e53935;
+    transform: translateY(-2px);
+    box-shadow: 0 6px #c62828;
+}
+
+#end-replay-btn:active, #end-exit-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #388e3c;
+}
+
+/* Tùy chỉnh hiển thị trên màn hình lớn */
+@media (min-width: 768px) {
+    .result-frame {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}   
+ /* THÊM CSS TẠM THỜI ĐỂ TEST */
+        #test-end-screen-btn {
+            position: fixed;
+            top: 2vh;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            display: none; /* Ban đầu ẩn nút này */
+        }
     </style>
   <script src="questions.js"></script> 
 </head>
@@ -739,12 +1010,26 @@ body {
         <p class="author-info"><b>Game Design & Development by Phạm Tường Văn</b></p>
         
      
-
-        <div id="about-me-overlay">
-            <img src="aboutme.webp" alt="About Me" class="about-me-img">
-        </div>
+      <div id="about-me-overlay">
+    <img src="aboutme.webp" alt="About Me" class="about-me-img">
+    <div id="about-me-content">
+        <h2 class="letter-title">Thông điệp từ người phát triển</h2>
+        <p class="letter-body">
+            Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!
+            <br><br>
+            Trò chơi này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.
+            <br><br>
+            Qua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.
+            <br><br>
+            Chúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.
+            <br><br>
+            Trân trọng,
+            <br>
+            Phạm Tường Văn
+        </p>
     </div>
-
+ </div>
+ </div>
     <div class="container" style="display: none;">
         <div class="logo-container">
             <img src="LogoKiemlam.png" alt="Logo Kiem Lam">
@@ -771,8 +1056,8 @@ body {
         <div id="score-board">
             <img src="Count.png" alt="Score Board" class="score-board-frame">
             <div class="score-text-container">
-                <p id="correct-count">Đ 0/20</p>
-                <p id="incorrect-count">S 0/20</p>
+                <p id="correct-count">Đ 0/25</p>
+                <p id="incorrect-count">S 0/25</p>
             </div>
         </div>
 
@@ -781,7 +1066,7 @@ body {
                 <div id="question-card-container"></div>
             </div>
             <div id="answers-container"></div>
-        </div>
+            </div>
 
         <div id="chibi-assistant" class="chibi-assistant">
             <video id="chibi-video" muted playsinline></video>
@@ -804,9 +1089,25 @@ body {
         </button>
     </div>
 
+    <div id="end-screen-overlay">
+    <div id="end-screen-container">
+    <div class="evaluation-box-top">
+        <span id="evaluation-text" class="result-text"></span>
+    </div>
+    <div id="star-rating"></div>
+    <div class="result-box">
+        <span id="final-stats-text" class="result-text"></span>
+    </div>
+    <div class="result-box">
+        <span id="avg-time-text" class="result-text"></span>
+    </div>
+    <button id="end-replay-btn" class="restart-btn">Chơi Lại</button>
+    <button id="end-exit-btn" class="restart-btn">Thoát</button>
+</div>
+</div>
+
     <script>
       
-
         // --- DOM Elements ---
         const startScreen = document.getElementById('start-screen');
         const startButton = document.getElementById('start-button');
@@ -828,7 +1129,7 @@ body {
         // --- DOM Elements for Quiz Content ---
         const questionCardContainer = document.getElementById('question-card-container');
         const answersContainer = document.getElementById('answers-container');
-
+        
         // --- DOM Elements for Score Board ---
         const scoreBoard = document.getElementById('score-board');
         const correctCountElement = document.getElementById('correct-count');
@@ -841,7 +1142,17 @@ body {
         const muteIcon = document.getElementById('mute-icon');
         const infoButton = document.getElementById('info-button');
         const aboutMeOverlay = document.getElementById('about-me-overlay');
-
+        
+        // --- Thêm các biến DOM mới cho màn hình kết quả ---
+        const endScreenOverlay = document.getElementById('end-screen-overlay');
+        const evaluationText = document.getElementById('evaluation-text');
+        const starRating = document.getElementById('star-rating');
+        const finalStatsText = document.getElementById('final-stats-text');
+        const avgTimeText = document.getElementById('avg-time-text');
+        const endReplayBtn = document.getElementById('end-replay-btn');
+        const endExitBtn = document.getElementById('end-exit-btn');
+        
+        
         // --- Sounds ---
         const themeMusic = new Audio('Theme.mp3');
         const clickSound = new Audio('click.mp3');
@@ -859,7 +1170,7 @@ body {
         clickSound.volume = 0.3
         
         // --- Game State ---
-        const totalQuestions = 20;
+        const totalQuestions = 25;
         let score = 0;
         let currentQuestionIndex = 0;
         let timerInterval;
@@ -892,7 +1203,7 @@ body {
             overlayExplanation.style.opacity = 0;
             scoreBoard.classList.add('active');
             updateScoreBoard(); // Cập nhật bảng điểm ban đầu
-
+            
             shuffledQuestions = shuffle([...questions]).slice(0, totalQuestions);
             
             showNextQuestion();
@@ -1092,19 +1403,42 @@ body {
             }, { once: true }); // Chỉ chạy event listener này một lần
         }
 
-        function showResults() {
-            questionCardContainer.innerHTML = '';
-            answersContainer.innerHTML = '';
-            resultsContainer.style.display = 'block';
-            timerContainer.style.display = 'none';
-            exitButton.style.display = 'none';
-            replayButton.style.display = 'none'; // Ẩn nút Replay khi xem kết quả
-            chibiAssistant.style.display = 'none';
-            overlayAnswer.style.display = 'none';
-            nextBtn.style.display = 'none';
-            scoreBoard.classList.remove('active');
-            resultText.textContent = `Bạn đã trả lời đúng ${correctAnswers} / ${totalQuestions} câu.`;
-        }
+        // --- Hàm showResults() đã được cập nhật ---
+function showResults() {
+    questionCardContainer.innerHTML = '';
+    answersContainer.innerHTML = '';
+    resultsContainer.style.display = 'none'; // Ẩn màn hình kết quả cũ
+    timerContainer.style.display = 'none';
+    exitButton.style.display = 'none';
+    replayButton.style.display = 'none';
+    chibiAssistant.style.display = 'none';
+    overlayAnswer.style.display = 'none';
+    nextBtn.style.display = 'none';
+    scoreBoard.classList.remove('active');
+   
+    // Hiển thị màn hình tổng kết mới
+    endScreenOverlay.style.display = 'flex';
+    setTimeout(() => endScreenOverlay.classList.add('active'), 50);
+
+    // Hiển thị nội dung tổng kết
+    displayEvaluation();
+    displayStars();
+    displayFinalStats();
+    displayAvgTime();
+
+    // Gắn sự kiện cho các nút mới
+    endReplayBtn.addEventListener('click', () => {
+        clickSound.play();
+        endScreenOverlay.classList.remove('active');
+        startQuiz();
+    });
+    endExitBtn.addEventListener('click', () => {
+        clickSound.play();
+        resetGame();
+        endScreenOverlay.classList.remove('active');
+        endScreenOverlay.style.display = 'none';
+    });
+}
         
         function resetGame() {
             clearInterval(timerInterval);
@@ -1239,22 +1573,112 @@ muteButton.addEventListener('click', () => {
     }
 });
 
-// Nút Giới thiệu
+// Nút Giới thiệu (ĐÃ NÂNG CẤP)
 infoButton.addEventListener('click', () => {
     clickSound.play();
-    if (aboutMeOverlay.classList.contains('active')) {
+    const isAlreadyActive = aboutMeOverlay.classList.contains('active');
+
+    if (isAlreadyActive) {
+        // --- Logic để đóng ---
         aboutMeOverlay.classList.remove('active');
-        // Sau khi cuộn lên, ẩn đi để không ảnh hưởng đến tương tác
+        // Cho một khoảng trễ nhỏ để kịp ẩn đi trước khi set display: none
         setTimeout(() => {
             aboutMeOverlay.style.display = 'none';
-        }, 500); // Tương ứng với thời gian transition
+        }, 500); 
+
     } else {
+        // --- Logic để MỞ với hiệu ứng mới ---
+        
+        // 1. Phát âm thanh cuộn giấy
+        latGiaySound.play();
+
+        // 2. Reset lại nội dung chữ để hiệu ứng typing chạy lại
+        const titleElement = aboutMeOverlay.querySelector('.letter-title');
+        const bodyElement = aboutMeOverlay.querySelector('.letter-body');
+        const originalTitle = "Thông điệp từ người phát triển";
+        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nTrò chơi này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
+        
+        titleElement.textContent = '';
+        bodyElement.textContent = '';
+        aboutMeOverlay.querySelector('#about-me-content').style.opacity = '0';
+
+
+        // 3. Bắt đầu animation cuộn giấy
         aboutMeOverlay.style.display = 'block';
-        setTimeout(() => {
-            aboutMeOverlay.classList.add('active');
-        }, 10); // Thêm một chút delay để kích hoạt animation
+        aboutMeOverlay.classList.add('active');
+
+        // 4. Lắng nghe sự kiện animation kết thúc để bắt đầu typing
+        function startTypingAnimation() {
+            const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
+            contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra mượt mà
+
+            typeWriterEffect(titleElement, originalTitle, () => {
+                // Sau khi viết xong tiêu đề, bắt đầu viết nội dung
+                typeWriterEffect(bodyElement, originalBody, null, 20);
+            }, 50);
+            
+            // Xóa event listener sau khi chạy xong để tránh lỗi
+            aboutMeOverlay.removeEventListener('animationend', startTypingAnimation);
+        }
+        
+        aboutMeOverlay.addEventListener('animationend', startTypingAnimation);
     }
-});
-    </script>
+});        
+    // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
+    // Hàm hiển thị đánh giá
+    function displayEvaluation() {
+        let evaluation = '';
+        if (correctAnswers <= 5) {
+            evaluation = 'HỌC LẠI NGAY';
+        } else if (correctAnswers >= 6 && correctAnswers <= 10) {
+            evaluation = 'PHẢI HỌC THÊM';
+        } else if (correctAnswers >= 11 && correctAnswers <= 15) {
+            evaluation = 'TẠM ỔN ĐẤY';
+        } else if (correctAnswers >= 16 && correctAnswers <= 20) {
+            evaluation = 'RẤT TỐT';
+        } else if (correctAnswers >= 21 && correctAnswers <= 24) {
+            evaluation = 'TUYỆT VỜI';
+        } else if (correctAnswers === 25) {
+            evaluation = 'XUẤT SẮC';
+        }
+        evaluationText.textContent = evaluation;
+    }
+
+    // Hàm hiển thị điểm sao
+    function displayStars() {
+        let starCount = 0;
+        if (correctAnswers >= 5) starCount = 1;
+        if (correctAnswers >= 10) starCount = 2;
+        if (correctAnswers >= 15) starCount = 3;
+        if (correctAnswers >= 20) starCount = 4;
+        if (correctAnswers >= 25) starCount = 5;
+
+        starRating.innerHTML = ''; // Xóa sao cũ
+        for (let i = 0; i < 5; i++) {
+            const starImg = document.createElement('img');
+            starImg.classList.add('star');
+            if (i < starCount) {
+                starImg.src = '1.webp'; // Sao vàng
+                starImg.alt = 'Filled Star';
+            } else {
+                starImg.src = '0.webp'; // Sao xám
+                starImg.alt = 'Empty Star';
+            }
+            starRating.appendChild(starImg);
+        }
+    }
+
+    // Hàm hiển thị tổng kết đúng/sai
+    function displayFinalStats() {
+        finalStatsText.textContent = `Đúng: ${correctAnswers}/${totalQuestions}\nSai: ${incorrectAnswers}/${totalQuestions}`;
+    }
+
+    // Hàm hiển thị thời gian trung bình (cần thêm logic tính toán)
+    function displayAvgTime() {
+        // Tạm thời hiển thị một giá trị giả lập, bạn có thể thay thế bằng logic tính toán thực tế
+        avgTimeText.textContent = `Thời gian trung bình:\n...s/câu`;
+    }
+        
+        </script>
 </body>
 </html>
