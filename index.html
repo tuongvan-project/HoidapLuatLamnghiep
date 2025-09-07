@@ -775,7 +775,7 @@ font-size: var(--font-size-lg);
 }
 
 #about-me-overlay {
-    position: absolute;
+    position: fixed; /* Sửa từ absolute sang fixed để bao phủ toàn bộ màn hình */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -804,8 +804,21 @@ font-size: var(--font-size-lg);
     animation: unroll 0.8s ease-out forwards;
 }
 
-    .about-me-img {
-     
+/* --- Thêm CSS cho phần nội dung bên trong --- */
+#about-me-content {
+    position: absolute; /* Đảm bảo nội dung được đặt trong khung overlay */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Giảm chiều rộng để vừa vặn trong khung giấy */
+    height: auto; /* Chiều cao tự động */
+    padding: 2% 5%;
+    text-align: center;
+    color: #433;
+    overflow-y: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
     
 /* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
