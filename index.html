@@ -775,7 +775,7 @@ font-size: var(--font-size-lg);
 }
 
 #about-me-overlay {
-    position: fixed; /* Sửa từ absolute sang fixed để bao phủ toàn bộ màn hình */
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -783,44 +783,39 @@ font-size: var(--font-size-lg);
     max-width: 600px;
     z-index: 40;
     
-    /* Trạng thái ẩn ban đầu */
-    opacity: 0;
-    pointer-events: none;
-    display: none; 
-
-    /* --- THÊM CÁC DÒNG DƯỚI ĐÂY --- */
-    background-image: url('aboutme.webp');
-    background-size: 100% 100%; /* Giúp ảnh vừa khít với khung */
+    /* Vô hiệu hóa hiệu ứng cuộn giấy, chỉ hiển thị ảnh nền */
+    background-image: url('Aboutme.webp'); 
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    aspect-ratio: 3 / 4; /* Giữ tỷ lệ khung hình (quan trọng!) */
+    aspect-ratio: 3 / 4;
+    
+    /* Hiệu ứng mờ dần */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 }
 
 #about-me-overlay.active {
-    display: block; /* Hiển thị để animation chạy */
     opacity: 1;
     pointer-events: auto;
-    /* Áp dụng hiệu ứng cuộn giấy */
-    animation: unroll 0.8s ease-out forwards;
 }
 
-/* --- Thêm CSS cho phần nội dung bên trong --- */
 #about-me-content {
-    position: absolute; /* Đảm bảo nội dung được đặt trong khung overlay */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; /* Giảm chiều rộng để vừa vặn trong khung giấy */
-    height: auto; /* Chiều cao tự động */
+    width: 80%;
+    height: auto;
     padding: 2% 5%;
     text-align: center;
     color: #433;
     overflow-y: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease 0.5s; /* Độ trễ để khớp với hiệu ứng hiện chữ */
 }
-    
 /* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
 #end-screen-overlay {
     position: fixed;
@@ -1599,41 +1594,14 @@ infoButton.addEventListener('click', () => {
     if (isAlreadyActive) {
         // --- Logic để đóng ---
         aboutMeOverlay.classList.remove('active');
-        // Cho một khoảng trễ nhỏ để kịp ẩn đi trước khi set display: none
-        setTimeout(() => {
-            aboutMeOverlay.style.display = 'none';
-        }, 500); 
-
+        const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
+        contentContainer.style.opacity = '0'; // Ẩn chữ đi
     } else {
-        // --- Logic để MỞ với giải pháp mới và ổn định ---
+        // --- Logic để MỞ ---
+        aboutMeOverlay.classList.add('active'); // Hiển thị ảnh
+        latGiaySound.play(); // Phát âm thanh
         
-        // 1. Phát âm thanh cuộn giấy
-        latGiaySound.play();
-
-        // 2. Tạo một đối tượng ảnh và đặt nguồn
-        const aboutMeImage = new Image();
-        aboutMeImage.src = 'Aboutme.webp'; // Tên file đã được sửa
-
-        // 3. Định nghĩa hàm sẽ chạy khi ảnh đã sẵn sàng
-        const handleImageLoad = () => {
-            // Hiển thị overlay trước
-            aboutMeOverlay.style.display = 'block';
-            
-            // Dùng setTimeout với độ trễ nhỏ để kích hoạt animation sau khi phần tử đã được render
-            setTimeout(() => {
-                aboutMeOverlay.classList.add('active');
-            }, 10);
-        };
-        
-        // 4. Kiểm tra xem ảnh đã tải xong chưa (để xử lý ảnh trong cache)
-        if (aboutMeImage.complete) {
-            handleImageLoad();
-        } else {
-            // Nếu chưa, lắng nghe sự kiện 'load'
-            aboutMeImage.onload = handleImageLoad;
-        }
-
-        // 5. Đặt lại nội dung chữ để hiệu ứng typing chạy lại
+        // Đặt lại nội dung chữ
         const titleElement = aboutMeOverlay.querySelector('.letter-title');
         const bodyElement = aboutMeOverlay.querySelector('.letter-body');
         const originalTitle = "Thông điệp từ người phát triển";
@@ -1641,23 +1609,15 @@ infoButton.addEventListener('click', () => {
         
         titleElement.textContent = '';
         bodyElement.textContent = '';
-        aboutMeOverlay.querySelector('#about-me-content').style.opacity = '0';
-
-        // Lắng nghe sự kiện animation kết thúc để bắt đầu typing
-        function startTypingAnimation() {
+        
+        // Bắt đầu hiệu ứng chữ sau một khoảng trễ
+        setTimeout(() => {
             const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
-            contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra mượt mà
-
+            contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra
             typeWriterEffect(titleElement, originalTitle, () => {
-                // Sau khi viết xong tiêu đề, bắt đầu viết nội dung
                 typeWriterEffect(bodyElement, originalBody, null, 20);
             }, 50);
-            
-            // Xóa event listener sau khi chạy xong để tránh lỗi
-            aboutMeOverlay.removeEventListener('animationend', startTypingAnimation);
-        }
-        
-        aboutMeOverlay.addEventListener('animationend', startTypingAnimation);
+        }, 500); // 500ms để khớp với hiệu ứng mờ dần của ảnh
     }
 });
  // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
