@@ -1591,7 +1591,7 @@ muteButton.addEventListener('click', () => {
     }
 });
 
-// Nút Giới thiệu (ĐÃ NÂNG CẤP VÀ SỬA LỖI)
+// Nút Giới thiệu (ĐÃ SỬA LỖI HOÀN TOÀN)
 infoButton.addEventListener('click', () => {
     clickSound.play();
     const isAlreadyActive = aboutMeOverlay.classList.contains('active');
@@ -1605,32 +1605,37 @@ infoButton.addEventListener('click', () => {
         }, 500); 
 
     } else {
-        // --- Logic để MỞ với hiệu ứng mới đã sửa lỗi ---
+        // --- Logic để MỞ với giải pháp mới ---
         
         // 1. Phát âm thanh cuộn giấy
         latGiaySound.play();
 
-        // 2. Hiển thị overlay trước
-        aboutMeOverlay.style.display = 'block';
-        
-        // 3. Sử dụng setTimeout với độ trễ 10ms để đảm bảo animation chạy
-        //    (Điều này tách biệt lệnh hiển thị và lệnh kích hoạt animation)
-        setTimeout(() => {
-            aboutMeOverlay.classList.add('active');
-        }, 10); // Độ trễ nhỏ, đủ để trình duyệt "nhận" sự thay đổi
+        // 2. Tạo một đối tượng ảnh trong JavaScript để tải ảnh nền
+        const aboutMeImage = new Image();
+        aboutMeImage.src = 'Aboutme.webp'; // Chắc chắn rằng tên file là đúng
 
-        // 4. Reset lại nội dung chữ để hiệu ứng typing chạy lại
+        // 3. Đợi cho ảnh tải xong
+        aboutMeImage.onload = () => {
+            // Khi ảnh đã tải xong, mới hiển thị và kích hoạt animation
+            aboutMeOverlay.style.display = 'block';
+            
+            // Sử dụng requestAnimationFrame để đảm bảo trình duyệt đã repaint
+            requestAnimationFrame(() => {
+                aboutMeOverlay.classList.add('active');
+            });
+        };
+        
+        // Đặt lại nội dung chữ để hiệu ứng typing chạy lại
         const titleElement = aboutMeOverlay.querySelector('.letter-title');
         const bodyElement = aboutMeOverlay.querySelector('.letter-body');
         const originalTitle = "Thông điệp từ người phát triển";
-        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
+        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người Kiểm lâm vi, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
         
         titleElement.textContent = '';
         bodyElement.textContent = '';
         aboutMeOverlay.querySelector('#about-me-content').style.opacity = '0';
 
-
-        // 5. Lắng nghe sự kiện animation kết thúc để bắt đầu typing
+        // Lắng nghe sự kiện animation kết thúc để bắt đầu typing
         function startTypingAnimation() {
             const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
             contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra mượt mà
@@ -1646,7 +1651,8 @@ infoButton.addEventListener('click', () => {
         
         aboutMeOverlay.addEventListener('animationend', startTypingAnimation);
     }
-});    // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
+});
+ // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
     // Hàm hiển thị đánh giá
     function displayEvaluation() {
         let evaluation = '';
