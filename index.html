@@ -1591,7 +1591,7 @@ muteButton.addEventListener('click', () => {
     }
 });
 
-// Nút Giới thiệu (ĐÃ NÂNG CẤP)
+// Nút Giới thiệu (ĐÃ NÂNG CẤP VÀ SỬA LỖI)
 infoButton.addEventListener('click', () => {
     clickSound.play();
     const isAlreadyActive = aboutMeOverlay.classList.contains('active');
@@ -1605,12 +1605,21 @@ infoButton.addEventListener('click', () => {
         }, 500); 
 
     } else {
-        // --- Logic để MỞ với hiệu ứng mới ---
+        // --- Logic để MỞ với hiệu ứng mới đã sửa lỗi ---
         
         // 1. Phát âm thanh cuộn giấy
         latGiaySound.play();
 
-        // 2. Reset lại nội dung chữ để hiệu ứng typing chạy lại
+        // 2. Hiển thị overlay trước
+        aboutMeOverlay.style.display = 'block';
+        
+        // 3. Sử dụng setTimeout với độ trễ 10ms để đảm bảo animation chạy
+        //    (Điều này tách biệt lệnh hiển thị và lệnh kích hoạt animation)
+        setTimeout(() => {
+            aboutMeOverlay.classList.add('active');
+        }, 10); // Độ trễ nhỏ, đủ để trình duyệt "nhận" sự thay đổi
+
+        // 4. Reset lại nội dung chữ để hiệu ứng typing chạy lại
         const titleElement = aboutMeOverlay.querySelector('.letter-title');
         const bodyElement = aboutMeOverlay.querySelector('.letter-body');
         const originalTitle = "Thông điệp từ người phát triển";
@@ -1620,13 +1629,6 @@ infoButton.addEventListener('click', () => {
         bodyElement.textContent = '';
         aboutMeOverlay.querySelector('#about-me-content').style.opacity = '0';
 
-        // 3. Hiển thị overlay trước
-        aboutMeOverlay.style.display = 'block';
-        
-        // 4. Sử dụng setTimeout với độ trễ 0 để đảm bảo animation chạy
-        setTimeout(() => {
-            aboutMeOverlay.classList.add('active');
-        }, 0);
 
         // 5. Lắng nghe sự kiện animation kết thúc để bắt đầu typing
         function startTypingAnimation() {
@@ -1644,8 +1646,7 @@ infoButton.addEventListener('click', () => {
         
         aboutMeOverlay.addEventListener('animationend', startTypingAnimation);
     }
-}); 
-    // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
+});    // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
     // Hàm hiển thị đánh giá
     function displayEvaluation() {
         let evaluation = '';
