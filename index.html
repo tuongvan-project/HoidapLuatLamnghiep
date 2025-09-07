@@ -782,23 +782,23 @@ font-size: var(--font-size-lg);
     width: 90%;
     max-width: 600px;
     z-index: 40;
-    
-    /* Vô hiệu hóa hiệu ứng cuộn giấy, chỉ hiển thị ảnh nền */
-    background-image: url('Aboutme.webp'); 
+    background-image: url('Aboutme.webp');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     aspect-ratio: 3 / 4;
-    
-    /* Hiệu ứng mờ dần */
+
+    /* Thay đổi: Ẩn đi để chuẩn bị cho animation */
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; /* Giữ lại transition này để xử lý việc đóng overlay */
 }
 
 #about-me-overlay.active {
     opacity: 1;
     pointer-events: auto;
+    /* Áp dụng animation unroll đã có sẵn */
+    animation: unroll 0.8s ease-out forwards;
 }
 
 #about-me-content {
@@ -814,7 +814,8 @@ font-size: var(--font-size-lg);
     overflow-y: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     opacity: 0;
-    transition: opacity 0.5s ease 0.5s; /* Độ trễ để khớp với hiệu ứng hiện chữ */
+    /* Xóa độ trễ, JavaScript sẽ kiểm soát thời điểm hiện ra */
+    transition: opacity 0.5s ease; 
 }
 /* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
 #end-screen-overlay {
@@ -1586,38 +1587,44 @@ muteButton.addEventListener('click', () => {
     }
 });
 
-// Nút Giới thiệu (ĐÃ SỬA LỖI HOÀN TOÀN TRÊN CẢ DESKTOP & MOBILE)
+// Nút Giới thiệu (ĐÃ CẬP NHẬT HIỆU ỨNG)
 infoButton.addEventListener('click', () => {
     clickSound.play();
     const isAlreadyActive = aboutMeOverlay.classList.contains('active');
+    const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
+    const titleElement = aboutMeOverlay.querySelector('.letter-title');
+    const bodyElement = aboutMeOverlay.querySelector('.letter-body');
 
     if (isAlreadyActive) {
         // --- Logic để đóng ---
+        // Thêm class để chạy animation ngược hoặc đơn giản là ẩn đi
         aboutMeOverlay.classList.remove('active');
-        const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
-        contentContainer.style.opacity = '0'; // Ẩn chữ đi
+        // Reset animation để lần sau có thể chạy lại
+        aboutMeOverlay.style.animation = 'none';
+        contentContainer.style.opacity = '0'; // Ẩn chữ đi ngay lập tức
     } else {
         // --- Logic để MỞ ---
-        aboutMeOverlay.classList.add('active'); // Hiển thị ảnh
-        latGiaySound.play(); // Phát âm thanh
-        
-        // Đặt lại nội dung chữ
-        const titleElement = aboutMeOverlay.querySelector('.letter-title');
-        const bodyElement = aboutMeOverlay.querySelector('.letter-body');
-        const originalTitle = "Thông điệp từ người phát triển";
-        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
-        
+        // Reset nội dung chữ
         titleElement.textContent = '';
         bodyElement.textContent = '';
+        const originalTitle = "Thông điệp từ người phát triển";
+        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
+
+        // Đảm bảo animation sẽ chạy lại
+        aboutMeOverlay.style.animation = '';
         
-        // Bắt đầu hiệu ứng chữ sau một khoảng trễ
-        setTimeout(() => {
-            const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
-            contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra
+        // Bắt đầu hiệu ứng
+        aboutMeOverlay.classList.add('active');
+        latGiaySound.play();
+
+        // Lắng nghe sự kiện khi animation cuộn giấy kết thúc
+        aboutMeOverlay.addEventListener('animationend', () => {
+            // Khi cuộn giấy xong, mới cho nội dung chữ hiện ra
+            contentContainer.style.opacity = '1'; 
             typeWriterEffect(titleElement, originalTitle, () => {
                 typeWriterEffect(bodyElement, originalBody, null, 20);
             }, 50);
-        }, 500); // 500ms để khớp với hiệu ứng mờ dần của ảnh
+        }, { once: true }); // { once: true } đảm bảo event này chỉ chạy 1 lần
     }
 });
  // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
