@@ -88,8 +88,7 @@ width: 100%; /* Chiếm toàn bộ chiều ngang của thẻ cha */
     opacity: 0; /* Ẩn đi lúc đầu */
     transition: opacity 0.5s ease; /* Hiệu ứng mờ ảo khi hiện ra */
     /* --- Thêm dòng dưới đây --- */
-    z-index: 2;
-}
+    }
 .letter-title {
 font-family: 'ViettayBold', sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
@@ -788,6 +787,13 @@ font-size: var(--font-size-lg);
     opacity: 0;
     pointer-events: none;
     display: none; 
+
+    /* --- THÊM CÁC DÒNG DƯỚI ĐÂY --- */
+    background-image: url('aboutme.webp');
+    background-size: 100% 100%; /* Giúp ảnh vừa khít với khung */
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 3 / 4; /* Giữ tỷ lệ khung hình (quan trọng!) */
 }
 
 #about-me-overlay.active {
@@ -799,11 +805,7 @@ font-size: var(--font-size-lg);
 }
 
     .about-me-img {
-       width: 100%;
-    height: auto;
-    /* --- Thêm 2 dòng dưới đây --- */
-    position: relative;
-    z-index: 1;
+     
 }
     
 /* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
@@ -1015,7 +1017,6 @@ font-size: var(--font-size-lg);
         
      
       <div id="about-me-overlay">
-    <img src="aboutme.webp" alt="About Me" class="about-me-img">
     <div id="about-me-content">
         <h2 class="letter-title">Thông điệp từ người phát triển</h2>
         <p class="letter-body">
