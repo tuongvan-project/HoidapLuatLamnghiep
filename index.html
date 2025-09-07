@@ -85,10 +85,11 @@ width: 100%; /* Chiếm toàn bộ chiều ngang của thẻ cha */
     color: #433;
     overflow-y: auto; /* Cho phép cuộn nếu nội dung dài */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     opacity: 0; /* Ẩn đi lúc đầu */
+    opacity: 0; /* Ẩn đi lúc đầu */
     transition: opacity 0.5s ease; /* Hiệu ứng mờ ảo khi hiện ra */
+    /* --- Thêm dòng dưới đây --- */
+    z-index: 2;
 }
-
 .letter-title {
 font-family: 'ViettayBold', sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
@@ -798,9 +799,12 @@ font-size: var(--font-size-lg);
 }
 
     .about-me-img {
-        width: 100%;
-        height: auto;
-    }
+       width: 100%;
+    height: auto;
+    /* --- Thêm 2 dòng dưới đây --- */
+    position: relative;
+    z-index: 1;
+}
     
 /* --- CSS mới cho màn hình kết quả và các phần tử liên quan --- */
 #end-screen-overlay {
