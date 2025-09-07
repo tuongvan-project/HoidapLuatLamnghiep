@@ -91,16 +91,25 @@ width: 100%; /* Chiếm toàn bộ chiều ngang của thẻ cha */
     }
 .letter-title {
 font-family: 'ViettayBold', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .letter-body {
 font-family: 'Viettay', sans-serif;  
- font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-    line-height: 1.5;
+ font-size: clamp(1.2rem, 3.2vw, 1.8rem);
+    line-height: 1.2;
     white-space: pre-wrap; /* Giúp xuống dòng tự động và giữ khoảng cách */
+}
+.letter-body p {
+    margin-top: 0.2rem;
+    margin: 0; 
+    /* Đặt margin-bottom để tạo khoảng cách giữa các khổ chữ */
+    margin-bottom: 0.1rem; 
+}
+.letter-body p:first-child {
+    margin-top: 0;
 }
 
 /* --- Thiết lập lại CSS và Body --- */
@@ -798,7 +807,7 @@ font-size: var(--font-size-lg);
     opacity: 1;
     pointer-events: auto;
     /* Áp dụng animation unroll đã có sẵn */
-    animation: unroll 0.8s ease-out forwards;
+    animation: unroll 1.5s ease-out forwards;
 }
 
 #about-me-content {
@@ -1026,23 +1035,17 @@ font-size: var(--font-size-lg);
         
      
       <div id="about-me-overlay">
-    <div id="about-me-content">
-        <h2 class="letter-title">Thông điệp từ người phát triển</h2>
-        <p class="letter-body">
-            Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!
-            <br><br>
-            Trò chơi này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.
-            <br><br>
-            Qua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.
-            <br><br>
-            Chúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.
-            <br><br>
-            Trân trọng,
-            <br>
-            Phạm Tường Văn
-        </p>
-    </div>
- </div>
+   <div id="about-me-content">
+    <h2 class="letter-title">Thông điệp từ người phát triển</h2>
+    <div class="letter-body">
+    <p>
+    <p>
+    <p>
+    <p>
+    <p>
+</div>
+</div>
+</div>
  </div>
     <div class="container" style="display: none;">
         <div class="logo-container">
@@ -1593,38 +1596,42 @@ infoButton.addEventListener('click', () => {
     const isAlreadyActive = aboutMeOverlay.classList.contains('active');
     const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
     const titleElement = aboutMeOverlay.querySelector('.letter-title');
-    const bodyElement = aboutMeOverlay.querySelector('.letter-body');
 
     if (isAlreadyActive) {
-        // --- Logic để đóng ---
-        // Thêm class để chạy animation ngược hoặc đơn giản là ẩn đi
         aboutMeOverlay.classList.remove('active');
-        // Reset animation để lần sau có thể chạy lại
         aboutMeOverlay.style.animation = 'none';
-        contentContainer.style.opacity = '0'; // Ẩn chữ đi ngay lập tức
+        contentContainer.style.opacity = '0';
     } else {
-        // --- Logic để MỞ ---
-        // Reset nội dung chữ
-        titleElement.textContent = '';
-        bodyElement.textContent = '';
-        const originalTitle = "Thông điệp từ người phát triển";
-        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
-
-        // Đảm bảo animation sẽ chạy lại
-        aboutMeOverlay.style.animation = '';
+        titleElement.textContent = ''; // Xóa nội dung cũ
         
-        // Bắt đầu hiệu ứng
+        const originalTitle = "Thông điệp từ người phát triển";
+        const originalBodies = [
+            "Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!",
+            "Dự án này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một Kiểm lâm viên, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.",
+            "Qua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật về Lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.",
+            "Chúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả./.",
+            "Trân trọng,\nPhạm Tường Văn"
+        ];
+
+        aboutMeOverlay.style.animation = '';
         aboutMeOverlay.classList.add('active');
         latGiaySound.play();
 
-        // Lắng nghe sự kiện khi animation cuộn giấy kết thúc
         aboutMeOverlay.addEventListener('animationend', () => {
-            // Khi cuộn giấy xong, mới cho nội dung chữ hiện ra
-            contentContainer.style.opacity = '1'; 
-            typeWriterEffect(titleElement, originalTitle, () => {
-                typeWriterEffect(bodyElement, originalBody, null, 20);
-            }, 50);
-        }, { once: true }); // { once: true } đảm bảo event này chỉ chạy 1 lần
+            contentContainer.style.opacity = '1';
+            const bodyParagraphs = contentContainer.querySelectorAll('.letter-body p');
+            
+            let pIndex = 0;
+            const typeNextParagraph = () => {
+                if (pIndex < originalBodies.length) {
+                    typeWriterEffect(bodyParagraphs[pIndex], originalBodies[pIndex], typeNextParagraph, 20);
+                    pIndex++;
+                }
+            };
+            
+            typeWriterEffect(titleElement, originalTitle, typeNextParagraph, 50);
+            
+        }, { once: true });
     }
 });
  // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
