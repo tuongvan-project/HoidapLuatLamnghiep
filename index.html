@@ -1591,7 +1591,7 @@ muteButton.addEventListener('click', () => {
     }
 });
 
-// Nút Giới thiệu (ĐÃ SỬA LỖI HOÀN TOÀN)
+// Nút Giới thiệu (ĐÃ SỬA LỖI HOÀN TOÀN TRÊN CẢ DESKTOP & MOBILE)
 infoButton.addEventListener('click', () => {
     clickSound.play();
     const isAlreadyActive = aboutMeOverlay.classList.contains('active');
@@ -1605,31 +1605,39 @@ infoButton.addEventListener('click', () => {
         }, 500); 
 
     } else {
-        // --- Logic để MỞ với giải pháp mới ---
+        // --- Logic để MỞ với giải pháp mới và ổn định ---
         
         // 1. Phát âm thanh cuộn giấy
         latGiaySound.play();
 
-        // 2. Tạo một đối tượng ảnh trong JavaScript để tải ảnh nền
+        // 2. Tạo một đối tượng ảnh và đặt nguồn
         const aboutMeImage = new Image();
-        aboutMeImage.src = 'Aboutme.webp'; // Chắc chắn rằng tên file là đúng
+        aboutMeImage.src = 'Aboutme.webp'; // Tên file đã được sửa
 
-        // 3. Đợi cho ảnh tải xong
-        aboutMeImage.onload = () => {
-            // Khi ảnh đã tải xong, mới hiển thị và kích hoạt animation
+        // 3. Định nghĩa hàm sẽ chạy khi ảnh đã sẵn sàng
+        const handleImageLoad = () => {
+            // Hiển thị overlay trước
             aboutMeOverlay.style.display = 'block';
             
-            // Sử dụng requestAnimationFrame để đảm bảo trình duyệt đã repaint
-            requestAnimationFrame(() => {
+            // Dùng setTimeout với độ trễ nhỏ để kích hoạt animation sau khi phần tử đã được render
+            setTimeout(() => {
                 aboutMeOverlay.classList.add('active');
-            });
+            }, 10);
         };
         
-        // Đặt lại nội dung chữ để hiệu ứng typing chạy lại
+        // 4. Kiểm tra xem ảnh đã tải xong chưa (để xử lý ảnh trong cache)
+        if (aboutMeImage.complete) {
+            handleImageLoad();
+        } else {
+            // Nếu chưa, lắng nghe sự kiện 'load'
+            aboutMeImage.onload = handleImageLoad;
+        }
+
+        // 5. Đặt lại nội dung chữ để hiệu ứng typing chạy lại
         const titleElement = aboutMeOverlay.querySelector('.letter-title');
         const bodyElement = aboutMeOverlay.querySelector('.letter-body');
         const originalTitle = "Thông điệp từ người phát triển";
-        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người Kiểm lâm vi, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
+        const originalBody = `Chào các đồng nghiệp Kiểm lâm và những người yêu rừng!\n\nDự án phi lợi nhuận này không chỉ là một công cụ giải trí mà còn là tâm huyết của tôi, một người đồng nghiệp Kiểm lâm, với mong muốn tạo ra một phương tiện học tập mới mẻ và thú vị.\n\nQua mỗi câu hỏi, tôi hy vọng chúng ta có thể củng cố và trau dồi kiến thức về pháp luật lâm nghiệp, một hành trang không thể thiếu trong công tác bảo vệ và phát triển rừng.\n\nChúc các bạn có những giây phút thư giãn và học hỏi thật hiệu quả.\n\nTrân trọng,\nPhạm Tường Văn`;
         
         titleElement.textContent = '';
         bodyElement.textContent = '';
