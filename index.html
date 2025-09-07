@@ -1602,12 +1602,15 @@ infoButton.addEventListener('click', () => {
         bodyElement.textContent = '';
         aboutMeOverlay.querySelector('#about-me-content').style.opacity = '0';
 
-
-        // 3. Bắt đầu animation cuộn giấy
+        // 3. Hiển thị overlay trước
         aboutMeOverlay.style.display = 'block';
-        aboutMeOverlay.classList.add('active');
+        
+        // 4. Sử dụng setTimeout với độ trễ 0 để đảm bảo animation chạy
+        setTimeout(() => {
+            aboutMeOverlay.classList.add('active');
+        }, 0);
 
-        // 4. Lắng nghe sự kiện animation kết thúc để bắt đầu typing
+        // 5. Lắng nghe sự kiện animation kết thúc để bắt đầu typing
         function startTypingAnimation() {
             const contentContainer = aboutMeOverlay.querySelector('#about-me-content');
             contentContainer.style.opacity = '1'; // Cho khung chữ hiện ra mượt mà
@@ -1623,7 +1626,7 @@ infoButton.addEventListener('click', () => {
         
         aboutMeOverlay.addEventListener('animationend', startTypingAnimation);
     }
-});        
+}); 
     // --- Thêm các hàm xử lý mới cho màn hình kết quả ---
     // Hàm hiển thị đánh giá
     function displayEvaluation() {
