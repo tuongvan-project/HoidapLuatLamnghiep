@@ -656,7 +656,7 @@ font-size: var(--font-size-lg);
 /* --- Media Queries cho màn hình nhỏ hơn --- */
 @media (max-width: 768px) {
     .chibi-assistant {
-        display: none;
+        width: 80px; /* Chibi sẽ có chiều rộng 100px trên màn hình nhỏ */
     }
     .question-frame {
         height: auto;
@@ -1162,6 +1162,7 @@ font-size: var(--font-size-lg);
         
         // --- Thêm các biến DOM mới cho màn hình kết quả ---
         const endScreenOverlay = document.getElementById('end-screen-overlay');
+        const endScreenContainer = document.getElementById('end-screen-container');
         const evaluationText = document.getElementById('evaluation-text');
         const starRating = document.getElementById('star-rating');
         const finalStatsText = document.getElementById('final-stats-text');
@@ -1194,7 +1195,8 @@ font-size: var(--font-size-lg);
         let shuffledQuestions;
         let correctAnswers = 0;
         let incorrectAnswers = 0;
-
+        let totalTimeSpent = 0;
+        let timeStartPerQuestion = 0;
         // --- Functions ---
         function shuffle(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -1204,23 +1206,31 @@ font-size: var(--font-size-lg);
             return array;
         }
 
-        function startQuiz() {
+       function startQuiz() {
+            // Đảm bảo ẩn màn hình kết thúc nếu nó đang hiển thị
+            endScreenOverlay.classList.remove('active');
+            endScreenOverlay.style.display = 'none'; // Thêm dòng này để ẩn hoàn toàn màn hình kết thúc
+
             score = 0;
             currentQuestionIndex = 0;
             correctAnswers = 0;
             incorrectAnswers = 0;
+            totalTimeSpent = 0;
+            
+            // Đảm bảo các màn hình và nút được hiển thị lại đúng cách
             resultsContainer.style.display = 'none';
             timerContainer.style.display = 'block';
             exitButton.style.display = 'block';
-            replayButton.style.display = 'block'; // Hiển thị nút Replay
+            replayButton.style.display = 'block';
             chibiAssistant.style.display = 'block';
             nextBtn.style.display = 'none';
             overlayAnswer.style.display = 'none';
-            overlayText.style.opacity = 0; // Đảm bảo text ẩn khi start quiz
+            overlayText.style.opacity = 0;
             overlayExplanation.style.opacity = 0;
             scoreBoard.classList.add('active');
-            updateScoreBoard(); // Cập nhật bảng điểm ban đầu
+            updateScoreBoard();
             
+            // Xáo trộn lại câu hỏi và bắt đầu trò chơi mới
             shuffledQuestions = shuffle([...questions]).slice(0, totalQuestions);
             
             showNextQuestion();
@@ -1302,7 +1312,8 @@ font-size: var(--font-size-lg);
         }
 
       function startTimer() {
-    let timeLeft = 60;
+timeStartPerQuestion = new Date().getTime(); // Ghi lại thời điểm bắt đầu đếm giờ    
+let timeLeft = 60;
     timerElement.textContent = timeLeft;
     timerElement.style.color = '#ffc107'; // Thay đổi thành màu vàng
 
@@ -1323,6 +1334,7 @@ font-size: var(--font-size-lg);
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
             handleAnswerTimeout();
+           totalTimeSpent += 60;
         }
     }, 1000);
 }
@@ -1334,7 +1346,9 @@ font-size: var(--font-size-lg);
 
        function handleAnswer(event) {
     clearInterval(timerInterval);
-
+const timeEndPerQuestion = new Date().getTime();
+const timeSpent = (timeEndPerQuestion - timeStartPerQuestion) / 1000; // Đổi sang giây
+totalTimeSpent += timeSpent;
     const selectedBtn = event.currentTarget;
     const parentAnswers = selectedBtn.closest('.answers');
     const correctAnswer = parentAnswers.dataset.correctAnswer;
@@ -1443,17 +1457,25 @@ function showResults() {
     displayFinalStats();
     displayAvgTime();
 
-    // Gắn sự kiện cho các nút mới
+    // --- Gắn sự kiện cho các nút mới --- (ĐÃ SỬA LỖI)
     endReplayBtn.addEventListener('click', () => {
         clickSound.play();
-        endScreenOverlay.classList.remove('active');
-        startQuiz();
+        endScreenOverlay.classList.remove('active'); // Bắt đầu hiệu ứng làm mờ (transition)
+        
+        // Đợi 500ms (nửa giây) cho hiệu ứng làm mờ hoàn tất rồi mới bắt đầu lại game
+        setTimeout(() => {
+            startQuiz();
+        }, 500); 
     });
+
     endExitBtn.addEventListener('click', () => {
         clickSound.play();
-        resetGame();
-        endScreenOverlay.classList.remove('active');
-        endScreenOverlay.style.display = 'none';
+        endScreenOverlay.classList.remove('active'); // Bắt đầu hiệu ứng làm mờ
+        
+        // Đợi 500ms cho hiệu ứng làm mờ hoàn tất rồi mới thoát game
+        setTimeout(() => {
+            resetGame();
+        }, 500);
     });
 }
         
@@ -1685,10 +1707,40 @@ infoButton.addEventListener('click', () => {
 
     // Hàm hiển thị thời gian trung bình (cần thêm logic tính toán)
     function displayAvgTime() {
-        // Tạm thời hiển thị một giá trị giả lập, bạn có thể thay thế bằng logic tính toán thực tế
-        avgTimeText.textContent = `Thời gian trung bình:\n...s/câu`;
-    }
+    const avgTime = (totalTimeSpent / totalQuestions).toFixed(1); // Làm tròn 1 chữ số thập phân
+    avgTimeText.textContent = `Thời gian trung bình:\n${avgTime}s/câu`;
+}
         
+// --- Đoạn mã mới để kiểm tra màn hình kết thúc ---
+        function testEndScreen(correct, incorrect, totalTime) {
+            // Thiết lập các biến trạng thái trò chơi
+            correctAnswers = correct;
+            incorrectAnswers = incorrect;
+            totalTimeSpent = totalTime;
+            
+            // Gọi hàm hiển thị màn hình kết quả
+            showResults();
+        }
+
+        // --- Gắn nút kiểm tra (Tùy chọn) ---
+        // Bạn có thể thêm một nút ẩn để dễ dàng gọi hàm này
+        // Ví dụ: Tạo một nút trong HTML có id="test-btn"
+        // <button id="test-btn" style="position: absolute; bottom: 10px; right: 10px;">Test End Screen</button>
+        // Sau đó thêm mã JS này vào đây:
+        // const testButton = document.getElementById('test-btn');
+        // if (testButton) {
+        //    testButton.addEventListener('click', () => {
+        //        // Gọi hàm test với số liệu mong muốn
+        //        // Ví dụ: 20 câu đúng, 5 câu sai, tổng thời gian 300 giây
+        //        testEndScreen(20, 5, 300);
+        //    });
+        // }
+        
+        // --- Hướng dẫn cách sử dụng đơn giản nhất ---
+        // Để kiểm tra nhanh, bạn chỉ cần mở trình duyệt, nhấn F12 để mở Console,
+        // sau đó gõ lệnh dưới đây và Enter:
+        // testEndScreen(25, 0, 150);
+        // (Ví dụ
         </script>
 </body>
 </html>

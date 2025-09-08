@@ -15,11 +15,11 @@ const questions = [
         question: "Theo Thông tư 26/2025/TT-BNNMT khái niệm Sản phẩm gỗ là gì?", 
         options: [
             "Sản phẩm được làm từ tre, nứa hoặc các loại lâm sản ngoài gỗ để phục vụ đời sống hằng ngày.", 
-            "SP chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP.", 
+            "SP chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP", 
             "Mọi nguyên liệu gỗ thô khai thác trực tiếp từ rừng chưa qua chế biến.", 
             "Các sản phẩm thủ công mỹ nghệ từ đất, đá, kim loại nhưng có hình dáng giống gỗ"
         ], 
-        correct: "Sản phẩm chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của SP, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP.",
+        correct: "SP chế biến từ gỗ được lắp ráp đầy đủ các bộ phận theo công dụng của sản phẩm, các chi tiết tháo rời của SP, khi lắp ráp có thể sử dụng được ngay theo công dụng của SP",
         explanation: "theo quy định tại khoản 5 Điều 3 Thông tư 26/2025/TT-BNNMT."
     },
     { 
