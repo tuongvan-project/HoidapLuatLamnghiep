@@ -415,7 +415,7 @@ const questions = [
 { 
         question: "Đáp án nào sau đây là đúng nhất về nghĩa vụ chung của chủ rừng?", 
         options: ["Tất cả các đáp án đều đúng", "Thực hiện quy định về theo dõi diễn biến rừng", "Trả lại rừng khi Nhà nước thu hồi rừng theo quy định", "Phòng cháy và chữa cháy rừng; phòng, trừ sinh vật gây hại rừng"], 
-        correct: "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản",
+        correct: "Tất cả các đáp án đều đúng",
         explanation: "Điều 74 Luật Lâm nghiệp: quy định Nghĩa vụ chung của chủ rừng bao gồm tất cả các đáp án trên"
     },
 { 
