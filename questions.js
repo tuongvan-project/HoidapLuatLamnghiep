@@ -47,7 +47,7 @@ const questions = [
     },
     { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, 'thực vật ngoài gỗ' gồm nhóm nào sau đây?", 
-        options: ["Song, mây, tre, nứa, cau, dừa...; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa...", "Gỗ tròn", "Gỗ xẻ", "Ngà voi"], 
+        options: ["Song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ", "Gỗ tròn", "Gỗ xẻ", "Ngà voi"], 
         correct: "Song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ",
         explanation: "Khoản 4 Điều 3 Thông tư 26/2025/TT-BNNMT quy định 'thực vật ngoài gỗ' bao gồm: các loài thuộc họ song, mây, tre, nứa, cau, dừa, tuế, sim, mua; thực vật rừng thân thảo; nấm; củi, dẫn xuất, hạt, củ, quả, hoa, các bộ phận khác của cây gỗ."
     },
@@ -287,223 +287,142 @@ const questions = [
         explanation: "quy định tại Điều 12 Nghị định số 102/2020/NĐ-CP"
     },
     { 
-        question: "Cơ quan nào có quyền tạm đình chỉ hoạt động chế biến gỗ khi phát hiện vi phạm nghiêm trọng?", 
-        options: ["UBND xã", "Cơ quan Kiểm lâm có thẩm quyền", "Công an huyện", "Phòng Kinh tế"], 
-        correct: "Cơ quan Kiểm lâm có thẩm quyền",
-        explanation: "Điều 43 Thông tư 26/2025/TT-BNNMT quy định cơ quan Kiểm lâm có thẩm quyền được quyền tạm đình chỉ hoạt động chế biến gỗ khi phát hiện vi phạm nghiêm trọng. Đây là biện pháp quản lý mạnh nhằm ngăn chặn hậu quả phát sinh. UBND xã hay Công an huyện không có thẩm quyền này."
+        question: "Theo Luật Lâm nghiệp, diện tích liền vùng tối thiểu là bao nhiêu để một hệ sinh thái gồm các loài thực vật rừng, động vật rừng, nấm, vi sinh vật, đất rừng..., trong đó thành phần chính là một hoặc một số loài cây thân gỗ, tre, nứa, cây họ cau có chiều cao được xác định theo hệ thực vật trên núi đất, núi đá, đất ngập nước, đất cát được coi là rừng?", 
+        options: ["0.5 ha", "1.0 ha", "0.2 ha", "0.3 ha"], 
+        correct: "0.3 ha",
+        explanation: "khoản 3 Điều 2 luật Lâm nghiệp quy định diện tích liền vùng từ 0,3 ha trở lên"
+    },
+   { 
+        question: "Theo Luật Lâm nghiệp, Rừng là một hệ sinh thái có độ tàn che (mức độ che kín của tán cây rừng theo phương thẳng đứng trên một đơn vị diện tích rừng được biểu thị bằng tỷ lệ phần mười) tối thiểu là bao nhiêu?", 
+        options: ["0.2 ha", "0.5 ha", "0.1 ha", "0.3 ha"], 
+        correct: "0.1 ha",
+        explanation: "khoản 3 Điều 2 luật Lâm nghiệp quy định khai niệm rừng có độ tàn che từ 0,1 trở lên"
     },
     { 
-        question: "Nếu phát hiện mẫu vật động vật thuộc Phụ lục I CITES không có đánh dấu, biện pháp nào phải thực hiện?", 
-        options: ["Cho phép lưu thông", "Tịch thu, xử lý theo pháp luật", "Bổ sung đánh dấu sau", "Cảnh báo bằng văn bản"], 
-        correct: "Tịch thu, xử lý theo pháp luật",
-        explanation: "Điều 44 Thông tư 26/2025/TT-BNNMT quy định các mẫu vật thuộc Phụ lục I CITES mà không có đánh dấu sẽ bị coi là không hợp pháp và phải bị tịch thu, xử lý theo pháp luật. Việc cho phép bổ sung đánh dấu sau hay chỉ cảnh báo không được chấp nhận để tránh gian lận trong quản lý."
+        question: "Theo Luật Lâm nghiệp, Rừng tự nhiên là gì?", 
+        options: ["Rừng được hình thành do di thực giống cây từ nơi khác về, có giá trị phòng hộ và bảo tồn", "Rừng có sẵn trong tự nhiên hoặc phục hồi bằng tái sinh tự nhiên hoặc tái sinh có trồng bổ sung", "Rừng hình thành từ việc trồng mới hoàn toàn bằng các loài cây bản địa", "Rừng được trồng lại sau khai thác, có sự hỗ trợ của con người là chủ yếu"], 
+        correct: "Rừng có sẵn trong tự nhiên hoặc phục hồi bằng tái sinh tự nhiên hoặc tái sinh có trồng bổ sung",
+        explanation: "khái niệm rừng tự nhiên được quy định tại khoản 6 Điều 2 Luật Lâm nghiệp"
     },
     { 
-        question: "Trường hợp doanh nghiệp không cung cấp đầy đủ hồ sơ phân loại theo yêu cầu, cơ quan quản lý xử lý thế nào?", 
-        options: ["Gia hạn vô thời hạn", "Không xem xét phân loại", "Vẫn phân loại Nhóm I", "Chỉ cảnh báo"], 
-        correct: "Không xem xét phân loại",
-        explanation: "Điều 45 Thông tư 26/2025/TT-BNNMT nêu rõ nếu doanh nghiệp không nộp đủ hồ sơ theo quy định thì cơ quan quản lý sẽ không xem xét phân loại. Điều này nhằm bảo đảm tính nghiêm túc và minh bạch trong thủ tục. Không có trường hợp gia hạn vô thời hạn hay phân loại mặc định."
+        question: "Theo Luật Lâm nghiệp, rừng trồng được hình thành do?", 
+        options: ["phục hồi tự nhiên sau hoạt động nương rẫy của con người", "Tự tái sinh sau khi cháy rừng", "Rừng có nguồn gốc tự nhiên nhưng được con người khoanh nuôi và bảo vệ", "Con người trồng mới trên đất chưa có rừng; cải tạo rừng tự nhiên; trồng lại hoặc tái sinh sau khai thác rừng trồng"], 
+        correct: "Con người trồng mới trên đất chưa có rừng; cải tạo rừng tự nhiên; trồng lại hoặc tái sinh sau khai thác rừng trồng",
+        explanation: "khái niệm rừng trồng được quy định tại khoản 7 Điều 2 Luật Lâm nghiệp"
     },
     { 
-        question: "Khi doanh nghiệp thay đổi thông tin liên quan đến phân loại, trách nhiệm của doanh nghiệp là gì?", 
-        options: ["Không cần báo cáo", "Báo cáo cơ quan có thẩm quyền trong thời hạn quy định", "Tự chỉnh sửa hồ sơ lưu nội bộ", "Chờ đến kỳ phân loại sau"], 
-        correct: "Báo cáo cơ quan có thẩm quyền trong thời hạn quy định",
-        explanation: "Điều 46 Thông tư 26/2025/TT-BNNMT yêu cầu doanh nghiệp phải báo cáo cơ quan có thẩm quyền khi có thay đổi thông tin ảnh hưởng đến phân loại. Đây là trách nhiệm bắt buộc để cơ quan quản lý kịp thời điều chỉnh quyết định phân loại. Không được phép tự ý điều chỉnh hay trì hoãn báo cáo."
+        question: "Theo Luật Lâm nghiệp, chủ rừng bao gồm các đối tượng nào?", 
+        options: ["Giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng", "Nhận chuyển nhượng, tặng cho, thừa kế rừng theo quy định của pháp luật", "Tự chiếm đất của tổ chức, cá nhân để trồng rừng của mình", "Cả A và B"], 
+        correct: "Cả A và B",
+        explanation: "Khoản 9 Điều 2 Luật Lâm nghiệp: Chủ rừng là tổ chức, hộ gia đình, cá nhân, cộng đồng dân cư được Nhà nước giao rừng, cho thuê rừng; giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng; nhận chuyển nhượng, tặng cho, thừa kế rừng theo quy định của pháp luật"
     },
-    { 
-        question: "Nếu doanh nghiệp bị phát hiện gian lận trong hồ sơ phân loại thì hậu quả pháp lý là gì?", 
-        options: ["Chỉ cảnh cáo", "Bị đưa vào Nhóm II hoặc hủy kết quả phân loại", "Không ảnh hưởng", "Chỉ bị phạt hành chính nhẹ"], 
-        correct: "Bị đưa vào Nhóm II hoặc hủy kết quả phân loại",
-        explanation: "Điều 47 Thông tư 26/2025/TT-BNNMT quy định nếu doanh nghiệp gian lận trong hồ sơ phân loại, cơ quan quản lý có quyền đưa vào Nhóm II hoặc hủy bỏ kết quả phân loại đã công nhận. Đây là biện pháp răn đe nghiêm khắc để ngăn chặn gian lận. Không chỉ dừng ở cảnh cáo hay phạt nhẹ."
+{ 
+        question: "Theo Luật Lâm nghiệp, Quyền sở hữu rừng sản xuất là rừng trồng bao gồm các quyền nào?", 
+        options: ["Quyền định đoạt đối với cây trồng do chủ rừng đầu tư trong thời hạn được giao, được thuê để trồng rừng", "Quyền chiếm hữu đối với cây trồng do chủ rừng đầu tư không trong thời hạn được giao, được thuê để trồng rừng", "Quyền định đoạt của chủ rừng đối với cây trồng, vật nuôi và tài sản khác gắn liền với rừng không do chủ rừng đầu tư", "Quyền sử dụng của chủ rừng đối với cây trồng, vật nuôi và tài sản khác gắn liền với rừng không do chủ rừng đầu tư"], 
+        correct: "Quyền định đoạt đối với cây trồng do chủ rừng đầu tư trong thời hạn được giao, được thuê để trồng rừng",
+        explanation: "Khoản 10 Điều 2 Luật Lâm nghiệp: Quyền sở hữu rừng sản xuất là rừng trồng bao gồm quyền chiếm hữu, quyền sử dụng, quyền định đoạt của chủ rừng đối với cây trồng, vật nuôi và tài sản khác gắn liền với rừng do chủ rừng đầu tư trong thời hạn được giao, được thuê để trồng rừng"
     },
-    { 
-        question: "Theo Thông tư 26/2025/TT-BNNMT, kết quả phân loại doanh nghiệp có hiệu lực trong bao lâu?", 
-        options: ["12 tháng", "24 tháng", "36 tháng", "48 tháng"], 
-        correct: "36 tháng",
-        explanation: "Điều 48 Thông tư 26/2025/TT-BNNMT quy định kết quả phân loại doanh nghiệp có giá trị trong 36 tháng kể từ ngày ban hành quyết định. Sau thời gian này, doanh nghiệp phải đăng ký phân loại lại. Các mốc 12, 24 hoặc 48 tháng không đúng với quy định."
+{ 
+        question: "Theo Luật Lâm nghiệp, Lâm sản là gì?", 
+        options: ["Lâm sản là sản phẩm thu được từ hoạt động nuôi trồng thủy sản trong rừng ngập mặn", "là sản phẩm khai thác từ rừng bao gồm thực vật rừng, động vật rừng và các sinh vật rừng khác gồm cả gỗ, lâm sản ngoài gỗ, sản phẩm gỗ, song, mây, tre, nứa đã chế biến", "là sản phẩm khai thác từ rừng bao gồm thực vật rừng, động vật rừng và các sinh vật rừng (gỗ, lâm sản ngoài gỗ), không bao gồm sản phẩm gỗ, song, mây, tre, nứa đã chế biến", "Lâm sản là mọi loại khoáng sản, thổ nhưỡng và nguồn nước được khai thác trong khu vực rừng"], 
+        correct: "là sản phẩm khai thác từ rừng bao gồm thực vật rừng, động vật rừng và các sinh vật rừng khác gồm cả gỗ, lâm sản ngoài gỗ, sản phẩm gỗ, song, mây, tre, nứa đã chế biến",
+        explanation: "Khoản 16 Điều 2 Luật Lâm nghiệp: Lâm sản là sản phẩm khai thác từ rừng bao gồm thực vật rừng, động vật rừng và các sinh vật rừng khác gồm cả gỗ, lâm sản ngoài gỗ, sản phẩm gỗ, song, mây, tre, nứa đã chế biến."
     },
-    { 
-        question: "Trường hợp lâm sản bị tịch thu mà không thể bán đấu giá thì xử lý thế nào?", 
-        options: ["Chỉ lưu kho vô thời hạn", "Chuyển giao cho đơn vị sự nghiệp quản lý, sử dụng", "Tiêu hủy ngay", "Phát miễn phí cho cộng đồng"], 
-        correct: "Chuyển giao cho đơn vị sự nghiệp quản lý, sử dụng",
-        explanation: "Điều 49 Thông tư 26/2025/TT-BNNMT quy định lâm sản bị tịch thu mà không thể bán đấu giá sẽ được chuyển giao cho đơn vị sự nghiệp công lập quản lý, sử dụng. Đây là giải pháp hợp lý, tránh lãng phí. Việc tiêu hủy chỉ áp dụng khi không còn giá trị sử dụng."
+{ 
+        question: "Theo quy định về phân loại rừng, căn cứ vào mục đích sử dụng chủ yếu, rừng tự nhiên và rừng trồng được phân thành mấy loại?", 
+        options: ["04 loại", "02 loại", "05 loại", "03 loại"], 
+        correct: "03 loại",
+        explanation: "Khoản 1 Điều 5 Luật Lâm nghiệp: Căn cứ vào mục đích sử dụng chủ yếu, rừng tự nhiên và rừng trồng được phân thành 03 loại Rừng đặc dụng; Rừng phòng hộ; Rừng sản xuất"
     },
-    { 
-        question: "Thông tư 26/2025/TT-BNNMT có hiệu lực thi hành từ ngày nào?", 
-        options: ["01/01/2025", "15/3/2025", "01/4/2025", "01/7/2025"], 
-        correct: "01/4/2025",
-        explanation: "Điều 50 Thông tư 26/2025/TT-BNNMT quy định văn bản này có hiệu lực từ ngày 01 tháng 4 năm 2025. Đây là thời điểm chính thức áp dụng các quy định mới về quản lý và xử lý lâm sản, thủy sản xác lập quyền sở hữu toàn dân."
+{ 
+        question: "Phân theo mức độ xung yếu, rừng phòng hộ bao gồm?", 
+        options: ["Rừng phòng hộ chắn gió, chắn cát bay ven biển; rừng phòng hộ bảo vệ đê điều; rừng phòng hộ cảnh quan đô thị", "Rừng phòng hộ chắn gió, chắn cát bay; rừng phòng hộ chắn sóng, lấn biển; rừng phòng hộ quốc gia", "Rừng phòng hộ chắn gió, chắn cát bay; rừng phòng hộ chắn sóng, lấn biển; rừng phòng hộ dự trữ thiên nhiên", "Rừng phòng hộ đầu nguồn; rừng bảo vệ nguồn nước của cộng đồng dân cư; rừng phòng hộ biên giới"], 
+        correct: "Rừng phòng hộ đầu nguồn; rừng bảo vệ nguồn nước của cộng đồng dân cư; rừng phòng hộ biên giới",
+        explanation: "Khoản 3 Điều 5 Luật Lâm nghiệp: RPH bao gồm: Rừng phòng hộ đầu nguồn; rừng bảo vệ nguồn nước của cộng đồng dân cư; rừng phòng hộ biên giới; Rừng phòng hộ chắn gió, chắn cát bay; rừng phòng hộ chắn sóng, lấn biển"
     },
-  {
-    question: "Trong Nghị định 156/2018/NĐ-CP sửa đổi bổ sung, 'diện tích liền vùng' được hiểu như thế nào?",
-    options: [
-      "Diện tích liền vùng có khoảng cách giữa dải rừng không quá 30 m và tổng khoảng trống không quá 30%",
-      "Diện tích liền vùng chỉ cần vượt 1 ha",
-      "Diện tích liền vùng là bất kỳ vùng rừng liên tục nào",
-      "Không có quy định về diện tích liền vùng"
-    ],
-    correct: "Diện tích liền vùng có khoảng cách giữa dải rừng không quá 30 m và tổng khoảng trống không quá 30%",
-    explanation: "Nghị định định nghĩa 'diện tích liền vùng' là vùng đất có rừng tự nhiên hoặc rừng trồng tập trung, liên tục; khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không vượt quá 30% diện tích. Đây là tiêu chí kỹ thuật để xác định một mảng rừng là 'liền vùng'."
-  },
-  {
-    question: "Tiêu chí tối thiểu về độ tàn che và diện tích để một mảng cây được coi là rừng tự nhiên là gì?",
-    options: [
-      "Độ tàn che ≥ 0,1 và diện tích liền vùng ≥ 0,3 ha",
-      "Độ tàn che ≥ 0,5 và diện tích ≥ 1 ha",
-      "Độ tàn che ≥ 0,2 và diện tích ≥ 0,1 ha",
-      "Không có tiêu chí về độ tàn che"
-    ],
-    correct: "Độ tàn che ≥ 0,1 và diện tích liền vùng ≥ 0,3 ha",
-    explanation: "Điều 4 quy định rừng tự nhiên gồm rừng nguyên sinh và rừng thứ sinh khi đáp ứng: độ tàn che của cây rừng là thành phần chính từ 0,1 trở lên và diện tích liền vùng từ 0,3 ha trở lên. Đây là hai chỉ tiêu cơ bản dùng để phân biệt rừng với các dạng cây ngoài rừng. "
-  },
-  {
-    question: "Tiêu chí chiều cao trung bình cây rừng tự nhiên trên đồi, núi đất và đồng bằng là bao nhiêu?",
-    options: ["≥ 1,0 m", "≥ 2,0 m", "≥ 3,0 m", "≥ 5,0 m"],
-    correct: "≥ 5,0 m",
-    explanation: "Theo Điều 4, đối với rừng tự nhiên trên đồi, núi đất và đồng bằng, chiều cao trung bình của cây rừng (thành phần chính) phải từ 5,0 m trở lên để đủ tiêu chí rừng tự nhiên. Các mức thấp hơn áp dụng cho các kiểu địa hình khác (ví dụ rừng khộp, rừng ngập nước). "
-  },
-  {
-    question: "Tiêu chí cơ bản để xác định rừng trồng gồm những yếu tố nào sau đây?",
-    options: [
-      "Độ tàn che ≥ 0,1; diện tích liền vùng ≥ 0,3 ha; chiều cao trung bình theo điều kiện lập địa",
-      "Chỉ cần diện tích > 1 ha",
-      "Chỉ cần là cây trồng đều hàng",
-      "Không có tiêu chí riêng"
-    ],
-    correct: "Độ tàn che ≥ 0,1; diện tích liền vùng ≥ 0,3 ha; chiều cao trung bình theo điều kiện lập địa",
-    explanation: "Điều 5 quy định rừng trồng đạt tiêu chí: độ tàn che từ 0,1 trở lên, diện tích liền vùng từ 0,3 ha trở lên và chiều cao trung bình tùy theo điều kiện lập địa (ví dụ 5,0 m trên đồi/núi đất và đồng bằng). Các tiêu chí tương tự rừng tự nhiên nhưng áp dụng cho rừng do con người trồng hoặc phục hồi. "
-  },
-  {
-    question: "Vườn quốc gia phải có diện tích liền vùng tối thiểu là bao nhiêu ha?",
-    options: ["1.000 ha", "3.000 ha", "5.000 ha", "7.000 ha"],
-    correct: "7.000 ha",
-    explanation: "Khoản 1 Điều 6 nêu vườn quốc gia phải có diện tích liền vùng tối thiểu 7.000 ha và trong đó ít nhất 70% diện tích là các hệ sinh thái rừng. Đây là tiêu chuẩn cao để đảm bảo giá trị bảo tồn quốc gia và quốc tế. "
-  },
-  {
-    question: "Khu dự trữ thiên nhiên có diện tích liền vùng tối thiểu là bao nhiêu ha?",
-    options: ["1.000 ha", "3.000 ha", "5.000 ha", "10.000 ha"],
-    correct: "5.000 ha",
-    explanation: "Khoản 2 Điều 6 quy định khu dự trữ thiên nhiên có diện tích liền vùng tối thiểu 5.000 ha và trong đó ít nhất 90% diện tích là các hệ sinh thái rừng. Tiêu chí này phản ánh yêu cầu bảo tồn quy mô lớn. "
-  },
-  {
-    question: "Rừng giống quốc gia phải đáp ứng diện tích tối thiểu bao nhiêu ha?",
-    options: ["10 ha", "20 ha", "30 ha", "50 ha"],
-    correct: "30 ha",
-    explanation: "Điều 6 (mục về rừng giống quốc gia) quy định rừng giống quốc gia phải có diện tích tối thiểu 30 ha và đáp ứng các yêu cầu tiêu chuẩn giống cây trồng lâm nghiệp. Đây là tiêu chuẩn để bảo đảm nguồn giống có quy mô phù hợp. "
-  },
-  {
-    question: "Rừng phòng hộ đầu nguồn yêu cầu độ dốc tối thiểu bao nhiêu độ?",
-    options: ["5 độ", "10 độ", "15 độ", "20 độ"],
-    correct: "15 độ",
-    explanation: "Điểm a khoản 1 Điều 7 nêu rừng phòng hộ đầu nguồn phải có địa hình đồi, núi và độ dốc từ 15 độ trở lên. Đây là một trong các tiêu chí địa hình để xác định rừng phòng hộ đầu nguồn. "
-  },
-  {
-    question: "Về rừng phòng hộ chắn sóng, lấn biển: đối với vùng bờ biển bồi tụ hoặc ổn định, chiều rộng đai rừng tối thiểu nằm trong khoảng nào?",
-    options: ["50–200 m", "100–300 m", "300–1.000 m", "1.000–2.000 m"],
-    correct: "300–1.000 m",
-    explanation: "Khoản 5 Điều 7 nêu rõ: đối với vùng bờ biển bồi tụ hoặc ổn định, chiều rộng của đai rừng phòng hộ chắn sóng, lấn biển quy định từ 300 m đến 1.000 m tùy vùng sinh thái. Giá trị này nhằm bảo đảm chức năng chắn sóng, bảo vệ bờ. "
-  },
-  {
-    question: "Khi lập hồ sơ thành lập khu rừng đặc dụng, bản đồ hiện trạng phải có tỷ lệ nào?",
-    options: ["1/1.000 hoặc 1/2.000", "1/5.000 hoặc 1/10.000 hoặc 1/25.000", "1/50.000", "Không quy định tỷ lệ"],
-    correct: "1/5.000 hoặc 1/10.000 hoặc 1/25.000",
-    explanation: "Khoản 3 Điều 9 nêu hồ sơ thành lập khu rừng đặc dụng phải kèm bản đồ hiện trạng với tỷ lệ 1/5.000 hoặc 1/10.000 hoặc 1/25.000 theo hệ quy chiếu VN2000, tùy quy mô diện tích. Đây là yêu cầu bắt buộc để thẩm định, xác định ranh giới và phân khu chức năng. "
-  },
-  {
-    question: "Trình tự thành lập khu rừng đặc dụng nằm trên địa bàn từ 02 tỉnh trở lên do cơ quan nào chủ trì xây dựng dự án và trình quyết định thành lập?",
-    options: [
-      "Sở Nông nghiệp tỉnh nơi có rừng",
-      "Bộ Nông nghiệp và Phát triển nông thôn",
-      "Ủy ban nhân dân cấp huyện",
-      "Ban quản lý rừng địa phương"
-    ],
-    correct: "Bộ Nông nghiệp và Phát triển nông thôn",
-    explanation: "Khoản 4 Điều 9 quy định: đối với khu rừng đặc dụng nằm trên địa bàn từ 02 tỉnh, Bộ NN&PTNT chủ trì tổ chức xây dựng dự án và trình Thủ tướng Chính phủ quyết định thành lập theo quy trình nêu trong Điều. Điều này phân biệt trách nhiệm giữa khu rừng跨 tỉnh và thuộc địa phương. "
-  },
+{ 
+        question: "Rừng sản xuất được sử dụng chủ yếu để làm gì?", 
+        options: ["để bảo tồn đa dạng sinh học, bảo vệ di tích lịch sử và nghiên cứu khoa học, cung ứng dịch vụ môi trường rừng", "cung cấp lâm sản; sản xuất, kinh doanh lâm, nông, ngư nghiệp kết hợp; du lịch sinh thái, nghỉ dưỡng, giải trí; cung ứng dịch vụ môi trường rừng", "để phòng sản xuất ở đầu nguồn, bảo vệ nguồn nước và môi trường sinh thái", "để làm khu vực định cư, phát triển đô thị và hạ tầng giao thông trong rừng"], 
+        correct: "cung cấp lâm sản; sản xuất, kinh doanh lâm, nông, ngư nghiệp kết hợp; du lịch sinh thái, nghỉ dưỡng, giải trí; cung ứng dịch vụ môi trường rừng",
+        explanation: "Khoản 4 Điều 5 Luật Lâm nghiệp: Rừng sản xuất được sử dụng chủ yếu để cung cấp lâm sản; sản xuất, kinh doanh lâm, nông, ngư nghiệp kết hợp; du lịch sinh thái, nghỉ dưỡng, giải trí; cung ứng dịch vụ môi trường rừng"
+    },
+{ 
+        question: "Nhà nước là đại diện chủ sở hữu đối với rừng nào?", 
+        options: ["Rừng do hộ gia đình, cá nhân, cộng đồng dân cư đầu tư", "Rừng trồng do các công ty lâm nghiệp đầu tư", "Rừng tự nhiên", "Rừng được do cá nhân nhận chuyển nhượng, tặng cho, thừa kế rừng từ chủ rừng khác theo quy định của pháp luật"], 
+        correct: "Rừng tự nhiên",
+        explanation: "Khoản 1 Điều 7 Luật Lâm nghiệp: Nhà nước là đại diện chủ sở hữu đối với rừng thuộc sở hữu toàn dân: Rừng tự nhiên; Rừng trồng do Nhà nước đầu tư toàn bộ; Rừng trồng do Nhà nước thu hồi, được tặng cho hoặc trường hợp chuyển quyền sở hữu rừng trồng khác theo quy định của pháp luật"
+    },
+{ 
+        question: "Những đối tượng nào sau đây không phải là chủ rừng?", 
+        options: ["Hộ gia đình, cá nhân trong nước", "Cộng đồng dân cư", "Doanh nghiệp có vốn đầu tư nước ngoài được Nhà nước cho thuê đất để trồng rừng sản xuất", "Tổ chức khoa học và công nghệ, đào tạo, giáo dục nghề nghiệp về lâm nghiệp nước ngoài"], 
+        correct: "Tổ chức khoa học và công nghệ, đào tạo, giáo dục nghề nghiệp về lâm nghiệp nước ngoài",
+        explanation: "chỉ Doanh nghiệp có vốn đầu tư nước ngoài được Nhà nước cho thuê đất để trồng rừng sản xuất mới được coi là chủ rừng có yếu tố nước ngoài"
+    },
+{ 
+        question: "Đâu là hành vi bị nghiêm cấm trong hoạt động lâm nghiệp?", 
+        options: ["Trồng rừng sản xuất bằng cây ngoại lai đã được phép đưa vào trồng ở Việt Nam", "Săn, bắt, nuôi, nhốt, giết, tàng trữ, vận chuyển, buôn bán động vật rừng, thu thập mẫu vật các loài thực vật rừng, động vật rừng trái quy định của pháp luật", "Khai thác lâm sản ngoài gỗ từ rừng tự nhiên theo hạn ngạch và giấy phép hợp pháp", "Tổ chức hoạt động tham quan, du lịch sinh thái trong khu rừng đặc dụng theo quy hoạch được phê duyệt"], 
+        correct: "Săn, bắt, nuôi, nhốt, giết, tàng trữ, vận chuyển, buôn bán động vật rừng, thu thập mẫu vật các loài thực vật rừng, động vật rừng trái quy định của pháp luật",
+        explanation: "Hành vi bị nghiêm cấm trong hoạt động lâm nghiệp quy định tại Điều 9 Luật Lâm nghiệp"
+    },
+{ 
+        question: "Các dự án nào sau đây được chuyển mục đích sử dụng rừng tự nhiên sang mục đích khác?", 
+        options: ["Dự án phát triển khu du lịch sinh thái, nghỉ dưỡng và giải trí thương mại phục theo kế hoạch của địa phương", "Dự án xây dựng khu đô thị, khu dân cư mới trên đất rừng tự nhiên", "Dự án quan trọng quốc gia; dự án phục vụ quốc phòng, an ninh", "Dự án khai thác khoáng sản, thủy điện thương mại nhằm mục đích kinh tế"], 
+        correct: "Dự án quan trọng quốc gia; dự án phục vụ quốc phòng, an ninh",
+        explanation: "khoản 2 Điều 14 Luật Lâm nghiệp: Không chuyển mục đích sử dụng rừng tự nhiên sang mục đích khác, trừ các dự án quan trọng quốc gia; dự án phục vụ quốc phòng, an ninh; dự án cấp thiết khác theo tiêu chí do Chính phủ quy định."
+    },
+{ 
+        question: "Chủ rừng có được cho tổ chức, hộ gia đình, cá nhân khác thuê diện tích rừng tự nhiên, rừng trồng do Nhà nước đầu tư không?", 
+        options: ["Không", "Có, nhưng chỉ được thuê ngắn hạn dưới 5 năm và phải được cơ quan quản lý nhà nước phê duyệt", "Có, nếu mục đích thuê để phát triển du lịch sinh thái và không làm thay đổi hiện trạng rừng", "Có, miễn là bên thuê cam kết bảo vệ và phát triển rừng theo quy hoạch"], 
+        correct: "Không",
+        explanation: "khoản 4 Điều 14 Luật Lâm nghiệp: Chủ rừng không được cho tổ chức, hộ gia đình, cá nhân khác thuê diện tích rừng tự nhiên, rừng trồng do Nhà nước đầu tư."
+    },
+{ 
+        question: "Quy định nào là đúng về khai thác rừng phòng hộ là rừng trồng?", 
+        options: ["Được khai thác toàn bộ rừng phòng hộ là rừng trồng bằng phương thức chặt trắng không cần theo quy hoạch", "Được khai thác cây trồng chính khi đạt tiêu chuẩn khai thác theo phương thức khai thác chọn hoặc chặt trắng theo băng, đám rừng", "Chỉ được khai thác khi toàn bộ rừng phòng hộ là rừng trồng đã quá tuổi sinh trưởng, không phân biệt loài cây", "Được khai thác tự do các loài cây phụ trợ và cây chính trong mọi giai đoạn phát triển của rừng"], 
+        correct: "Được khai thác cây trồng chính khi đạt tiêu chuẩn khai thác theo phương thức khai thác chọn hoặc chặt trắng theo băng, đám rừng",
+        explanation: "điểm b khoản 3 Điều 55 Luật Lâm nghiệp: Được khai thác cây trồng chính khi đạt tiêu chuẩn khai thác theo phương thức khai thác chọn hoặc chặt trắng theo băng, đám rừng"
+    },
+{ 
+        question: "Có được khai thác cây phụ trợ, chặt tỉa thưa khi rừng trồng phòng hộ có mật độ lớn hơn mật độ quy định không?", 
+        options: ["Không, rừng phòng hộ là rừng trồng chỉ được phép khai thác khi toàn bộ rừng đến tuổi", "Không, mọi hoạt động chặt tỉa trong rừng phòng hộ đều bị cấm để giữ nguyên mật độ", "Không, chỉ được phép khai thác cây phụ trợ khi có quyết định đặc biệt của Thủ tướng Chính phủ", "Có"], 
+        correct: "Có",
+        explanation: "điểm a khoản 3 Điều 55 Luật Lâm nghiệp: Được khai thác cây phụ trợ, chặt tỉa thưa khi rừng trồng có mật độ lớn hơn mật độ quy định"
+    },
+{ 
+        question: "Đáp án nào dưới đây được coi là dịch vụ môi trường rừng?", 
+        options: ["Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối", "Khai thác lâm sản ngoài gỗ để phát triển kinh tế hộ gia đình", "Chăn thả gia súc, gia cầm trong rừng để tận dụng thảm thực bì", "Xây dựng khu nghỉ dưỡng sinh thái và thu phí dịch vụ du lịch"], 
+        correct: "Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối",
+        explanation: "Điều 61 Luật Lâm nghiệp: có 5 loại dịch vụ môi trường rừng, trong đó có dịch vụ: Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối"
+    },
+{ 
+        question: "Có mấy loại dịch vụ môi trường rừng?", 
+        options: ["4", "5", "6", "7"], 
+        correct: "5",
+        explanation: "Điều 61 Luật Lâm nghiệp: có 5 loại dịch vụ môi trường rừng."
+    },
+{ 
+        question: "Đối tượng nào sau đây khi sử dụng dịch vụ phải chi trả tiền dịch vụ môi trường rừng?", 
+        options: ["Trường học, bệnh viện công lập hoạt động trong khu vực miền núi", "Hộ gia đình sử dụng nước sinh hoạt hàng ngày từ sông, suối", "Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng", "Doanh nghiệp khai thác khoáng sản trong khu vực rừng đặc dụng"], 
+        correct: "Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng",
+        explanation: "khoản 2 Điều 63 Luật Lâm nghiệp: có 7 nhóm đối tượng phải chi trả tiền dịch vụ môi trường rừng bao gồm Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng"
+    },
+{ 
+        question: "Đáp án nào sau đây là nghĩa vụ của Cơ sở thương mại lâm sản?", 
+        options: ["Được Kinh doanh những mặt hàng lâm sản Nhà nước không cấm", "Chỉ cần đăng ký kinh doanh theo quy định, không bắt buộc tuân thủ các quy định về hồ sơ lâm sản hợp pháp", "Có nghĩa vụ ưu tiên xuất khẩu lâm sản thô thay vì chế biến sâu trong nước", "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản"], 
+        correct: "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản",
+        explanation: "khoản 2 Điều 71 Luật Lâm nghiệp: quy định nghĩa vụ của Cơ sở thương mại lâm sản"
+    },
+{ 
+        question: "Đáp án nào sau đây là đúng nhất về nghĩa vụ chung của chủ rừng?", 
+        options: ["Tất cả các đáp án đều đúng", "Thực hiện quy định về theo dõi diễn biến rừng", "Trả lại rừng khi Nhà nước thu hồi rừng theo quy định", "Phòng cháy và chữa cháy rừng; phòng, trừ sinh vật gây hại rừng"], 
+        correct: "Tất cả các đáp án đều đúng",
+        explanation: "Điều 74 Luật Lâm nghiệp: quy định Nghĩa vụ chung của chủ rừng bao gồm tất cả các đáp án trên"
+    },
+{ 
+        question: "Theo Nghị định số 156/2018/NĐ-CP ngày 16 tháng 11 năm 2018 của Chính phủ quy định chi tiết thi hành một số điều của Luật Lâm nghiệp Diện tích liền vùng là?", 
+        options: ["Diện tích vùng đất có rừng tập trung, khoảng cách giữa các dải rừng không vượt quá 50 m và tổng diện tích khoảng trống không quá 20%", "diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích", "Diện tích vùng đất có rừng phân tán, khoảng cách giữa các dải rừng không vượt quá 100 m và tổng diện tích khoảng trống không quá 40%", "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 20 m và tổng diện tích khoảng trống không quá 10%"], 
+        correct: "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích",
+        explanation: "Khái niệm diện tích liền vùng được quy định tại khoản 2 Điều 3 Nghị định số 156/2018/NĐ-CP"
+    },
 
-  {
-    question: "Việc điều chỉnh tăng diện tích khu rừng đặc dụng từ chuyển loại rừng phòng hộ hoặc rừng sản xuất được thực hiện theo quy định nào?",
-    options: [
-      "Thực hiện theo quy định chung của Luật Đất đai",
-      "Thực hiện theo quy định tại các khoản 1–5 Điều 9 của Nghị định 156/2018/NĐ-CP sửa đổi bổ sung về thành lập khu rừng đặc dụng",
-      "Chỉ cần quyết định của Chủ tịch UBND xã",
-      "Không được phép điều chỉnh"
-    ],
-    correct: "Thực hiện theo quy định tại các khoản 1–5 Điều 9 của Nghị định 156/2018/NĐ-CP về thành lập khu rừng đặc dụng",
-    explanation: "Khoản 6 Điều 9 nêu rõ: việc điều chỉnh tăng diện tích khu rừng đặc dụng từ chuyển loại rừng phòng hộ, rừng sản xuất hoặc rừng ngoài quy hoạch lâm nghiệp phải thực hiện theo quy định tại các khoản 1–5 Điều 9 (quy trình lập dự án, lấy ý kiến, thẩm định, quyết định). Nói cách khác, phần diện tích được điều chỉnh tăng thêm phải trải qua thủ tục thành lập tương tự như lập khu rừng đặc dụng mới. "
-  },
-  {
-    question: "Sau khi có quyết định chuyển loại rừng hoặc chuyển mục đích sử dụng, chủ rừng phải hoàn thành cập nhật hồ sơ quản lý rừng trong thời hạn bao nhiêu ngày?",
-    options: ["07 ngày", "15 ngày", "30 ngày", "90 ngày"],
-    correct: "30 ngày",
-    explanation: "Khoản 7 Điều 9 quy định: trong thời gian 30 ngày, sau khi cấp có thẩm quyền quyết định chuyển loại rừng hoặc chuyển mục đích sử dụng rừng, chủ rừng phải hoàn thành cập nhật hồ sơ quản lý rừng. Quy định này nhằm đảm bảo thông tin quản lý kịp thời, chính xác trong hệ thống hồ sơ. "
-  },
-    {
-    question: "Trong phân khu phục hồi sinh thái được phép xây dựng công trình phục vụ du lịch; tuy nhiên tổng diện tích công trình không được vượt quá tỉ lệ nào so với diện tích hợp đồng cho thuê/một phần phân khu này?",
-    options: ["0,5%", "1%", "2%", "5%"],
-    correct: "2%",
-    explanation: "Điều 15 khoản 3 quy định: tổng diện tích công trình phục vụ du lịch, nghỉ dưỡng, giải trí trong phân khu phục hồi sinh thái không vượt quá 2% diện tích trong hợp đồng hợp tác, liên kết hoặc cho thuê môi trường rừng thuộc phân khu này. Quy định này nhằm đảm bảo ưu tiên phục hồi sinh thái và hạn chế tác động xây dựng. "
-  },
-  {
-    question: "Nếu tổng diện tích xây dựng công trình phục vụ du lịch trong phân khu phục hồi sinh thái vượt quá giới hạn quy định, cơ quan nào có thể đề nghị Bộ và Thủ tướng xem xét, chấp thuận điều chỉnh?",
-    options: [
-      "Chủ rừng báo cáo lên Sở Tài nguyên",
-      "Ủy ban nhân dân cấp tỉnh gửi văn bản đề nghị Bộ Nông nghiệp và PTNT để báo cáo Thủ tướng Chính phủ",
-      "Công an tỉnh ra quyết định tạm thời",
-      "Không có khả năng được xem xét"
-    ],
-    correct: "Ủy ban nhân dân cấp tỉnh gửi văn bản đề nghị Bộ Nông nghiệp và PTNT để báo cáo Thủ tướng Chính phủ",
-    explanation: "Điều 15 khoản 3–4 nêu: trường hợp vượt quá quy định, Ủy ban nhân dân cấp tỉnh, căn cứ thực tiễn và tính chất dự án, có thể đề nghị Bộ NN&PTNT báo cáo Thủ tướng Chính phủ xem xét, chấp thuận. Quyền đề xuất này thuộc thẩm quyền tỉnh nhằm giải quyết trường hợp đặc thù."
-  },
-  {
-    question: "Khi cho thuê môi trường rừng để kinh doanh dịch vụ du lịch sinh thái, chủ rừng phải thông báo công khai tối thiểu trong thời gian bao nhiêu ngày trước khi lựa chọn tổ chức/cá nhân thuê?",
-    options: ["07 ngày", "15 ngày", "30 ngày", "60 ngày"],
-    correct: "30 ngày",
-    explanation: "Điều 14 khoản 6(a) quy định: việc cho thuê môi trường rừng phải được thông báo công khai, rộng rãi trong thời gian tối thiểu 30 ngày bằng các hình thức niêm yết, đăng trên trang thông tin điện tử của đơn vị hoặc cơ quan có thẩm quyền. Yêu cầu này nhằm tăng tính minh bạch trong lựa chọn nhà đầu tư."
-  },
-  {
-    question: "Thời hạn tối đa của hợp đồng cho thuê môi trường rừng để kinh doanh dịch vụ du lịch theo Nghị định 156/2018/NĐ-CP sửa đổi bổ sung là bao nhiêu năm, và chu kỳ đánh giá hiệu quả thực hiện hợp đồng là bao nhiêu năm?",
-    options: [
-      "Tối đa 10 năm; đánh giá mỗi 2 năm",
-      "Tối đa 20 năm; đánh giá mỗi 4 năm",
-      "Tối đa 30 năm; đánh giá định kỳ 5 năm",
-      "Không giới hạn; không cần đánh giá"
-    ],
-    correct: "Tối đa 30 năm; đánh giá định kỳ 5 năm",
-    explanation: "Khoản 6(h) Điều 14 quy định thời gian thuê môi trường rừng không quá 30 năm; định kỳ 5 năm đánh giá việc thực hiện hợp đồng. Nếu bên thuê thực hiện đúng và có nhu cầu gia hạn, chủ rừng xem xét kéo dài không quá hai phần ba thời gian thuê lần đầu. Quy định này cân bằng giữa stabilty hợp đồng và quyền điều chỉnh của chủ rừng."
-  },
-  {
-    question: "Khai thác lâm sản trong vườn quốc gia, khu dự trữ thiên nhiên, khu bảo tồn loài - sinh cảnh được phép trong trường hợp nào?",
-    options: [
-      "Bất kỳ khi nào chủ rừng thấy cần",
-      "Khi có phương án khai thác tận thu gỗ; hoặc quyết định chuyển mục đích sử dụng rừng; hoặc chương trình/đề tài nghiên cứu khoa học được phê duyệt",
-      "Chỉ khi là rừng trồng",
-      "Luôn bị cấm tuyệt đối"
-    ],
-    correct: "Khi có phương án khai thác tận thu gỗ; hoặc quyết định chuyển mục đích sử dụng rừng; hoặc chương trình/đề tài nghiên cứu khoa học được phê duyệt",
-    explanation: "Điểm a và b khoản 1 Điều 12 quy định: các đối tượng khai thác, thu thập mẫu vật trong các loại rừng đặc dụng chỉ được thực hiện khi có cơ sở pháp lý: phương án khai thác tận thu gỗ theo quy định của Bộ, quyết định chuyển mục đích sử dụng rừng (nếu khai thác do chuyển mục đích), hoặc chương trình/đề tài nghiên cứu khoa học đã phê duyệt. Điều này nhằm hạn chế tác động lên hệ sinh thái đặc dụng."
-  },
-  {
-    question: "Những hoạt động nào bị nghiêm cấm trong rừng đặc dụng nhằm bảo vệ hệ sinh thái?",
-    options: [
-      "Chặt cây phục vụ sinh kế cá nhân nhỏ lẻ",
-      "Các hoạt động làm thay đổi cảnh quan tự nhiên, khai thác trái phép tài nguyên, mang hóa chất độc hại, chăn thả gia súc trong phân khu bảo vệ nghiêm ngặt",
-      "Xây một số công trình theo đề án được phê duyệt",
-      "Cắm trại giáo dục môi trường được cấp phép"
-    ],
-    correct: "Các hoạt động làm thay đổi cảnh quan tự nhiên, khai thác trái phép tài nguyên, mang hóa chất độc hại, chăn thả gia súc trong phân khu bảo vệ nghiêm ngặt",
-    explanation: "Điều 11 khoản 1 và 2 nêu rõ: không được tiến hành các hoạt động làm thay đổi cảnh quan tự nhiên, khai thác trái phép tài nguyên, gây ô nhiễm môi trường, mang hóa chất độc hại, và cấm chăn thả gia súc trong phân khu bảo vệ nghiêm ngặt. Các hoạt động được phép phải tuân thủ quy chế quản lý và quyết định phê duyệt. "
-  },
-  {
-    question: "Trình tự thẩm định, phê duyệt đề án du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng đặc dụng (thuộc địa phương quản lý) có thời hạn nào để Chủ tịch UBND cấp tỉnh quyết định sau khi nhận đủ hồ sơ hợp lệ?",
-    options: ["03 ngày", "10 ngày", "30 ngày", "60 ngày"],
-    correct: "10 ngày",
-    explanation: "Khoản 4(d) Điều 14 quy định: trong thời gian 10 ngày kể từ ngày nhận được đầy đủ hồ sơ, Chủ tịch UBND cấp tỉnh (đối với khu rừng đặc dụng thuộc địa phương quản lý) hoặc Bộ NN&PTNT (đối với khu rừng thuộc Bộ quản lý) quyết định phê duyệt đề án du lịch sinh thái, nghỉ dưỡng, giải trí. Mốc 10 ngày này là thời hạn ban hành quyết định phê duyệt đề án khi hồ sơ hợp lệ."
-  },
-  {
-    question: "Đối với đai rừng phòng hộ chắn gió, chắn cát bay phía sau đai rừng ven biển: nếu vùng cát có diện tích từ 100 ha trở lên (hoặc là vùng cát di động), chiều rộng tối thiểu của đai rừng phía sau là bao nhiêu?",
-    options: ["20 m", "30 m", "40 m", "150 m"],
-    correct: "40 m",
-    explanation: "Điểm 4(a–b) Điều 7 quy định: đai rừng phòng hộ chắn gió, chắn cát bay phía sau đai rừng (đai phía sau) có chiều rộng tối thiểu 40 m trong trường hợp vùng cát có diện tích từ 100 ha trở lên hoặc vùng cát di động (hoặc độ dốc lớn). Nếu vùng cát nhỏ hơn 100 ha và ổn định thì chiều rộng tối thiểu là 30 m. Quy định này chi tiết hóa tiêu chí thiết kế đai rừng phòng hộ ven biển."
-  }
 ];
