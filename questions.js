@@ -383,10 +383,46 @@ const questions = [
         explanation: "điểm b khoản 3 Điều 55 Luật Lâm nghiệp: Được khai thác cây trồng chính khi đạt tiêu chuẩn khai thác theo phương thức khai thác chọn hoặc chặt trắng theo băng, đám rừng"
     },
 { 
-        question: "Có đượ khai thác cây phụ trợ, chặt tỉa thưa khi rừng trồng phòng hộ có mật độ lớn hơn mật độ quy định không?", 
+        question: "Có được khai thác cây phụ trợ, chặt tỉa thưa khi rừng trồng phòng hộ có mật độ lớn hơn mật độ quy định không?", 
         options: ["Không, rừng phòng hộ là rừng trồng chỉ được phép khai thác khi toàn bộ rừng đến tuổi", "Không, mọi hoạt động chặt tỉa trong rừng phòng hộ đều bị cấm để giữ nguyên mật độ", "Không, chỉ được phép khai thác cây phụ trợ khi có quyết định đặc biệt của Thủ tướng Chính phủ", "Có"], 
         correct: "Có",
         explanation: "điểm a khoản 3 Điều 55 Luật Lâm nghiệp: Được khai thác cây phụ trợ, chặt tỉa thưa khi rừng trồng có mật độ lớn hơn mật độ quy định"
+    },
+{ 
+        question: "Đáp án nào dưới đây được coi là dịch vụ môi trường rừng?", 
+        options: ["Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối", "Khai thác lâm sản ngoài gỗ để phát triển kinh tế hộ gia đình", "Chăn thả gia súc, gia cầm trong rừng để tận dụng thảm thực bì", "Xây dựng khu nghỉ dưỡng sinh thái và thu phí dịch vụ du lịch"], 
+        correct: "Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối",
+        explanation: "Điều 61 Luật Lâm nghiệp: có 5 loại dịch vụ môi trường rừng, trong đó có dịch vụ: Bảo vệ đất, hạn chế xói mòn và bồi lắng lòng hồ, lòng sông, lòng suối"
+    },
+{ 
+        question: "Có mấy loại dịch vụ môi trường rừng?", 
+        options: ["4", "5", "6", "7"], 
+        correct: "5",
+        explanation: "Điều 61 Luật Lâm nghiệp: có 5 loại dịch vụ môi trường rừng."
+    },
+{ 
+        question: "Đối tượng nào sau đây khi sử dụng dịch vụ phải chi trả tiền dịch vụ môi trường rừng?", 
+        options: ["Trường học, bệnh viện công lập hoạt động trong khu vực miền núi", "Hộ gia đình sử dụng nước sinh hoạt hàng ngày từ sông, suối", "Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng", "Doanh nghiệp khai thác khoáng sản trong khu vực rừng đặc dụng"], 
+        correct: "Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng",
+        explanation: "khoản 2 Điều 63 Luật Lâm nghiệp: có 7 nhóm đối tượng phải chi trả tiền dịch vụ môi trường rừng bao gồm Cơ sở sản xuất thủy điện, sản xuất và cung ứng nước sạch, Tổ chức, cá nhân kinh doanh dịch vụ du lịch sinh thái, nghỉ dưỡng, giải trí trong rừng"
+    },
+{ 
+        question: "Đáp án nào sau đây là nghĩa vụ của Cơ sở thương mại lâm sản?", 
+        options: ["Được Kinh doanh những mặt hàng lâm sản Nhà nước không cấm", "Chỉ cần đăng ký kinh doanh theo quy định, không bắt buộc tuân thủ các quy định về hồ sơ lâm sản hợp pháp", "Có nghĩa vụ ưu tiên xuất khẩu lâm sản thô thay vì chế biến sâu trong nước", "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản"], 
+        correct: "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản",
+        explanation: "khoản 2 Điều 71 Luật Lâm nghiệp: quy định nghĩa vụ của Cơ sở thương mại lâm sản"
+    },
+{ 
+        question: "Đáp án nào sau đây là đúng nhất về nghĩa vụ chung của chủ rừng?", 
+        options: ["Tất cả các đáp án đều đúng", "Thực hiện quy định về theo dõi diễn biến rừng", "Trả lại rừng khi Nhà nước thu hồi rừng theo quy định", "Phòng cháy và chữa cháy rừng; phòng, trừ sinh vật gây hại rừng"], 
+        correct: "Tuân thủ quy định của pháp luật về đầu tư, doanh nghiệp, bảo vệ môi trường, lao động, tài chính; QĐ về hồ sơ lâm sản hợp pháp và kiểm tra nguồn gốc lâm sản",
+        explanation: "Điều 74 Luật Lâm nghiệp: quy định Nghĩa vụ chung của chủ rừng bao gồm tất cả các đáp án trên"
+    },
+{ 
+        question: "Theo Nghị định số 156/2018/NĐ-CP ngày 16 tháng 11 năm 2018 của Chính phủ quy định chi tiết thi hành một số điều của Luật Lâm nghiệp Diện tích liền vùng là?", 
+        options: ["Diện tích vùng đất có rừng tập trung, khoảng cách giữa các dải rừng không vượt quá 50 m và tổng diện tích khoảng trống không quá 20%", "diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích", "Diện tích vùng đất có rừng phân tán, khoảng cách giữa các dải rừng không vượt quá 100 m và tổng diện tích khoảng trống không quá 40%", "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 20 m và tổng diện tích khoảng trống không quá 10%"], 
+        correct: "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích",
+        explanation: "Khai niệm diện tích liền vùng được quy định tại khoản 2 Điều 3 Nghị định số 156/2018/NĐ-CP"
     },
 
 ];
