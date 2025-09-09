@@ -1073,8 +1073,8 @@ font-size: var(--font-size-lg);
         <div id="score-board">
             <img src="Count.png" alt="Score Board" class="score-board-frame">
             <div class="score-text-container">
-                <p id="correct-count">Đ 0/25</p>
-                <p id="incorrect-count">S 0/25</p>
+                <p id="correct-count">Đ 0/20</p>
+                <p id="incorrect-count">S 0/20</p>
             </div>
         </div>
 
@@ -1188,7 +1188,7 @@ font-size: var(--font-size-lg);
         clickSound.volume = 0.3
         
         // --- Game State ---
-        const totalQuestions = 25;
+        const totalQuestions = 20;
         let score = 0;
         let currentQuestionIndex = 0;
         let timerInterval;
@@ -1276,9 +1276,11 @@ font-size: var(--font-size-lg);
 
         function createAndShowAnswers(answersElement, options) {
             const answerLabels = ['A', 'B', 'C', 'D'];
-            answersElement.innerHTML = options.map((option, index) => 
-                `<button class="answer-btn">${answerLabels[index]}. ${option}</button>`
-            ).join('');
+            // SẮP XẾP NGẪU NHIÊN CÁC ĐÁP ÁN
+            const shuffledOptions = shuffle([...options]);
+            answersElement.innerHTML = shuffledOptions.map((option, index) => 
+    `<button class="answer-btn">${answerLabels[index]}. ${option}</button>`
+).join('');
 
             answersElement.classList.add('visible');
             const answerButtons = Array.from(answersElement.children);
@@ -1435,49 +1437,28 @@ totalTimeSpent += timeSpent;
         }
 
         // --- Hàm showResults() đã được cập nhật ---
-function showResults() {
-    questionCardContainer.innerHTML = '';
-    answersContainer.innerHTML = '';
-    resultsContainer.style.display = 'none'; // Ẩn màn hình kết quả cũ
-    timerContainer.style.display = 'none';
-    exitButton.style.display = 'none';
-    replayButton.style.display = 'none';
-    chibiAssistant.style.display = 'none';
-    overlayAnswer.style.display = 'none';
-    nextBtn.style.display = 'none';
-    scoreBoard.classList.remove('active');
-   
-    // Hiển thị màn hình tổng kết mới
-    endScreenOverlay.style.display = 'flex';
-    setTimeout(() => endScreenOverlay.classList.add('active'), 50);
-
-    // Hiển thị nội dung tổng kết
-    displayEvaluation();
-    displayStars();
-    displayFinalStats();
-    displayAvgTime();
-
-    // --- Gắn sự kiện cho các nút mới --- (ĐÃ SỬA LỖI)
-    endReplayBtn.addEventListener('click', () => {
-        clickSound.play();
-        endScreenOverlay.classList.remove('active'); // Bắt đầu hiệu ứng làm mờ (transition)
+        function showResults() {
+            questionCardContainer.innerHTML = '';
+            answersContainer.innerHTML = '';
+            resultsContainer.style.display = 'none'; // Ẩn màn hình kết quả cũ
+            timerContainer.style.display = 'none';
+            exitButton.style.display = 'none';
+            replayButton.style.display = 'none';
+            chibiAssistant.style.display = 'none';
+            overlayAnswer.style.display = 'none';
+            nextBtn.style.display = 'none';
+            scoreBoard.classList.remove('active');
         
-        // Đợi 500ms (nửa giây) cho hiệu ứng làm mờ hoàn tất rồi mới bắt đầu lại game
-        setTimeout(() => {
-            startQuiz();
-        }, 500); 
-    });
+            // Hiển thị màn hình tổng kết mới
+            endScreenOverlay.style.display = 'flex';
+            setTimeout(() => endScreenOverlay.classList.add('active'), 50);
 
-    endExitBtn.addEventListener('click', () => {
-        clickSound.play();
-        endScreenOverlay.classList.remove('active'); // Bắt đầu hiệu ứng làm mờ
-        
-        // Đợi 500ms cho hiệu ứng làm mờ hoàn tất rồi mới thoát game
-        setTimeout(() => {
-            resetGame();
-        }, 500);
-    });
-}
+            // Hiển thị nội dung tổng kết
+            displayEvaluation();
+            displayStars();
+            displayFinalStats();
+            displayAvgTime();
+        }
         
         function resetGame() {
             clearInterval(timerInterval);
@@ -1517,30 +1498,57 @@ function showResults() {
         });
 
        nextBtn.addEventListener('click', () => {
-    clickSound.play();
-    nextBtn.style.display = 'none';
-    
-    // Ẩn overlay và reset các thông tin
-    overlayAnswer.classList.remove('active');
-    overlayText.style.opacity = 0;
-    overlayText.textContent = '';
-    overlayExplanation.style.opacity = 0;
-    overlayExplanation.textContent = '';
-    
-    // Thêm hiệu ứng fade-out cho khung câu hỏi hiện tại
-    const quizWrapper = document.querySelector('.quiz-wrapper');
-    quizWrapper.classList.add('fade-out');
+            clickSound.play();
+            nextBtn.style.display = 'none';
+            
+            // Ẩn overlay và reset các thông tin
+            overlayAnswer.classList.remove('active');
+            overlayText.style.opacity = 0;
+            overlayText.textContent = '';
+            overlayExplanation.style.opacity = 0;
+            overlayExplanation.textContent = '';
+            
+            // Thêm hiệu ứng fade-out cho khung câu hỏi hiện tại
+            const quizWrapper = document.querySelector('.quiz-wrapper');
+            quizWrapper.classList.add('fade-out');
 
-    // Chờ hiệu ứng kết thúc rồi mới chuyển sang câu hỏi mới
-    setTimeout(() => {
-        // Reset lại vị trí và độ trong suốt
-        quizWrapper.classList.remove('fade-out');
-        quizWrapper.style.opacity = 1; // Đảm bảo hiện lại
+            // Chờ hiệu ứng kết thúc rồi mới chuyển sang câu hỏi mới
+            setTimeout(() => {
+                // Reset lại vị trí và độ trong suốt
+                quizWrapper.classList.remove('fade-out');
+                quizWrapper.style.opacity = 1; // Đảm bảo hiện lại
 
-        currentQuestionIndex++;
-        showNextQuestion();
-    }, 1000); // 1000ms = 1 giây
-});
+                currentQuestionIndex++;
+                showNextQuestion();
+            }, 1000); // 1000ms = 1 giây
+        });
+
+        // =================================================================
+        // SỬA LỖI: Di chuyển event listeners của màn hình kết thúc ra ngoài
+        // để chúng chỉ được đăng ký một lần duy nhất.
+        // =================================================================
+        endReplayBtn.addEventListener('click', () => {
+            clickSound.play();
+            endScreenOverlay.classList.remove('active');
+            
+            // Chờ 1000ms (1 giây) cho hiệu ứng làm mờ hoàn tất
+            setTimeout(() => {
+                endScreenOverlay.style.display = 'none'; // Ẩn hẳn overlay
+                startQuiz();
+            }, 1000); 
+        });
+
+        endExitBtn.addEventListener('click', () => {
+            clickSound.play();
+            endScreenOverlay.classList.remove('active');
+            
+            // SỬA LỖI: Chờ 1000ms (1 giây), đúng bằng thời gian transition trong CSS
+            setTimeout(() => {
+                endScreenOverlay.style.display = 'none'; // Ẩn hẳn overlay để không chặn click
+                resetGame();
+            }, 1000);
+        });
+        // =================================================================
 
        function playChibiVideo(videoSrc) {
     // Đặt lại các thuộc tính mặc định
@@ -1660,17 +1668,17 @@ infoButton.addEventListener('click', () => {
     // Hàm hiển thị đánh giá
     function displayEvaluation() {
         let evaluation = '';
-        if (correctAnswers <= 5) {
+        if (correctAnswers <= 3) {
             evaluation = 'HỌC LẠI NGAY';
-        } else if (correctAnswers >= 6 && correctAnswers <= 10) {
+        } else if (correctAnswers >= 4 && correctAnswers <= 7) {
             evaluation = 'PHẢI HỌC THÊM';
-        } else if (correctAnswers >= 11 && correctAnswers <= 15) {
+        } else if (correctAnswers >= 8 && correctAnswers <= 11) {
             evaluation = 'TẠM ỔN ĐẤY';
-        } else if (correctAnswers >= 16 && correctAnswers <= 20) {
+        } else if (correctAnswers >= 12 && correctAnswers <= 15) {
             evaluation = 'RẤT TỐT';
-        } else if (correctAnswers >= 21 && correctAnswers <= 24) {
+        } else if (correctAnswers >= 16 && correctAnswers <= 19) {
             evaluation = 'TUYỆT VỜI';
-        } else if (correctAnswers === 25) {
+        } else if (correctAnswers === 20) {
             evaluation = 'XUẤT SẮC';
         }
         evaluationText.textContent = evaluation;
@@ -1679,11 +1687,11 @@ infoButton.addEventListener('click', () => {
     // Hàm hiển thị điểm sao
     function displayStars() {
         let starCount = 0;
-        if (correctAnswers >= 5) starCount = 1;
-        if (correctAnswers >= 10) starCount = 2;
-        if (correctAnswers >= 15) starCount = 3;
-        if (correctAnswers >= 20) starCount = 4;
-        if (correctAnswers >= 25) starCount = 5;
+        if (correctAnswers >= 4) starCount = 1;
+        if (correctAnswers >= 8) starCount = 2;
+        if (correctAnswers >= 12) starCount = 3;
+        if (correctAnswers >= 16) starCount = 4;
+        if (correctAnswers >= 20) starCount = 5;
 
         starRating.innerHTML = ''; // Xóa sao cũ
         for (let i = 0; i < 5; i++) {

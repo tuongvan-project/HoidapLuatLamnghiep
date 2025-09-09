@@ -119,9 +119,9 @@ const questions = [
         explanation: "khoản 1 Điều 8 Thông tư 26/2025/TT-BNNMT quy định rõ hồ sơ gỗ từ rừng tự nhiên khai thác trong nước phải có bản chính Bảng kê lâm sản có xác nhận của cơ quan Kiểm lâm sở tại. Đây là bằng chứng pháp lý về nguồn gốc hợp pháp của gỗ. Các loại giấy tờ như hóa đơn VAT hay quyết định đấu giá chỉ là chứng từ thương mại, không thay thế được."
     },
     { 
-        question: "Hồ sơ nhập khẩu gỗ thuộc Phụ lục CITES cần loại giấy tờ gì sau đây?", 
-        options: ["Bản sao giấy phép CITES xuất khẩu hoặc tái xuất khẩu", "Bản chính hoặc bản điện tử giấy phép CITES nhập khẩu", "Biên bản kiểm lâm", "Bảng kê lâm sản theo Thông tư 26/2025/TT-BNNMT"], 
-        correct: "Cả A và C",
+        question: "Hồ sơ nhập khẩu gỗ thuộc Phụ lục CITES cần loại giấy tờ gì sau đây, chọn đáp án đúng nhất?", 
+        options: ["Bản sao giấy phép CITES xuất khẩu hoặc tái xuất khẩu", "Bản chính hoặc bản điện tử giấy phép CITES nhập khẩu", "Cả giấy phép CITES từ nước xuất khẩu và giấy phép CITES nhập khẩu do Cơ quan CITES Việt Nam cấp", "Bảng kê lâm sản theo Thông tư 26/2025/TT-BNNMT"], 
+        correct: "Cả giấy phép CITES từ nước xuất khẩu và giấy phép CITES nhập khẩu do Cơ quan CITES Việt Nam cấp",
         explanation: "Theo Điều 7 Nghị định số 102/2020/NĐ-CP Khi làm thủ tục hải quan đối với lô hàng gỗ nhập khẩu chủ gỗ thuộc Phụ lục CITES phải xuất trình Bản sao giấy phép CITES xuất khẩu hoặc tái xuất khẩu do Cơ quan CITES nước xuất khẩu hoặc nước tái xuất khẩu cấp; Bản chính hoặc bản điện tử giấy phép CITES nhập khẩu do Cơ quan CITES Việt Nam cấp;."
     },
     { 
@@ -311,10 +311,10 @@ const questions = [
         explanation: "khái niệm rừng trồng được quy định tại khoản 7 Điều 2 Luật Lâm nghiệp"
     },
     { 
-        question: "Theo Luật Lâm nghiệp, chủ rừng bao gồm các đối tượng nào?", 
-        options: ["Giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng", "Nhận chuyển nhượng, tặng cho, thừa kế rừng theo quy định của pháp luật", "Tự chiếm đất của tổ chức, cá nhân để trồng rừng của mình", "Cả A và B"], 
-        correct: "Cả A và B",
-        explanation: "Khoản 9 Điều 2 Luật Lâm nghiệp: Chủ rừng là tổ chức, hộ gia đình, cá nhân, cộng đồng dân cư được Nhà nước giao rừng, cho thuê rừng; giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng; nhận chuyển nhượng, tặng cho, thừa kế rừng theo quy định của pháp luật"
+        question: "Theo Luật Lâm nghiệp, chủ rừng (tổ chức, hộ gia đình, cá nhân, cộng đồng dân cư) gồm các đối tượng nào dưới đây?", 
+        options: ["Được giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng", "Nhận chuyển nhượng, tặng cho, thừa kế rừng KHÔNG theo quy định của pháp luật", "Tự chiếm đất của tổ chức, cá nhân để trồng rừng của mình", "Cả A và B"], 
+        correct: "Được giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng",
+        explanation: "Khoản 9 Điều 2 Luật Lâm nghiệp: Chủ rừng là tổ chức, hộ gia đình, cá nhân, cộng đồng dân cư được Nhà nước giao rừng, cho thuê rừng; giao đất, cho thuê đất để trồng rừng; tự phục hồi, phát triển rừng; nhận chuyển nhượng, tặng cho, thừa kế rừng THEO quy định của pháp luật"
     },
 { 
         question: "Theo Luật Lâm nghiệp, Quyền sở hữu rừng sản xuất là rừng trồng bao gồm các quyền nào?", 
@@ -423,6 +423,48 @@ const questions = [
         options: ["Diện tích vùng đất có rừng tập trung, khoảng cách giữa các dải rừng không vượt quá 50 m và tổng diện tích khoảng trống không quá 20%", "diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích", "Diện tích vùng đất có rừng phân tán, khoảng cách giữa các dải rừng không vượt quá 100 m và tổng diện tích khoảng trống không quá 40%", "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 20 m và tổng diện tích khoảng trống không quá 10%"], 
         correct: "Diện tích vùng đất có rừng tập trung, liên tục, khoảng cách giữa các dải rừng không vượt quá 30 m và tổng diện tích các khoảng trống không quá 30% diện tích",
         explanation: "Khái niệm diện tích liền vùng được quy định tại khoản 2 Điều 3 Nghị định số 156/2018/NĐ-CP"
+    },
+{ 
+        question: "Theo Luật Xử lý vi phạm hành chính, người từ đủ 14 tuổi đến dưới 16 tuổi bị xử phạt vi phạm hành chính khi nào?", 
+        options: ["Bị xử phạt vi phạm hành chính về mọi hành vi, dù cố ý hay vô ý", "Vi phạm hành chính do cố ý", "Chỉ bị xử phạt vi phạm hành chính khi gây thiệt hại về tài sản từ 2 triệu đồng trở lên", "Không bị xử phạt vi phạm hành chính trong bất kỳ trường hợp nào, chỉ áp dụng biện pháp giáo dục"], 
+        correct: "Vi phạm hành chính do cố ý",
+        explanation: "điểm a khoản 1 Điều 5 Luật xử lý Vi phạm hành chính quy định Người từ đủ 14 tuổi đến dưới 16 tuổi bị xử phạt vi phạm hành chính về vi phạm hành chính do cố ý; người từ đủ 16 tuổi trở lên bị xử phạt vi phạm hành chính về mọi vi phạm hành chính"
+    },
+{ 
+        question: "Thời hiệu xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp là bao nhiêu?", 
+        options: ["01 năm", "06 tháng", "02 năm", "03 năm"], 
+        correct: "02 năm",
+        explanation: "điểm a khoản 1 Điều 6 Luật xử lý Vi phạm hành chính quy định Thời hiệu xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp là 02 năm"
+    },
+{ 
+        question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết giảm nhẹ?", 
+        options: ["Người vi phạm hành chính đã có hành vi ngăn chặn, làm giảm bớt hậu quả của vi phạm hoặc tự nguyện khắc phục hậu quả, bồi thường thiệt hại", "Người vi phạm hành chính đã tự nguyện khai báo, thành thật hối lỗi", "Vi phạm hành chính do trình độ lạc hậu", "Tất cả các đáp án đều đúng"], 
+        correct: "Tất cả các đáp án đều đúng",
+        explanation: " Điều 9 Luật xử lý Vi phạm hành chính quy định tình tiết giảm nhẹ bao gồm tất cả các đáp án trên"
+    },
+{ 
+        question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết giảm nhẹ?", 
+        options: ["Vi phạm hành chính vì hoàn cảnh đặc biệt khó khăn", "Vi phạm hành chính do trình độ lạc hậu", "Người vi phạm hành chính thuộc hộ nghèo theo quy định của pháp luật", "Tất cả các đáp án đều đúng"], 
+        correct: "Vi phạm hành chính do trình độ lạc hậu",
+        explanation: "khoản 7 Điều 9 Luật xử lý Vi phạm hành chính quy định tình tiết giảm nhẹ Vi phạm hành chính do trình độ lạc hậu. Các tình tiết còn lại không được coi là tình tiết giảm nhẹ"
+    },
+{ 
+        question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết tăng nặng?", 
+        options: ["Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính", "Sau khi vi phạm đã không trốn tránh, che giấu vi phạm hành chính", "Vi phạm hành chính có quy mô nhỏ, số lượng hoặc trị giá hàng hóa nhỏ", "Chấm dứt hành vi vi phạm hành chính khi người có thẩm quyền đã yêu cầu"], 
+        correct: "Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính",
+        explanation: "quy định tại điểm g khoản 1 Điều 10 Luật xử lý Vi phạm hành chính"
+    },
+{ 
+        question: "Theo Luật Xử lý vi phạm hành chính, vi phạm hành chính nhiều lần là?", 
+        options: ["Cá nhân, tổ chức thực hiện hành vi VPHC mà trước đó đã thực hiện hành vi VPHC này nhưng chưa bị xử lý và chưa hết thời hiệu xử lý", "Cá nhân, tổ chức thực hiện hành vi VPHC mà trước đó đã thực hiện hành vi VPHC này nhưng chưa bị xử lý và đã hết thời hiệu xử lý", "cá nhân, tổ chức câu kết với cá nhân, tổ chức khác để cùng thực hiện hành vi vi phạm hành chính", "cá nhân, tổ chức đã bị ra quyết định xử phạt VPHC nhưng chưa hết thời hạn được coi là chưa bị xử phạt VPHC mà lại thực hiện hành vi VPHC đã bị xử phạt"], 
+        correct: "Cá nhân, tổ chức thực hiện hành vi VPHC mà trước đó đã thực hiện hành vi VPHC này nhưng chưa bị xử lý và chưa hết thời hiệu xử lý",
+        explanation: "quy định tại khoản 6 Điều 2 Luật xử lý Vi phạm hành chính"
+    },
+{ 
+        question: "Theo Luật Xử lý vi phạm hành chính, tái phạm là?", 
+        options: ["Trường hợp cá nhân, tổ chức thực hiện hành vi VPHC mà trước đó đã thực hiện hành vi VPHC này nhưng chưa bị xử lý ", "Cá nhân, tổ chức đã bị ra quyết định xử phạt VPHC nhưng chưa hết thời hạn được coi là chưa bị xử phạt VPHC mà lại thực hiện hành vi VPHC đã bị xử phạt", "Cá nhân, tổ chức đã bị ra quyết định xử phạt VPHC, đã đến thời hạn được coi là chưa bị xử phạt VPHC mà lại thực hiện hành vi VPHC đã bị xử phạt", "Trường hợp cá nhân, tổ chức thực hiện hành vi VPHC mà trước đó đã thực hiện hành vi VPHC và đã bị xử lý"], 
+        correct: "Cá nhân, tổ chức đã bị ra quyết định xử phạt VPHC nhưng chưa hết thời hạn được coi là chưa bị xử phạt VPHC mà lại thực hiện hành vi VPHC đã bị xử phạt",
+        explanation: "quy định tại khoản 5 Điều 2 Luật xử lý Vi phạm hành chính"
     },
 
 ];
