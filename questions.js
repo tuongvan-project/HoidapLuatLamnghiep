@@ -466,5 +466,79 @@ const questions = [
         correct: "Cá nhân, tổ chức đã bị ra quyết định xử phạt VPHC nhưng chưa hết thời hạn được coi là chưa bị xử phạt VPHC mà lại thực hiện hành vi VPHC đã bị xử phạt",
         explanation: "quy định tại khoản 5 Điều 2 Luật xử lý Vi phạm hành chính"
     },
+{ 
+        question: "Theo Luật Xử lý vi phạm hành chính, quy định bao nhiêu hình thức xử phạt?", 
+        options: ["5", "4", "6", "3"], 
+        correct: "5",
+        explanation: "khoản 1 Điều 51 Luật xử lý Vi phạm hành chính quy định 5 hình thức xử phạt: Cảnh cáo; Phạt tiền; Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn; Tịch thu tang vật VPHC, phương tiện được sử dụng để VPHC; Trục xuất"
+    },
+{ 
+        question: "Trường hợp nào cá nhân bị xử phạt được áp dụng hoãn thi hành quyết định phạt tiền?", 
+        options: ["Cá nhân đang gặp khó khăn về kinh tế", "Cá nhân chưa có việc làm ổn định hoặc có thu nhập thấp", "Cá nhân đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn", "Cá nhân đang cư trú ở vùng sâu, vùng xa, đi lại khó khăn để nộp phạt"], 
+        correct: "Cá nhân đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn",
+        explanation: "điểm b khoản 1 Điều 76 Luật xử lý Vi phạm hành chính quy định trường hợp cá nhân đang gặp khó khăn theo quy định trên phải có xác nhận của cơ quan, tổ chức có thẩm quyền"
+    },
+{ 
+        question: "Nếu quá thời hạn thi hành quyết định xử phạt, ngoài việc bị bị cưỡng chế thi hành quyết định xử phạt, cá nhân, tổ chức vi phạm phải...?", 
+        options: ["Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,5% tính trên số tiền phạt chưa nộp", "Cứ mỗi tuần chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt", "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,005% tính trên số tiền phạt còn lại", "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp"], 
+        correct: "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp",
+        explanation: "khoản 1 Điều 78 Luật xử lý Vi phạm hành chính quy định Nếu quá thời hạn nêu trên sẽ bị cưỡng chế thi hành quyết định xử phạt và cứ mỗi ngày chậm nộp tiền phạt thì cá nhân, tổ chức vi phạm phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp"
+    },
+{ 
+        question: "Trường hợp người bị xử phạt đang gặp khó khăn đặc biệt về kinh tế và có đơn đề nghị nộp tiền phạt nhiều lần, tổng thời hạn để nộp tiền và mức nộp phạt tối thiểu lần thứ nhất là bao nhiêu?", 
+        options: ["Thời hạn không quá 3 tháng và mức nộp phạt tối thiểu là 30% tổng số tiền phạt", "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 40% tổng số tiền phạt", "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 50% tổng số tiền phạt", "Thời hạn không quá 3 tháng và mức nộp phạt tối thiểu là 50% tổng số tiền phạt"], 
+        correct: "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 40% tổng số tiền phạt",
+        explanation: "Điều 79 Luật xử lý Vi phạm hành chính quy định Thời hạn nộp tiền phạt nhiều lần không quá 06 tháng, kể từ ngày quyết định xử phạt có hiệu lực; số lần nộp tiền phạt tối đa không quá 03 lần. Mức nộp phạt lần thứ nhất tối thiểu là 40% tổng số tiền phạt"
+    },
+{ 
+        question: "Cá nhân có quyền giải trình trực tiếp hoặc bằng văn bản với người có thẩm quyền xử phạt vi phạm hành chính trong trường hợp nào sau đây?", 
+        options: ["Mức tối đa của khung tiền phạt đối với hành vi đó từ 5.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 10.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 20.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 15.000.000 đồng trở lên"], 
+        correct: "Mức tối đa của khung tiền phạt đối với hành vi đó từ 15.000.000 đồng trở lên",
+        explanation: "Điều 61 Luật xử lý Vi phạm hành chính quy định hình thức giải trình trực tiếp hoặc bằng văn bản, cá nhân, tổ chức VPHC phải gửi văn bản cho người có thẩm quyền xử phạt VPHC trong thời hạn 02 hoặc 05 ngày làm việc, kể từ ngày lập biên bản vi phạm hành chính"
+    },
+{ 
+        question: "Nghị định của Chính phủ về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp quy định Lấn, chiếm rừng là gì?", 
+        options: ["Tự ý chuyển mục đích sử dụng đất rừng sang đất nông nghiệp hoặc đất ở", "Tự ý dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân", "Tự ý phát, đốt rừng làm nương rẫy để canh tác lúa và hoa màu","Tự ý dịch chuyển ranh giới đất trồng rừng hoặc chiếm đất rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân"], 
+        correct: "Tự ý dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân",
+        explanation: "Điều 7 Nghị định số 35/2019/NĐ-CP quy định lấn, chiếm rừng là Hành vi dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân chưa giao, chưa cho thuê"
+    },
+{ 
+        question: "Nghị định của Chính phủ về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp quy định Khai thác trái phép môi trường rừng và thực hiện các dịch vụ, kinh doanh trái phép trong rừng là gì?", 
+        options: ["Tổ chức các dịch vụ, kinh doanh trong rừng mà không được phép của chủ rừng", "Tổ chức du lịch, tham quan trong rừng mà không được phép của chủ rừng", "Tất cả các đáp án đều đúng","Tổ chức nghỉ dưỡng, giải trí trong phân khu bảo vệ nghiêm ngặt của rừng đặc dụng"], 
+        correct: "Tất cả các đáp án đều đúng",
+        explanation: "Điều 8 Nghị định số 35/2019/NĐ-CP quy định Khai thác trái phép môi trường rừng và thực hiện các dịch vụ, kinh doanh trái phép trong rừng"
+    },
+{ 
+        question: "Hành vi không xây dựng, trình cấp có thẩm quyền phê duyệt phương án quản lý rừng bền vững hoặc không thực hiện đúng phương án quản lý rừng bền vững đã được cấp có thẩm quyền phê duyệt bị xử phạt bao nhiêu tiền?",
+        options: ["Từ 1.000.000 đồng đến 3.000.000 đồng", "Từ 2.000.000 đồng đến 4.000.000 đồng", "Tất cả các đáp án đều đúng", "Từ 2.000.000 đồng đến 5.000.000 đồng"], 
+        correct: "Từ 1.000.000 đồng đến 3.000.000 đồng",
+        explanation: "Điều 10 Nghị định số 35/2019/NĐ-CP quy định hành vi không xây dựng, trình phê duyệt phương án quản lý rừng bền vững hoặc không thực hiện đúng phương án quản lý rừng bền vững đã được phê duyệt bị Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng"
+    },
+{ 
+        question: "Theo Nghị định về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp, mức phạt đối với hành vi khai thác rừng trái pháp luật trường hợp gỗ thuộc loài thông thường trong rừng sản xuất là rừng tự nhiên là bao nhiêu?",
+        options: ["Từ 1.000.000 đồng đến 100.000.000 đồng", "Từ 500.000 đồng đến 100.000.000 đồng", "Từ 500.000 đồng đến 70.000.000 đồng", "Từ 2.500.000 đồng đến 100.000.000 đồng"], 
+        correct: "Từ 500.000 đồng đến 100.000.000 đồng",
+        explanation: "Điều 13 Nghị định số 35/2019/NĐ-CP quy định hành vi khai thác rừng trái pháp luật trường hợp gỗ thuộc loài thông thường trong rừng sản xuất là rừng tự nhiên bị Phạt tiền Từ 500.000 đồng đến 100.000.000 đồng"
+    },
+{ 
+        question: "Tên gọi của hành vi khai thác lâm sản trong rừng không được phép của cơ quan có thẩm quyền được quy định tại Nghị định số 35/2019/NĐ-CP?",
+        options: ["Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp", "Khai thác rừng trái phép", "Khai thác lâm sản trái pháp luật", "Khai thác rừng trái pháp luật"], 
+        correct: "Khai thác rừng trái pháp luật",
+        explanation: "Điều 13 Nghị định số 35/2019/NĐ-CP Tên gọi của hành vi khai thác lâm sản trong rừng không được phép của cơ quan có thẩm quyền là Khai thác rừng trái pháp luật"
+    },
+{ 
+        question: "Theo Nghị định số 35/2019/NĐ-CP, hành vi khai thác trái pháp luật trong rừng sản xuất là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là bao nhiêu?",
+        options: ["từ 500.000 đồng đến 1.000.000 đồng", "từ 1.000.000 đồng đến 3.000.000 đồng", "từ 750.000 đồng đến 1.500.000 đồng", "Không có đáp án nào đúng"], 
+        correct: "từ 500.000 đồng đến 1.000.000 đồng",
+        explanation: "điểm a khoản 1 Điều 13 Nghị định số 35/2019/NĐ-CP hành vi khai thác trái pháp luật trong rừng sản xuất là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là từ 500.000 đồng đến 1.000.000 đồng"
+    },
+{ 
+        question: "Theo Nghị định số 35/2019/NĐ-CP, hành vi khai thác trái pháp luật trong rừng phòng hộ là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối đa là bao nhiêu?",
+        options: ["Từ 80.000.000 đồng đến 100.000.000 đồng", "Từ 70.000.000 đồng đến 120.000.000 đồng", "từ 70.000.000 đồng đến 100.000.000 đồng", "Không có đáp án nào đúng"], 
+        correct: "từ 70.000.000 đồng đến 100.000.000 đồng",
+        explanation: "điểm a khoản 2 Điều 13 Nghị định số 35/2019/NĐ-CP hành vi khai thác trái pháp luật trong rừng phòng hộ là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là từ từ 70.000.000 đồng đến 100.000.000 đồng"
+    },
+
+
 
 ];
