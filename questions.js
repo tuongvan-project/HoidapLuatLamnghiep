@@ -39,7 +39,14 @@ const questions = [
         correct: "6 cm",
         explanation: "điểm c khoản 1 Điều 3 Thông tư 26/2025/TT-BNNMT, gỗ tròn là Gỗ rừng trồng, rừng tràm, rừng ngập mặn có đường kính đầu nhỏ từ 06 cm trở lên và chiều dài từ 01 m trở lên."
     },
-    { 
+{ 
+        question: "Theo Thông tư 26/2025/TT-BNNMT gỗ tròn (trừ gỗ rừng trồng, rừng tràm, rừng ngập mặn) là gỗ có kích thước như thế nào?", 
+        options: ["có đường kính đầu nhỏ từ 6 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "có đường kính đầu nhỏ từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "có đường kính đầu to từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "các đáp án trên đều đúng"], 
+        correct: "có đường kính đầu nhỏ từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên",
+        explanation: "điểm c khoản 1 Điều 3 Thông tư 26/2025/TT-BNNMT, gỗ tròn là Gỗ có đường kính đầu nhỏ từ 10 (cm) đến dưới 20 cm và chiều dài từ 01 (m) trở lên; Gỗ có đường kính đầu nhỏ từ 20 cm trở lên và chiều dài từ 30 cm trở lên"
+    },
+    
+{ 
         question: "Theo Thông tư 26/2025/TT-BNNMT, kiểu gỗ nào sau đây không được coi là 'gỗ tròn'?", 
         options: ["Gỗ nguyên khai cắt khúc", "Gỗ bóc vỏ", "Gỗ lóc lõi", "Gỗ xẻ thành thanh, tấm"], 
         correct: "Gỗ xẻ thành thanh, tấm",
@@ -450,8 +457,14 @@ const questions = [
     },
 { 
         question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết tăng nặng?", 
-        options: ["Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính", "Sau khi vi phạm đã không trốn tránh, che giấu vi phạm hành chính", "Vi phạm hành chính có quy mô nhỏ, số lượng hoặc trị giá hàng hóa nhỏ", "Chấm dứt hành vi vi phạm hành chính khi người có thẩm quyền đã yêu cầu"], 
+        options: ["Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính", "Sau khi vi phạm đã không trốn tránh, che giấu vi phạm hành chính", "Vi phạm hành chính có quy mô không nhỏ, số lượng hoặc trị giá hàng hóa không nhỏ", "Chấm dứt hành vi vi phạm hành chính khi người có thẩm quyền đã yêu cầu"], 
         correct: "Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính",
+        explanation: "quy định tại điểm g khoản 1 Điều 10 Luật xử lý Vi phạm hành chính"
+    },
+{ 
+        question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết tăng nặng?", 
+        options: ["Lợi dụng hoàn cảnh các ngày lễ, tết, sự kiện kỷ niệm trọng đại của quốc gia để vi phạm hành chính", "Che giấu cho người vi phạm hành chính", "Vi phạm hành chính nhiều lần; tái phạm", "Vi phạm hành chính vượt quá giới hạn phòng vệ chính đáng; vượt quá yêu cầu của tình thế cấp thiết"], 
+        correct: "Vi phạm hành chính nhiều lần; tái phạm",
         explanation: "quy định tại điểm g khoản 1 Điều 10 Luật xử lý Vi phạm hành chính"
     },
 { 
