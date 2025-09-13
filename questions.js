@@ -76,13 +76,85 @@ const questions = [
         correct: "Gỗ nguyên liệu của doanh nghiệp Nhóm I",
         explanation: "Theo khoản 4 Điều 5 Thông tư 26/2025/TT-BNNMT, Lâm sản không phải xác nhận Bảng kê lâm sản: gỗ nguyên liệu của doanh nghiệp Nhóm I theo quy định của Hệ thống bảo đảm gỗ hợp pháp Việt Nam; sản phẩm gỗ. Các trường hợp còn lại vẫn phải xác nhận vì tính chất nhạy cảm, quý hiếm."
     },
-    { 
-        question: "Thời hạn cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản sau khi nhận đủ hồ sơ hợp lệ là bao lâu?", 
-        options: ["01 ngày làm việc", "02 ngày làm việc", "03 ngày", "05 ngày"], 
-        correct: "02 ngày làm việc",
-        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
+ { 
+        question: "Trong trường hợp phải xác minh nguồn gốc lâm sản, thời hạn tối đa cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản kể từ ngày nhận đủ hồ sơ hợp lệ là bao lâu?", 
+        options: ["02 ngày làm việc", "04 ngày làm việc", "03 ngày", "04 ngày"], 
+        correct: "04 ngày làm việc",
+        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT Trường hợp cần xác minh nguồn gốc lâm sản trong 01 ngày làm việc kể từ ngày nhận được hồ sơ hợp lệ, cơ quan Kiểm lâm thông báo cho chủ lâm sản về việc xác minh; trong thời hạn không quá 03 ngày làm việc kể từ ngày thông báo, cơ quan Kiểm lâm sở tại tiến hành xác minh, và hoàn thành xác nhận Bảng kê lâm sản"
     },
-   { 
+{ 
+        question: "Hồ sơ đề nghị xác nhận bảng kê lâm sản sau khai thác của chủ rừng phải có tài liệu nào sau đây?", 
+        options: ["Bản sao bảng kê lâm sản đề nghị xác nhận", "Bản sao Sổ theo dõi nhập, xuất lâm sản đối với chủ lâm sản là tổ chức, hộ kinh doanh xuất bán lâm sản", "Bản sao Phương án khai thác", "Bản sao Bảng kê lâm sản mua bán, chuyển giao quyền sở hữu liền kề trước đó"], 
+        correct: "Bản sao Phương án khai thác",
+        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định ngoài bản chính đơn đề nghị xác nhận và bảng kê lâm sản, còn thêm Bản sao Phương án khai thác đối với trường hợp xác nhận bảng kê lâm sản sau khai thác"
+    },
+{ 
+        question: "Trong trường hợp động vật nguy cấp, quý, hiếm đe dọa xâm hại tài sản hoặc tính mạng của con người, tổ chức, hộ gia đình, cá nhân phải làm gì sau đây là đúng nhất?", 
+        options: ["Áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, đồng thời thông tin ngay đến Sở NN&MT hoặc UBND cấp xã gần nhất", "Được phép tự do săn bắt, bẫy hoặc giết động vật để bảo đảm an toàn cho người và tài sản", "Tự ý nuôi nhốt động vật để bàn giao sau khi thấy không còn nguy hiểm", "Báo tin cho cơ quan công an địa phương nhưng không cần thực hiện biện pháp ngăn chặn, xua đuổi"], 
+        correct: "Áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, đồng thời thông tin ngay đến Sở NN&MT hoặc UBND cấp xã gần nhất",
+        explanation: "Điều 9 Thông tư 27/2025/TT-BNNMT Trong trường hợp động vật nguy cấp, quý, hiếm đe dọa xâm hại tài sản hoặc tính mạng của con người, phải áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, thông tin đến Sở NN&MT hoặc UBND cấp xã"
+    },
+
+{ 
+        question: "Theo Thông tư số 27/2025/TT-BNNMT, khái niệm động vật rừng thế hệ F2 hoặc thế hệ kế tiếp là gì?", 
+        options: ["Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi", "là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên", "Là cá thể được sinh ra trong môi trường có kiểm soát từ cặp bố, mẹ đều có nguồn gốc từ tự nhiên (thế hệ gốc)", "Là cá thể được sinh ra trong môi trường có kiểm soát từ cặp bố, mẹ đều có nguồn gốc từ tự nhiên (thế hệ gốc)"], 
+        correct: "Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi",
+        explanation: "Khoản 19 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi"
+    },
+{ 
+        question: "Theo Thông tư số 27/2025/TT-BNNMT, hình thức nuôi động vật rừng để sản sinh ra thế hệ kế tiếp trong môi trường có kiểm soát còn được goi là gì?", 
+        options: ["Nuôi sinh trưởng", "Nuôi sinh sản", "Nuôi bán hoang dã", "Nuôi thuần dưỡng"], 
+        correct: "Nuôi sinh sản",
+        explanation: "Khoản 16 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Nuôi sinh sản là hình thức nuôi động vật để sản sinh ra thế hệ kế tiếp trong môi trường có kiểm soát"
+    },
+{ 
+        question: "Trong thời hạn bao lâu kể từ ngày đưa động vật, thực vật về cơ sở nuôi, trồng, tổ chức, cá nhân gửi thông báo và bản sao hồ sơ nguồn gốc mẫu vật đến cơ quan Kiểm lâm sở tại?", 
+        options: ["03 ngày", "04 ngày", "02 ngày làm việc", "03 ngày làm việc"], 
+        correct: "03 ngày làm việc",
+        explanation: "Khoản 3 Điều 24 và khoản 1 Điều 25 Thông tư 26/2025/TT-BNNMT trong thời hạn 03 ngày làm việc, kể từ ngày đưa động vật, thực vật về cơ sở nuôi, trồng, tổ chức, cá nhân gửi thông báo và bản sao hồ sơ nguồn gốc mẫu vật đến cơ quan Kiểm lâm sở tại"
+    },
+
+{ 
+        question: "Theo Thông tư số 27/2025/TT-BNNMT, khái niệm động vật rừng thế hệ F1 là gì?", 
+        options: ["Là cá thể được sinh ra trong môi trường tự nhiên, không có tác động của con người", "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên", "Là cá thể được sinh ra trong môi trường tự nhiên không kiểm soát, trong đó có ít nhất bố hoặc mẹ được nuôi nhốt", "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó cả bố và mẹ đều là F1"], 
+        correct: "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên",
+        explanation: "Khoản 18 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên"
+    },
+{ 
+        question: "Trường hợp chủ cơ sở nuôi động vật rừng đề nghị xác nhận bảng kê lâm sản đối với động vật, sản phẩm của chúng thuộc Danh mục loài nguy cấp, quý, hiếm; Danh mục ĐVR thông thường..., ngoài bản chính bảng kê lâm sản và đơn đề nghị xác nhận BKLS, phải cung cấp thêm tài liệu gì để hồ sơ hợp lệ?", 
+        options: ["Tất cả các phương án đều đúng", "Bản chính Mã số cơ sở nuôi do Cơ quan Kiểm lâm cấp tỉnh cấp", "Bản chính Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường", "Bản sao Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường"], 
+        correct: "Bản chính Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường",
+        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định Bản chính Sổ theo dõi nuôi, trồng đối với chủ cơ sở nuôi động vật, trồng thực vật thuộc Danh mục loài nguy cấp, quý, hiếm hoặc động vật, thực vật hoang dã nguy cấp thuộc Phụ lục CITES"
+    },
+
+{ 
+        question: "Hồ sơ đề nghị xác nhận bảng kê lâm sản sau khai thác của chủ rừng phải có tài liệu nào sau đây?", 
+        options: ["Bản sao bảng kê lâm sản đề nghị xác nhận", "Bản sao Sổ theo dõi nhập, xuất lâm sản đối với chủ lâm sản là tổ chức, hộ kinh doanh xuất bán lâm sản", "Bản sao Phương án khai thác", "Bản sao Bảng kê lâm sản mua bán, chuyển giao quyền sở hữu liền kề trước đó"], 
+        correct: "Bản sao Phương án khai thác",
+        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định ngoài bản chính đơn đề nghị xác nhận và bảng kê lâm sản, còn thêm Bản sao Phương án khai thác đối với trường hợp xác nhận bảng kê lâm sản sau khai thác"
+    },
+    
+{ 
+        question: "Trong trường hợp không xác minh nguồn gốc lâm sản, thời hạn cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản kể từ ngày nhận đủ hồ sơ hợp lệ là bao lâu?", 
+        options: ["01 ngày làm việc", "02 ngày làm việc", "02 ngày", "04 ngày"], 
+        correct: "02 ngày làm việc",
+        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa"
+    },
+    { 
+        question: "Thông tư 26/2025/TT-BNNMT quy định thực vật rừng thông thường là gì?", 
+        options: ["Loài thực vật có nguồn gốc từ rừng thuộc danh mục loài thực vật rừng thông thường", "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES", "Loài thực vật không thuộc Danh mục loài nguy cấp, quý, hiếm", "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES"], 
+        correct: "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES",
+        explanation: "Khoản 7 Điều 3 Thông tư 26/2025/TT-BNNMT quy định: Thực vật rừng thông thường là loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES"
+    },
+
+ { 
+        question: "Gỗ tròn, gỗ xẻ, gỗ đẽo, ván các loại, dăm gỗ, bột gỗ, sợi gỗ và các loại gỗ đã chế biến hoặc chưa qua chế biến được sử dụng để làm nguyên liệu sản xuất sản phẩm gỗ được gọi chung là gì?", 
+        options: ["Lâm sản tiền sản phẩm gỗ", "Gỗ nguyên liệu", "Gỗ bán thành phẩm", "Gỗ công nghiệp"], 
+        correct: "Gỗ nguyên liệu",
+        explanation: "Khoản 6 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Gỗ nguyên liệu là gỗ tròn, gỗ xẻ, gỗ đẽo, ván các loại, dăm gỗ, bột gỗ, sợi gỗ và các loại gỗ đã chế biến hoặc chưa qua chế biến được sử dụng để làm nguyên liệu sản xuất sản phẩm gỗ"
+    },
+
+{ 
         question: "Trường hợp nào phải phê duyệt phương án khai thác?", 
         options: ["Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ", "Khai thác cây trồng phân tán ngoài rừng do hộ gia đình tự trồng trên đất nông nghiệp", "Khai thác tận thu củi khô, cành gãy trong rừng sản xuất là rừng trồng sau bão", "Thực vật rừng ngoài gỗ trong rừng phòng hộ"], 
         correct: "Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ",
@@ -263,7 +335,32 @@ const questions = [
         correct: "Doanh nghiệp, cơ sở chế biến lâm sản",
         explanation: "Điều 19 Thông tư 26/2025/TT-BNNMT quy định Hồ sơ lâm sản tại cơ sở chế biến, kinh doanh, cất giữ gỗ gồm Sổ theo dõi nhập, xuất lâm sản. Chủ lâm sản có trách nhiệm cập nhật đầy đủ, kịp thời các thông tin vào Sổ theo dõi nhập, xuất lâm sản khi nhập, xuất lâm sản"
     },
+ { 
+        question: "Cơ quan nào sau đây có thẩm quyền cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật thuộc Phụ lục Công ước CITES?", 
+        options: ["Hạt Kiểm lâm sở tại", "Chi cục Chăn nuôi, thú y và thuỷ sản", "Cơ quan Kiểm lâm cấp tỉnh", "UBND cấp xã nơi đặt cơ sở nuôi, trồng"], 
+        correct: "Cơ quan Kiểm lâm cấp tỉnh",
+        explanation: "điểm a khoản 1 Điều 26 Thông tư 27/2025/TT-BNNMT quy định Cơ quan Kiểm lâm cấp tỉnh cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật, thực vật thuộc Phụ lục Công ước CITES"
+    },
+{ 
+        question: "Rắn hổ mang Trung Quốc, tên khoa học Naja atra thuộc loài động vật rừng nhóm nào sau đây?", 
+        options: ["guy cấp, quý hiếm IB", "nguy cấp, quý hiếm IIB", "nhóm I CITES", "loài thông thường"], 
+        correct: "nguy cấp, quý hiếm IIB",
+        explanation: "Danh mục loài nguy cấp, quý, hiếm ban hành tại Phụ lục I kèm theo Thông tư 27/2025/TT-BNNMT"
+    },
     { 
+        question: "Cầy vòi mốc tên khoa học Paguma larvata, thuộc loài động vật rừng nhóm nào sau đây?", 
+        options: ["guy cấp, quý hiếm IB", "nguy cấp, quý hiếm IIB", "nhóm I CITES", "loài thông thường"], 
+        correct: "nguy cấp, quý hiếm IIB",
+        explanation: "Danh mục loài nguy cấp, quý, hiếm ban hành tại Phụ lục I kèm theo Thông tư 27/2025/TT-BNNMT"
+    },
+
+ { 
+        question: "Tài liệu nào sau đây nằm trong danh mục Hồ sơ đề nghị cấp mã số cơ sở nuôi, trồng các loài động vật, thực vật nguy cấp, quý hiếm, thuộc Phụ lục Công ước CITES?", 
+        options: ["Hoá đơn mua bán động vật, thực vật nguy cấp, quý hiếm, thuộc Phụ lục Công ước CITES", " Giấy chứng nhận kiểm dịch động vật, sản phẩm động vật", "Bản chính phương án nuôi, trồng", "Bản sao phương án nuôi, trồng"], 
+        correct: "Bản chính phương án nuôi, trồng",
+        explanation: "điểm a khoản 1 Điều 26 Thông tư 27/2025/TT-BNNMT quy định Cơ quan Kiểm lâm cấp tỉnh cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật, thực vật thuộc Phụ lục Công ước CITES"
+    },
+{ 
         question: "Tổ chức, hộ kinh doanh phải báo cáo tình hình nhập, xuất lâm sản cho cơ quan Kiểm lâm sở tại định kỳ như thế nào?", 
         options: ["Trước ngày 15 tháng 01 hằng năm", "Trước ngày 31 tháng 12 hằng năm", "Trước ngày 15 tháng 7 và 15 tháng 01 hằng năm", "Trước ngày 30 tháng 6 hằng năm"], 
         correct: "Trước ngày 15 tháng 01 hằng năm",
