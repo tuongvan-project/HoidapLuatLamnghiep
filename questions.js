@@ -648,6 +648,48 @@ const questions = [
         correct: "từ 70.000.000 đồng đến 100.000.000 đồng",
         explanation: "điểm a khoản 2 Điều 13 Nghị định số 35/2019/NĐ-CP hành vi khai thác trái pháp luật trong rừng phòng hộ là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là từ từ 70.000.000 đồng đến 100.000.000 đồng"
     },
+{ 
+        question: "Hành vi tận thu trái pháp luật gỗ nằm, trục, vớt gỗ trái pháp luật dưới sông, suối, ao, hồ trong rừng thì xử phạt như thế nào?",
+        options: ["Xử phạt như khai thác trái pháp luật trong rừng phòng hộ", "Xử phạt như khai thác trái pháp luật trong rừng đặc dụng", "Xử phạt như khai thác trái pháp luật trong rừng sản xuất", "Xử phạt như khai thác trái pháp luật trong rừng tự nhiên"], 
+        correct: "Xử phạt như khai thác trái pháp luật trong rừng sản xuất",
+        explanation: "khoản 6 Điều 13 Nghị định số 35/2019/NĐ-CP tận thu trái pháp luật gỗ nằm, trục, vớt gỗ trái pháp luật dưới sông, suối, ao, hồ trong rừng thì xử phạt theo quy định tại khoản 1 tức là xử phạt như khai thác trong rừng sản xuất"
+    },
+{ 
+        question: "Khi bị xử phạt về hành vi khai thác rừng trái pháp luật, người bị xử phạt còn có thể bị phạt bổ sung Tịch thu phương tiện cơ giới trong trường hợp nào?",
+        options: ["Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 10 m3 gỗ rừng trồng trở lên hoặc 3 m3 gỗ rừng tự nhiên trở lên", "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 5 m3 gỗ rừng trồng trở lên hoặc 2 m3 gỗ rừng tự nhiên trở lên", "Người bị xử phạt chỉ bị tịch thu phương tiện giao thông thô sơ đường bộ và các dụng cụ, công cụ được sử dụng để thực hiện hành vi ", "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên"], 
+        correct: "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên",
+        explanation: "điểm c khoản 8 Điều 13 Nghị định số 35/2019/NĐ-CP Tịch thu phương tiện cơ giới khi khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên"
+    },
+{ 
+        question: "Hành vi Không báo cáo kết quả sản xuất, kinh doanh giống cây trồng lâm nghiệp khi có yêu cầu của cơ quan quản lý nhà nước về lâm nghiệp tại địa phương bị xử phạt như thế nào?",
+        options: ["Phạt tiền từ 500.000 đồng đến 1.000.000 đồng ", "Phạt tiền từ 750.000 đồng đến 1.000.000 đồng ", "Phạt tiền từ 200.000 đồng đến 500.000 đồng", "Không có quy định xử phạt VPHC đối với hành vi này"], 
+        correct: "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng ",
+        explanation: "điểm a khoản 1 Điều 14 Nghị định số 35/2019/NĐ-CP Phạt tiền từ 500.000 đồng đến 1.000.000 đồng khi Không báo cáo kết quả sản xuất, kinh doanh giống cây trồng lâm nghiệp khi có yêu cầu của cơ quan quản lý nhà nước về lâm nghiệp tại địa phương"
+    },
+{ 
+        question: "Sản xuất giống cây trồng lâm nghiệp không đảm bảo chất lượng; kinh doanh giống cây trồng lâm nghiệp không đảm bảo chất lượng hoặc không có hồ sơ giống cây trồng lâm nghiệp theo quy định bị xử phạt như thế nào?",
+        options: ["Phạt tiền từ 500.000 đồng đến 10.000.000 đồng và buộc nộp lại toàn bộ lợi nhuận thu được", "Phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng và tịch thu toàn bộ lô giống cây trồng lâm nghiệp", "Phạt tiền từ 1.000.000 Đồng đến 40.000.000 Đồng và Buộc tiêu hủy lô giống cây trồng lâm nghiệp", "Phạt tiền từ 2.000.000 đồng đến 30.000.000 đồng và chỉ cảnh cáo, không áp dụng biện pháp khắc phục hậu quả"], 
+        correct: "Phạt tiền từ 1.000.000 Đồng đến 40.000.000 Đồng và Buộc tiêu hủy lô giống cây trồng lâm nghiệp",
+        explanation: "khoản 4 và 5 Điều 14 Nghị định số 35/2019/NĐ-CP quy định mức tiền phạt và biện pháp khắc phục hậu quả đối với hành vi sản xuất giống cây trồng lâm nghiệp không đảm bảo chất lượng; kinh doanh giống cây trồng lâm nghiệp không đảm bảo chất lượng hoặc không có hồ sơ giống cây trồng lâm nghiệp theo quy định"
+    },
+{ 
+        question: "Hành vi nào dưới đây là hành vi Vi phạm các quy định chung của Nhà nước về bảo vệ rừng?",
+        options: ["Chủ rừng không thực hiện trồng lại rừng ngay trong vụ trồng rừng kế tiếp sau khi khai thác trắng", "Mang các loại dụng cụ, công cụ vào rừng sản xuất hoặc rừng phòng hộ mà không được phép của chủ rừng", "Mang hóa chất độc hại, chất nổ, chất dễ cháy trái quy định của pháp luật vào rừng sản xuất là rừng trồng", "Chủ rừng không báo cáo hoặc báo cáo không đúng thời hạn cho cơ quan có thẩm quyền khi có biến động về diện tích rừng theo quy định của pháp luật"], 
+        correct: "Chủ rừng không báo cáo hoặc báo cáo không đúng thời hạn cho cơ quan có thẩm quyền khi có biến động về diện tích rừng theo quy định của pháp luật",
+        explanation: "Điều 16 Nghị định số 35/2019/NĐ-CP quy định 26 hành vi Vi phạm các quy định chung của Nhà nước về bảo vệ rừng"
+    },
+{ 
+        question: "Hành vi chăn thả gia súc, gia cầm, vật nuôi khác trên diện tích mới trồng rừng, đang trong thời kỳ chăm sóc đối với rừng sản xuất hoặc rừng phòng hộ bị xử phạt như thế nào?",
+        options: ["Phạt tiền từ 500.000 đồng đến 1.000.000 đồng", "Phạt tiền từ 750.000 đồng đến 1.000.000 đồng", "Phạt tiền từ 100.000 đồng đến 300.000 đồng", "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng và buộc trồng lại rừng cho chủ rừng nếu rừng bị thiệt hại"], 
+        correct: "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng",
+        explanation: "Điều 16 Nghị định số 35/2019/NĐ-CP Hành vi chăn thả gia súc, gia cầm, vật nuôi khác trên diện tích mới trồng rừng, đang trong thời kỳ chăm sóc đối với rừng sản xuất hoặc rừng phòng hộ bị Phạt tiền từ 500.000 đồng đến 1.000.000 đồng"
+    },
+{ 
+        question: "Trường hợp khai thác rừng tự nhiên hoặc rừng do Nhà nước đại diện chủ sở hữu có nguồn gốc hợp pháp nhưng không chấp hành đầy đủ về hồ sơ lâm sản hoặc trình tự, thủ tục khai thác lâm sản bị xử phạt về hành vi nào?",
+        options: ["Huỷ hoại rừng", "Vi phạm các quy định chung của Nhà nước về bảo vệ rừng", "Khai thác rừng trái pháp luật", "Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp"], 
+        correct: "Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp",
+        explanation: "Điều 11 Nghị định số 35/2019/NĐ-CP Hành vi Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp là khai thác, tận dụng, tận thu gỗ rừng tự nhiên hoặc rừng trồng do nhà nước đại diện chủ sở hữu có nguồn gốc hợp pháp nhưng không chấp hành đầy đủ về hồ sơ lâm sản hoặc trình tự, thủ tục khai thác lâm sản theo quy định của pháp luật"
+    },
 
 
 
