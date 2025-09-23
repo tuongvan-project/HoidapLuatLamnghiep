@@ -39,14 +39,7 @@ const questions = [
         correct: "6 cm",
         explanation: "điểm c khoản 1 Điều 3 Thông tư 26/2025/TT-BNNMT, gỗ tròn là Gỗ rừng trồng, rừng tràm, rừng ngập mặn có đường kính đầu nhỏ từ 06 cm trở lên và chiều dài từ 01 m trở lên."
     },
-{ 
-        question: "Theo Thông tư 26/2025/TT-BNNMT gỗ tròn (trừ gỗ rừng trồng, rừng tràm, rừng ngập mặn) là gỗ có kích thước như thế nào?", 
-        options: ["có đường kính đầu nhỏ từ 6 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "có đường kính đầu nhỏ từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "có đường kính đầu to từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên", "các đáp án trên đều đúng"], 
-        correct: "có đường kính đầu nhỏ từ 10 cm đến dưới 20 cm và chiều dài từ 01 mét trở lên",
-        explanation: "điểm c khoản 1 Điều 3 Thông tư 26/2025/TT-BNNMT, gỗ tròn là Gỗ có đường kính đầu nhỏ từ 10 (cm) đến dưới 20 cm và chiều dài từ 01 (m) trở lên; Gỗ có đường kính đầu nhỏ từ 20 cm trở lên và chiều dài từ 30 cm trở lên"
-    },
-    
-{ 
+    { 
         question: "Theo Thông tư 26/2025/TT-BNNMT, kiểu gỗ nào sau đây không được coi là 'gỗ tròn'?", 
         options: ["Gỗ nguyên khai cắt khúc", "Gỗ bóc vỏ", "Gỗ lóc lõi", "Gỗ xẻ thành thanh, tấm"], 
         correct: "Gỗ xẻ thành thanh, tấm",
@@ -76,85 +69,13 @@ const questions = [
         correct: "Gỗ nguyên liệu của doanh nghiệp Nhóm I",
         explanation: "Theo khoản 4 Điều 5 Thông tư 26/2025/TT-BNNMT, Lâm sản không phải xác nhận Bảng kê lâm sản: gỗ nguyên liệu của doanh nghiệp Nhóm I theo quy định của Hệ thống bảo đảm gỗ hợp pháp Việt Nam; sản phẩm gỗ. Các trường hợp còn lại vẫn phải xác nhận vì tính chất nhạy cảm, quý hiếm."
     },
- { 
-        question: "Trong trường hợp phải xác minh nguồn gốc lâm sản, thời hạn tối đa cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản kể từ ngày nhận đủ hồ sơ hợp lệ là bao lâu?", 
-        options: ["02 ngày làm việc", "04 ngày làm việc", "03 ngày", "04 ngày"], 
-        correct: "04 ngày làm việc",
-        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT Trường hợp cần xác minh nguồn gốc lâm sản trong 01 ngày làm việc kể từ ngày nhận được hồ sơ hợp lệ, cơ quan Kiểm lâm thông báo cho chủ lâm sản về việc xác minh; trong thời hạn không quá 03 ngày làm việc kể từ ngày thông báo, cơ quan Kiểm lâm sở tại tiến hành xác minh, và hoàn thành xác nhận Bảng kê lâm sản"
-    },
-{ 
-        question: "Hồ sơ đề nghị xác nhận bảng kê lâm sản sau khai thác của chủ rừng phải có tài liệu nào sau đây?", 
-        options: ["Bản sao bảng kê lâm sản đề nghị xác nhận", "Bản sao Sổ theo dõi nhập, xuất lâm sản đối với chủ lâm sản là tổ chức, hộ kinh doanh xuất bán lâm sản", "Bản sao Phương án khai thác", "Bản sao Bảng kê lâm sản mua bán, chuyển giao quyền sở hữu liền kề trước đó"], 
-        correct: "Bản sao Phương án khai thác",
-        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định ngoài bản chính đơn đề nghị xác nhận và bảng kê lâm sản, còn thêm Bản sao Phương án khai thác đối với trường hợp xác nhận bảng kê lâm sản sau khai thác"
-    },
-{ 
-        question: "Trong trường hợp động vật nguy cấp, quý, hiếm đe dọa xâm hại tài sản hoặc tính mạng của con người, tổ chức, hộ gia đình, cá nhân phải làm gì sau đây là đúng nhất?", 
-        options: ["Áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, đồng thời thông tin ngay đến Sở NN&MT hoặc UBND cấp xã gần nhất", "Được phép tự do săn bắt, bẫy hoặc giết động vật để bảo đảm an toàn cho người và tài sản", "Tự ý nuôi nhốt động vật để bàn giao sau khi thấy không còn nguy hiểm", "Báo tin cho cơ quan công an địa phương nhưng không cần thực hiện biện pháp ngăn chặn, xua đuổi"], 
-        correct: "Áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, đồng thời thông tin ngay đến Sở NN&MT hoặc UBND cấp xã gần nhất",
-        explanation: "Điều 9 Thông tư 27/2025/TT-BNNMT Trong trường hợp động vật nguy cấp, quý, hiếm đe dọa xâm hại tài sản hoặc tính mạng của con người, phải áp dụng các biện pháp ngăn chặn, xua đuổi, hạn chế gây tổn thương đến động vật, thông tin đến Sở NN&MT hoặc UBND cấp xã"
-    },
-
-{ 
-        question: "Theo Thông tư số 27/2025/TT-BNNMT, khái niệm động vật rừng thế hệ F2 hoặc thế hệ kế tiếp là gì?", 
-        options: ["Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi", "là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên", "Là cá thể được sinh ra trong môi trường có kiểm soát từ cặp bố, mẹ đều có nguồn gốc từ tự nhiên (thế hệ gốc)", "Là cá thể được sinh ra trong môi trường có kiểm soát từ cặp bố, mẹ đều có nguồn gốc từ tự nhiên (thế hệ gốc)"], 
-        correct: "Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi",
-        explanation: "Khoản 19 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Là cá thể được sinh ra trong môi trường có kiểm soát bởi cặp bố, mẹ từ thế hệ F1 trở đi"
-    },
-{ 
-        question: "Theo Thông tư số 27/2025/TT-BNNMT, hình thức nuôi động vật rừng để sản sinh ra thế hệ kế tiếp trong môi trường có kiểm soát còn được goi là gì?", 
-        options: ["Nuôi sinh trưởng", "Nuôi sinh sản", "Nuôi bán hoang dã", "Nuôi thuần dưỡng"], 
-        correct: "Nuôi sinh sản",
-        explanation: "Khoản 16 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Nuôi sinh sản là hình thức nuôi động vật để sản sinh ra thế hệ kế tiếp trong môi trường có kiểm soát"
-    },
-{ 
-        question: "Trong thời hạn bao lâu kể từ ngày đưa động vật, thực vật về cơ sở nuôi, trồng, tổ chức, cá nhân gửi thông báo và bản sao hồ sơ nguồn gốc mẫu vật đến cơ quan Kiểm lâm sở tại?", 
-        options: ["03 ngày", "04 ngày", "02 ngày làm việc", "03 ngày làm việc"], 
-        correct: "03 ngày làm việc",
-        explanation: "Khoản 3 Điều 24 và khoản 1 Điều 25 Thông tư 26/2025/TT-BNNMT trong thời hạn 03 ngày làm việc, kể từ ngày đưa động vật, thực vật về cơ sở nuôi, trồng, tổ chức, cá nhân gửi thông báo và bản sao hồ sơ nguồn gốc mẫu vật đến cơ quan Kiểm lâm sở tại"
-    },
-
-{ 
-        question: "Theo Thông tư số 27/2025/TT-BNNMT, khái niệm động vật rừng thế hệ F1 là gì?", 
-        options: ["Là cá thể được sinh ra trong môi trường tự nhiên, không có tác động của con người", "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên", "Là cá thể được sinh ra trong môi trường tự nhiên không kiểm soát, trong đó có ít nhất bố hoặc mẹ được nuôi nhốt", "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó cả bố và mẹ đều là F1"], 
-        correct: "Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên",
-        explanation: "Khoản 18 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Là cá thể được sinh ra trong môi trường có kiểm soát, trong đó có ít nhất bố hoặc mẹ được khai thác từ tự nhiên"
-    },
-{ 
-        question: "Trường hợp chủ cơ sở nuôi động vật rừng đề nghị xác nhận bảng kê lâm sản đối với động vật, sản phẩm của chúng thuộc Danh mục loài nguy cấp, quý, hiếm; Danh mục ĐVR thông thường..., ngoài bản chính bảng kê lâm sản và đơn đề nghị xác nhận BKLS, phải cung cấp thêm tài liệu gì để hồ sơ hợp lệ?", 
-        options: ["Tất cả các phương án đều đúng", "Bản chính Mã số cơ sở nuôi do Cơ quan Kiểm lâm cấp tỉnh cấp", "Bản chính Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường", "Bản sao Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường"], 
-        correct: "Bản chính Sổ theo dõi nuôi động vật theo quy định của Bộ Nông nghiệp và Môi trường",
-        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định Bản chính Sổ theo dõi nuôi, trồng đối với chủ cơ sở nuôi động vật, trồng thực vật thuộc Danh mục loài nguy cấp, quý, hiếm hoặc động vật, thực vật hoang dã nguy cấp thuộc Phụ lục CITES"
-    },
-
-{ 
-        question: "Hồ sơ đề nghị xác nhận bảng kê lâm sản sau khai thác của chủ rừng phải có tài liệu nào sau đây?", 
-        options: ["Bản sao bảng kê lâm sản đề nghị xác nhận", "Bản sao Sổ theo dõi nhập, xuất lâm sản đối với chủ lâm sản là tổ chức, hộ kinh doanh xuất bán lâm sản", "Bản sao Phương án khai thác", "Bản sao Bảng kê lâm sản mua bán, chuyển giao quyền sở hữu liền kề trước đó"], 
-        correct: "Bản sao Phương án khai thác",
-        explanation: "Khoản 6 Điều 5 Thông tư 26/2025/TT-BNNMT quy định ngoài bản chính đơn đề nghị xác nhận và bảng kê lâm sản, còn thêm Bản sao Phương án khai thác đối với trường hợp xác nhận bảng kê lâm sản sau khai thác"
-    },
-    
-{ 
-        question: "Trong trường hợp không xác minh nguồn gốc lâm sản, thời hạn cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản kể từ ngày nhận đủ hồ sơ hợp lệ là bao lâu?", 
-        options: ["01 ngày làm việc", "02 ngày làm việc", "02 ngày", "04 ngày"], 
-        correct: "02 ngày làm việc",
-        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa"
-    },
     { 
-        question: "Thông tư 26/2025/TT-BNNMT quy định thực vật rừng thông thường là gì?", 
-        options: ["Loài thực vật có nguồn gốc từ rừng thuộc danh mục loài thực vật rừng thông thường", "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES", "Loài thực vật không thuộc Danh mục loài nguy cấp, quý, hiếm", "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES"], 
-        correct: "Loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES",
-        explanation: "Khoản 7 Điều 3 Thông tư 26/2025/TT-BNNMT quy định: Thực vật rừng thông thường là loài thực vật có nguồn gốc từ rừng không thuộc Danh mục loài nguy cấp, quý, hiếm và không thuộc Phụ lục CITES"
+        question: "Thời hạn cơ quan Kiểm lâm trả kết quả xác nhận Bảng kê lâm sản sau khi nhận đủ hồ sơ hợp lệ là bao lâu?", 
+        options: ["01 ngày làm việc", "02 ngày làm việc", "03 ngày", "05 ngày"], 
+        correct: "02 ngày làm việc",
+        explanation: "Khoản 7 Điều 5 Thông tư 26/2025/TT-BNNMT quy định rõ: trong thời hạn 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ, cơ quan Kiểm lâm sở tại phải xác nhận Bảng kê lâm sản. Đây là thời hạn tối đa, bảo đảm sự kịp thời trong lưu thông hàng hóa. Các mốc thời gian khác không đúng với quy định."
     },
-
- { 
-        question: "Gỗ tròn, gỗ xẻ, gỗ đẽo, ván các loại, dăm gỗ, bột gỗ, sợi gỗ và các loại gỗ đã chế biến hoặc chưa qua chế biến được sử dụng để làm nguyên liệu sản xuất sản phẩm gỗ được gọi chung là gì?", 
-        options: ["Lâm sản tiền sản phẩm gỗ", "Gỗ nguyên liệu", "Gỗ bán thành phẩm", "Gỗ công nghiệp"], 
-        correct: "Gỗ nguyên liệu",
-        explanation: "Khoản 6 Điều 3 Thông tư 26/2025/TT-BNNMT quy định Gỗ nguyên liệu là gỗ tròn, gỗ xẻ, gỗ đẽo, ván các loại, dăm gỗ, bột gỗ, sợi gỗ và các loại gỗ đã chế biến hoặc chưa qua chế biến được sử dụng để làm nguyên liệu sản xuất sản phẩm gỗ"
-    },
-
-{ 
+   { 
         question: "Trường hợp nào phải phê duyệt phương án khai thác?", 
         options: ["Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ", "Khai thác cây trồng phân tán ngoài rừng do hộ gia đình tự trồng trên đất nông nghiệp", "Khai thác tận thu củi khô, cành gãy trong rừng sản xuất là rừng trồng sau bão", "Thực vật rừng ngoài gỗ trong rừng phòng hộ"], 
         correct: "Khai thác rừng phòng hộ là rừng trồng do tổ chức, cá nhân, HGĐ, cộng đồng dân cư tự đầu tư hoặc được NN hỗ trợ",
@@ -335,32 +256,7 @@ const questions = [
         correct: "Doanh nghiệp, cơ sở chế biến lâm sản",
         explanation: "Điều 19 Thông tư 26/2025/TT-BNNMT quy định Hồ sơ lâm sản tại cơ sở chế biến, kinh doanh, cất giữ gỗ gồm Sổ theo dõi nhập, xuất lâm sản. Chủ lâm sản có trách nhiệm cập nhật đầy đủ, kịp thời các thông tin vào Sổ theo dõi nhập, xuất lâm sản khi nhập, xuất lâm sản"
     },
- { 
-        question: "Cơ quan nào sau đây có thẩm quyền cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật thuộc Phụ lục Công ước CITES?", 
-        options: ["Hạt Kiểm lâm sở tại", "Chi cục Chăn nuôi, thú y và thuỷ sản", "Cơ quan Kiểm lâm cấp tỉnh", "UBND cấp xã nơi đặt cơ sở nuôi, trồng"], 
-        correct: "Cơ quan Kiểm lâm cấp tỉnh",
-        explanation: "điểm a khoản 1 Điều 26 Thông tư 27/2025/TT-BNNMT quy định Cơ quan Kiểm lâm cấp tỉnh cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật, thực vật thuộc Phụ lục Công ước CITES"
-    },
-{ 
-        question: "Rắn hổ mang Trung Quốc, tên khoa học Naja atra thuộc loài động vật rừng nhóm nào sau đây?", 
-        options: ["guy cấp, quý hiếm IB", "nguy cấp, quý hiếm IIB", "nhóm I CITES", "loài thông thường"], 
-        correct: "nguy cấp, quý hiếm IIB",
-        explanation: "Danh mục loài nguy cấp, quý, hiếm ban hành tại Phụ lục I kèm theo Thông tư 27/2025/TT-BNNMT"
-    },
     { 
-        question: "Cầy vòi mốc tên khoa học Paguma larvata, thuộc loài động vật rừng nhóm nào sau đây?", 
-        options: ["guy cấp, quý hiếm IB", "nguy cấp, quý hiếm IIB", "nhóm I CITES", "loài thông thường"], 
-        correct: "nguy cấp, quý hiếm IIB",
-        explanation: "Danh mục loài nguy cấp, quý, hiếm ban hành tại Phụ lục I kèm theo Thông tư 27/2025/TT-BNNMT"
-    },
-
- { 
-        question: "Tài liệu nào sau đây nằm trong danh mục Hồ sơ đề nghị cấp mã số cơ sở nuôi, trồng các loài động vật, thực vật nguy cấp, quý hiếm, thuộc Phụ lục Công ước CITES?", 
-        options: ["Hoá đơn mua bán động vật, thực vật nguy cấp, quý hiếm, thuộc Phụ lục Công ước CITES", " Giấy chứng nhận kiểm dịch động vật, sản phẩm động vật", "Bản chính phương án nuôi, trồng", "Bản sao phương án nuôi, trồng"], 
-        correct: "Bản chính phương án nuôi, trồng",
-        explanation: "điểm a khoản 1 Điều 26 Thông tư 27/2025/TT-BNNMT quy định Cơ quan Kiểm lâm cấp tỉnh cấp mã số cơ sở nuôi, cơ sở trồng các loài động vật, thực vật thuộc Phụ lục Công ước CITES"
-    },
-{ 
         question: "Tổ chức, hộ kinh doanh phải báo cáo tình hình nhập, xuất lâm sản cho cơ quan Kiểm lâm sở tại định kỳ như thế nào?", 
         options: ["Trước ngày 15 tháng 01 hằng năm", "Trước ngày 31 tháng 12 hằng năm", "Trước ngày 15 tháng 7 và 15 tháng 01 hằng năm", "Trước ngày 30 tháng 6 hằng năm"], 
         correct: "Trước ngày 15 tháng 01 hằng năm",
@@ -554,14 +450,8 @@ const questions = [
     },
 { 
         question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết tăng nặng?", 
-        options: ["Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính", "Sau khi vi phạm đã không trốn tránh, che giấu vi phạm hành chính", "Vi phạm hành chính có quy mô không nhỏ, số lượng hoặc trị giá hàng hóa không nhỏ", "Chấm dứt hành vi vi phạm hành chính khi người có thẩm quyền đã yêu cầu"], 
+        options: ["Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính", "Sau khi vi phạm đã không trốn tránh, che giấu vi phạm hành chính", "Vi phạm hành chính có quy mô nhỏ, số lượng hoặc trị giá hàng hóa nhỏ", "Chấm dứt hành vi vi phạm hành chính khi người có thẩm quyền đã yêu cầu"], 
         correct: "Lợi dụng hoàn cảnh chiến tranh, thiên tai, thảm họa, dịch bệnh hoặc những khó khăn đặc biệt khác của xã hội để vi phạm hành chính",
-        explanation: "quy định tại điểm g khoản 1 Điều 10 Luật xử lý Vi phạm hành chính"
-    },
-{ 
-        question: "Trong Luật Xử lý vi phạm hành chính, tình tiết nào sau đây được quy định la tình tiết tăng nặng?", 
-        options: ["Lợi dụng hoàn cảnh các ngày lễ, tết, sự kiện kỷ niệm trọng đại của quốc gia để vi phạm hành chính", "Che giấu cho người vi phạm hành chính", "Vi phạm hành chính nhiều lần; tái phạm", "Vi phạm hành chính vượt quá giới hạn phòng vệ chính đáng; vượt quá yêu cầu của tình thế cấp thiết"], 
-        correct: "Vi phạm hành chính nhiều lần; tái phạm",
         explanation: "quy định tại điểm g khoản 1 Điều 10 Luật xử lý Vi phạm hành chính"
     },
 { 
@@ -577,120 +467,28 @@ const questions = [
         explanation: "quy định tại khoản 5 Điều 2 Luật xử lý Vi phạm hành chính"
     },
 { 
-        question: "Theo Luật Xử lý vi phạm hành chính, quy định bao nhiêu hình thức xử phạt?", 
-        options: ["5", "4", "6", "3"], 
-        correct: "5",
-        explanation: "khoản 1 Điều 51 Luật xử lý Vi phạm hành chính quy định 5 hình thức xử phạt: Cảnh cáo; Phạt tiền; Tước quyền sử dụng giấy phép, chứng chỉ hành nghề có thời hạn hoặc đình chỉ hoạt động có thời hạn; Tịch thu tang vật VPHC, phương tiện được sử dụng để VPHC; Trục xuất"
+        question: "Việc chặt, đốt, phá cây rừng, đào, bới, san ủi, nổ mìn; đắp đập, ngăn dòng chảy tự nhiên, xả chất độc hoặc các hành vi khác gây thiệt hại đến rừng thuộc sở hữu toàn dân với bất kỳ mục đích gì mà không được phép của cơ quan nhà nước có thẩm quyền đã vi phạm hành vi gì theo Nghị định xử phạt VPHC trong lĩnh vực lâm nghiệp?", 
+        options: ["Khai thác rừng tự nhiên trái pháp luật", "Huỷ hoại rừng", "Phá huỷ rừng trái phép", "Phá rừng trái pháp luật"], 
+        correct: "Phá rừng trái pháp luật",
+        explanation: "......."
     },
 { 
-        question: "Trường hợp nào cá nhân bị xử phạt được áp dụng hoãn thi hành quyết định phạt tiền?", 
-        options: ["Cá nhân đang gặp khó khăn về kinh tế", "Cá nhân chưa có việc làm ổn định hoặc có thu nhập thấp", "Cá nhân đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn", "Cá nhân đang cư trú ở vùng sâu, vùng xa, đi lại khó khăn để nộp phạt"], 
-        correct: "Cá nhân đang gặp khó khăn về kinh tế do thiên tai, thảm họa, hỏa hoạn, dịch bệnh, mắc bệnh hiểm nghèo, tai nạn",
-        explanation: "điểm b khoản 1 Điều 76 Luật xử lý Vi phạm hành chính quy định trường hợp cá nhân đang gặp khó khăn theo quy định trên phải có xác nhận của cơ quan, tổ chức có thẩm quyền"
+        question: " Phá hủy các công trình bảo vệ và phát triển rừng bao gồm các hành vi cụ thể nào?", 
+        options: ["Trồng cây xanh hoặc hoa trên các công trình bảo vệ rừng để cải tạo cảnh quan", "Viết, vẽ, xóa các thông tin, hình ảnh trên các biển báo, biển cảnh báo, bảng tuyên truyền bảo vệ rừng", "Sơn sửa, thay thế biển báo hoặc bảng tuyên truyền cũ bằng cái mới theo sáng kiến cá nhân", "Thu dọn cỏ dại, dây leo bám vào các công trình bảo vệ rừng"], 
+        correct: "Viết, vẽ, xóa các thông tin, hình ảnh trên các biển báo, biển cảnh báo, bảng tuyên truyền bảo vệ rừng",
+        explanation: "......."
     },
 { 
-        question: "Nếu quá thời hạn thi hành quyết định xử phạt, ngoài việc bị bị cưỡng chế thi hành quyết định xử phạt, cá nhân, tổ chức vi phạm phải...?", 
-        options: ["Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,5% tính trên số tiền phạt chưa nộp", "Cứ mỗi tuần chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt", "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,005% tính trên số tiền phạt còn lại", "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp"], 
-        correct: "Cứ mỗi ngày chậm nộp tiền phạt phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp",
-        explanation: "khoản 1 Điều 78 Luật xử lý Vi phạm hành chính quy định Nếu quá thời hạn nêu trên sẽ bị cưỡng chế thi hành quyết định xử phạt và cứ mỗi ngày chậm nộp tiền phạt thì cá nhân, tổ chức vi phạm phải nộp thêm 0,05% tính trên tổng số tiền phạt chưa nộp"
+        question: "Hành vi bóc vỏ, ken cây, khoan vào thân cây, băm gốc, đổ hóa chất hủy hoại gốc, rễ cây rừng làm ảnh hưởng đến sinh trưởng, phát triển cây rừng bị xử phạt như thế nào?", 
+        options: ["Xử phạt về hành vi Phá rừng trái pháp luật, Đơn vị tính để xác định thiệt hại là m2", "Xử phạt về hành vi khai thác rừng trái pháp luật, đơn vị tính để xác định thiệt hại là m3", "Xử phạt về hành vi Vi phạm các quy định chung của nhà nước về bảo vệ rừng", "Xử phạt về hành vi Phá rừng trái pháp luật, Đơn vị tính để xác định thiệt hại là mỗi cây rừng"], 
+        correct: "Xử phạt về hành vi Phá rừng trái pháp luật, Đơn vị tính để xác định thiệt hại là mỗi cây rừng",
+        explanation: "......."
     },
 { 
-        question: "Trường hợp người bị xử phạt đang gặp khó khăn đặc biệt về kinh tế và có đơn đề nghị nộp tiền phạt nhiều lần, tổng thời hạn để nộp tiền và mức nộp phạt tối thiểu lần thứ nhất là bao nhiêu?", 
-        options: ["Thời hạn không quá 3 tháng và mức nộp phạt tối thiểu là 30% tổng số tiền phạt", "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 40% tổng số tiền phạt", "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 50% tổng số tiền phạt", "Thời hạn không quá 3 tháng và mức nộp phạt tối thiểu là 50% tổng số tiền phạt"], 
-        correct: "Thời hạn không quá 6 tháng và mức nộp phạt tối thiểu là 40% tổng số tiền phạt",
-        explanation: "Điều 79 Luật xử lý Vi phạm hành chính quy định Thời hạn nộp tiền phạt nhiều lần không quá 06 tháng, kể từ ngày quyết định xử phạt có hiệu lực; số lần nộp tiền phạt tối đa không quá 03 lần. Mức nộp phạt lần thứ nhất tối thiểu là 40% tổng số tiền phạt"
+        question: "Hành vi săn, bắt, giết, nuôi, nhốt động vật rừng trái quy định của pháp luật đối với động vật rừng thông thường trị giá dưới 5.000.000 đồng bị phạt tiền như thế nào?", 
+        options: ["Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng", "Phạt tiền từ 1.000.000 đồng đến 5.000.000 đồng", "Phạt tiền từ 2.000.000 đồng đến 7.000.000 đồng ", "Phạt tiền từ 1.000.000 đồng đến 2.000.000 đồng "], 
+        correct: "Phạt tiền từ 1.000.000 đồng đến 5.000.000 đồng",
+        explanation: "......."
     },
-{ 
-        question: "Cá nhân có quyền giải trình trực tiếp hoặc bằng văn bản với người có thẩm quyền xử phạt vi phạm hành chính trong trường hợp nào sau đây?", 
-        options: ["Mức tối đa của khung tiền phạt đối với hành vi đó từ 5.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 10.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 20.000.000 đồng trở lên", "Mức tối đa của khung tiền phạt đối với hành vi đó từ 15.000.000 đồng trở lên"], 
-        correct: "Mức tối đa của khung tiền phạt đối với hành vi đó từ 15.000.000 đồng trở lên",
-        explanation: "Điều 61 Luật xử lý Vi phạm hành chính quy định hình thức giải trình trực tiếp hoặc bằng văn bản, cá nhân, tổ chức VPHC phải gửi văn bản cho người có thẩm quyền xử phạt VPHC trong thời hạn 02 hoặc 05 ngày làm việc, kể từ ngày lập biên bản vi phạm hành chính"
-    },
-{ 
-        question: "Nghị định của Chính phủ về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp quy định Lấn, chiếm rừng là gì?", 
-        options: ["Tự ý chuyển mục đích sử dụng đất rừng sang đất nông nghiệp hoặc đất ở", "Tự ý dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân", "Tự ý phát, đốt rừng làm nương rẫy để canh tác lúa và hoa màu","Tự ý dịch chuyển ranh giới đất trồng rừng hoặc chiếm đất rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân"], 
-        correct: "Tự ý dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân",
-        explanation: "Điều 7 Nghị định số 35/2019/NĐ-CP quy định lấn, chiếm rừng là Hành vi dịch chuyển mốc giới, ranh giới rừng hoặc chiếm rừng của chủ rừng khác; rừng thuộc sở hữu toàn dân chưa giao, chưa cho thuê"
-    },
-{ 
-        question: "Nghị định của Chính phủ về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp quy định Khai thác trái phép môi trường rừng và thực hiện các dịch vụ, kinh doanh trái phép trong rừng là gì?", 
-        options: ["Tổ chức các dịch vụ, kinh doanh trong rừng mà không được phép của chủ rừng", "Tổ chức du lịch, tham quan trong rừng mà không được phép của chủ rừng", "Tất cả các đáp án đều đúng","Tổ chức nghỉ dưỡng, giải trí trong phân khu bảo vệ nghiêm ngặt của rừng đặc dụng"], 
-        correct: "Tất cả các đáp án đều đúng",
-        explanation: "Điều 8 Nghị định số 35/2019/NĐ-CP quy định Khai thác trái phép môi trường rừng và thực hiện các dịch vụ, kinh doanh trái phép trong rừng"
-    },
-{ 
-        question: "Hành vi không xây dựng, trình cấp có thẩm quyền phê duyệt phương án quản lý rừng bền vững hoặc không thực hiện đúng phương án quản lý rừng bền vững đã được cấp có thẩm quyền phê duyệt bị xử phạt bao nhiêu tiền?",
-        options: ["Từ 1.000.000 đồng đến 3.000.000 đồng", "Từ 2.000.000 đồng đến 4.000.000 đồng", "Tất cả các đáp án đều đúng", "Từ 2.000.000 đồng đến 5.000.000 đồng"], 
-        correct: "Từ 1.000.000 đồng đến 3.000.000 đồng",
-        explanation: "Điều 10 Nghị định số 35/2019/NĐ-CP quy định hành vi không xây dựng, trình phê duyệt phương án quản lý rừng bền vững hoặc không thực hiện đúng phương án quản lý rừng bền vững đã được phê duyệt bị Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng"
-    },
-{ 
-        question: "Theo Nghị định về xử phạt vi phạm hành chính trong lĩnh vực lâm nghiệp, mức phạt đối với hành vi khai thác rừng trái pháp luật trường hợp gỗ thuộc loài thông thường trong rừng sản xuất là rừng tự nhiên là bao nhiêu?",
-        options: ["Từ 1.000.000 đồng đến 100.000.000 đồng", "Từ 500.000 đồng đến 100.000.000 đồng", "Từ 500.000 đồng đến 70.000.000 đồng", "Từ 2.500.000 đồng đến 100.000.000 đồng"], 
-        correct: "Từ 500.000 đồng đến 100.000.000 đồng",
-        explanation: "Điều 13 Nghị định số 35/2019/NĐ-CP quy định hành vi khai thác rừng trái pháp luật trường hợp gỗ thuộc loài thông thường trong rừng sản xuất là rừng tự nhiên bị Phạt tiền Từ 500.000 đồng đến 100.000.000 đồng"
-    },
-{ 
-        question: "Tên gọi của hành vi khai thác lâm sản trong rừng không được phép của cơ quan có thẩm quyền được quy định tại Nghị định số 35/2019/NĐ-CP?",
-        options: ["Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp", "Khai thác rừng trái phép", "Khai thác lâm sản trái pháp luật", "Khai thác rừng trái pháp luật"], 
-        correct: "Khai thác rừng trái pháp luật",
-        explanation: "Điều 13 Nghị định số 35/2019/NĐ-CP Tên gọi của hành vi khai thác lâm sản trong rừng không được phép của cơ quan có thẩm quyền là Khai thác rừng trái pháp luật"
-    },
-{ 
-        question: "Theo Nghị định số 35/2019/NĐ-CP, hành vi khai thác trái pháp luật trong rừng sản xuất là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là bao nhiêu?",
-        options: ["từ 500.000 đồng đến 1.000.000 đồng", "từ 1.000.000 đồng đến 3.000.000 đồng", "từ 750.000 đồng đến 1.500.000 đồng", "Không có đáp án nào đúng"], 
-        correct: "từ 500.000 đồng đến 1.000.000 đồng",
-        explanation: "điểm a khoản 1 Điều 13 Nghị định số 35/2019/NĐ-CP hành vi khai thác trái pháp luật trong rừng sản xuất là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là từ 500.000 đồng đến 1.000.000 đồng"
-    },
-{ 
-        question: "Theo Nghị định số 35/2019/NĐ-CP, hành vi khai thác trái pháp luật trong rừng phòng hộ là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối đa là bao nhiêu?",
-        options: ["Từ 80.000.000 đồng đến 100.000.000 đồng", "Từ 70.000.000 đồng đến 120.000.000 đồng", "từ 70.000.000 đồng đến 100.000.000 đồng", "Không có đáp án nào đúng"], 
-        correct: "từ 70.000.000 đồng đến 100.000.000 đồng",
-        explanation: "điểm a khoản 2 Điều 13 Nghị định số 35/2019/NĐ-CP hành vi khai thác trái pháp luật trong rừng phòng hộ là rừng trồng đối với gỗ loài thông thường có khung tiền phạt tối thiểu là từ từ 70.000.000 đồng đến 100.000.000 đồng"
-    },
-{ 
-        question: "Hành vi tận thu trái pháp luật gỗ nằm, trục, vớt gỗ trái pháp luật dưới sông, suối, ao, hồ trong rừng thì xử phạt như thế nào?",
-        options: ["Xử phạt như khai thác trái pháp luật trong rừng phòng hộ", "Xử phạt như khai thác trái pháp luật trong rừng đặc dụng", "Xử phạt như khai thác trái pháp luật trong rừng sản xuất", "Xử phạt như khai thác trái pháp luật trong rừng tự nhiên"], 
-        correct: "Xử phạt như khai thác trái pháp luật trong rừng sản xuất",
-        explanation: "khoản 6 Điều 13 Nghị định số 35/2019/NĐ-CP tận thu trái pháp luật gỗ nằm, trục, vớt gỗ trái pháp luật dưới sông, suối, ao, hồ trong rừng thì xử phạt theo quy định tại khoản 1 tức là xử phạt như khai thác trong rừng sản xuất"
-    },
-{ 
-        question: "Khi bị xử phạt về hành vi khai thác rừng trái pháp luật, người bị xử phạt còn có thể bị phạt bổ sung Tịch thu phương tiện cơ giới trong trường hợp nào?",
-        options: ["Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 10 m3 gỗ rừng trồng trở lên hoặc 3 m3 gỗ rừng tự nhiên trở lên", "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 5 m3 gỗ rừng trồng trở lên hoặc 2 m3 gỗ rừng tự nhiên trở lên", "Người bị xử phạt chỉ bị tịch thu phương tiện giao thông thô sơ đường bộ và các dụng cụ, công cụ được sử dụng để thực hiện hành vi ", "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên"], 
-        correct: "Khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên",
-        explanation: "điểm c khoản 8 Điều 13 Nghị định số 35/2019/NĐ-CP Tịch thu phương tiện cơ giới khi khai thác rừng trái pháp luật đối với gỗ thông thường trong rừng sản xuất từ 05 m3 gỗ rừng trồng trở lên hoặc 2,5 m3 gỗ rừng tự nhiên trở lên"
-    },
-{ 
-        question: "Hành vi Không báo cáo kết quả sản xuất, kinh doanh giống cây trồng lâm nghiệp khi có yêu cầu của cơ quan quản lý nhà nước về lâm nghiệp tại địa phương bị xử phạt như thế nào?",
-        options: ["Phạt tiền từ 500.000 đồng đến 1.000.000 đồng ", "Phạt tiền từ 750.000 đồng đến 1.000.000 đồng ", "Phạt tiền từ 200.000 đồng đến 500.000 đồng", "Không có quy định xử phạt VPHC đối với hành vi này"], 
-        correct: "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng ",
-        explanation: "điểm a khoản 1 Điều 14 Nghị định số 35/2019/NĐ-CP Phạt tiền từ 500.000 đồng đến 1.000.000 đồng khi Không báo cáo kết quả sản xuất, kinh doanh giống cây trồng lâm nghiệp khi có yêu cầu của cơ quan quản lý nhà nước về lâm nghiệp tại địa phương"
-    },
-{ 
-        question: "Sản xuất giống cây trồng lâm nghiệp không đảm bảo chất lượng; kinh doanh giống cây trồng lâm nghiệp không đảm bảo chất lượng hoặc không có hồ sơ giống cây trồng lâm nghiệp theo quy định bị xử phạt như thế nào?",
-        options: ["Phạt tiền từ 500.000 đồng đến 10.000.000 đồng và buộc nộp lại toàn bộ lợi nhuận thu được", "Phạt tiền từ 5.000.000 đồng đến 50.000.000 đồng và tịch thu toàn bộ lô giống cây trồng lâm nghiệp", "Phạt tiền từ 1.000.000 Đồng đến 40.000.000 Đồng và Buộc tiêu hủy lô giống cây trồng lâm nghiệp", "Phạt tiền từ 2.000.000 đồng đến 30.000.000 đồng và chỉ cảnh cáo, không áp dụng biện pháp khắc phục hậu quả"], 
-        correct: "Phạt tiền từ 1.000.000 Đồng đến 40.000.000 Đồng và Buộc tiêu hủy lô giống cây trồng lâm nghiệp",
-        explanation: "khoản 4 và 5 Điều 14 Nghị định số 35/2019/NĐ-CP quy định mức tiền phạt và biện pháp khắc phục hậu quả đối với hành vi sản xuất giống cây trồng lâm nghiệp không đảm bảo chất lượng; kinh doanh giống cây trồng lâm nghiệp không đảm bảo chất lượng hoặc không có hồ sơ giống cây trồng lâm nghiệp theo quy định"
-    },
-{ 
-        question: "Hành vi nào dưới đây là hành vi Vi phạm các quy định chung của Nhà nước về bảo vệ rừng?",
-        options: ["Chủ rừng không thực hiện trồng lại rừng ngay trong vụ trồng rừng kế tiếp sau khi khai thác trắng", "Mang các loại dụng cụ, công cụ vào rừng sản xuất hoặc rừng phòng hộ mà không được phép của chủ rừng", "Mang hóa chất độc hại, chất nổ, chất dễ cháy trái quy định của pháp luật vào rừng sản xuất là rừng trồng", "Chủ rừng không báo cáo hoặc báo cáo không đúng thời hạn cho cơ quan có thẩm quyền khi có biến động về diện tích rừng theo quy định của pháp luật"], 
-        correct: "Chủ rừng không báo cáo hoặc báo cáo không đúng thời hạn cho cơ quan có thẩm quyền khi có biến động về diện tích rừng theo quy định của pháp luật",
-        explanation: "Điều 16 Nghị định số 35/2019/NĐ-CP quy định 26 hành vi Vi phạm các quy định chung của Nhà nước về bảo vệ rừng"
-    },
-{ 
-        question: "Hành vi chăn thả gia súc, gia cầm, vật nuôi khác trên diện tích mới trồng rừng, đang trong thời kỳ chăm sóc đối với rừng sản xuất hoặc rừng phòng hộ bị xử phạt như thế nào?",
-        options: ["Phạt tiền từ 500.000 đồng đến 1.000.000 đồng", "Phạt tiền từ 750.000 đồng đến 1.000.000 đồng", "Phạt tiền từ 100.000 đồng đến 300.000 đồng", "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng và buộc trồng lại rừng cho chủ rừng nếu rừng bị thiệt hại"], 
-        correct: "Phạt tiền từ 500.000 đồng đến 1.000.000 đồng",
-        explanation: "Điều 16 Nghị định số 35/2019/NĐ-CP Hành vi chăn thả gia súc, gia cầm, vật nuôi khác trên diện tích mới trồng rừng, đang trong thời kỳ chăm sóc đối với rừng sản xuất hoặc rừng phòng hộ bị Phạt tiền từ 500.000 đồng đến 1.000.000 đồng"
-    },
-{ 
-        question: "Trường hợp khai thác rừng tự nhiên hoặc rừng do Nhà nước đại diện chủ sở hữu có nguồn gốc hợp pháp nhưng không chấp hành đầy đủ về hồ sơ lâm sản hoặc trình tự, thủ tục khai thác lâm sản bị xử phạt về hành vi nào?",
-        options: ["Huỷ hoại rừng", "Vi phạm các quy định chung của Nhà nước về bảo vệ rừng", "Khai thác rừng trái pháp luật", "Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp"], 
-        correct: "Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp",
-        explanation: "Điều 11 Nghị định số 35/2019/NĐ-CP Hành vi Vi phạm quy định về hồ sơ, thủ tục khai thác lâm sản có nguồn gốc hợp pháp là khai thác, tận dụng, tận thu gỗ rừng tự nhiên hoặc rừng trồng do nhà nước đại diện chủ sở hữu có nguồn gốc hợp pháp nhưng không chấp hành đầy đủ về hồ sơ lâm sản hoặc trình tự, thủ tục khai thác lâm sản theo quy định của pháp luật"
-    },
-
-
 
 ];
