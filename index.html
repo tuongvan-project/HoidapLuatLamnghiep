@@ -58,6 +58,27 @@
   font-display: swap; 
 }
 
+/* --- CSS CHO LỚP PHỦ TỐI --- */
+#dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen với độ trong suốt 60% */
+    z-index: 14; /* Nằm dưới overlay đáp án nhưng trên các thành phần khác */
+    display: none; /* Ẩn theo mặc định */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#dim-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+
+
 #evaluation-text {
     font-family: 'End', sans-serif;
     color: black; /* Ví dụ: màu xanh lá cây, phù hợp với màu chính của game */
@@ -356,7 +377,7 @@ body {
 }
         
 .question-frame {
-    width: clamp(300px, 80vw, 800px);
+    width: clamp(300px, 85vw, 900px); /* Tăng chiều rộng tối đa */
     min-height: 150px;
     height: auto;
     background-image: url('Cauhoi.png');
@@ -366,10 +387,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5% 12%;
+    padding: 5% 8%; /* Giảm padding ngang từ 12% xuống 8% */
     margin-bottom: 2rem;
-}
-        
+}        
 .question-card {
     width: 100%;
     height: 100%;
@@ -502,7 +522,7 @@ font-size: var(--font-size-lg);
     right: 0;
     width: clamp(150px, 20vw, 250px);
     height: auto;
-    z-index: 10;
+    z-index: 15;
     pointer-events: none;
 }
         
@@ -1007,7 +1027,8 @@ font-size: var(--font-size-lg);
   <script src="questions.js"></script> 
 </head>
 <body>
-    <div id="menu-container">
+    <div id="dim-overlay"></div>
+	<div id="menu-container">
     <button id="menu-button" class="menu-btn">
         <img src="Menu.webp" alt="Menu Button">
     </button>
@@ -1135,6 +1156,7 @@ font-size: var(--font-size-lg);
         const timerContainer = document.getElementById('timer-container');
         const timerElement = document.getElementById('timer');
         const exitButton = document.getElementById('exit-button');
+        const dimOverlay = document.getElementById('dim-overlay'); // <-- THÊM DÒNG NÀY
         const replayButton = document.getElementById('replay-button'); // Thêm dòng này
         const nextBtn = document.getElementById('next-button');
         const overlayAnswer = document.getElementById('overlay-answer');
@@ -1410,6 +1432,7 @@ totalTimeSpent += timeSpent;
         }
 
        function showCorrectAnswerOverlay(correctAnswerText) {
+            dimOverlay.classList.add('active'); // Kích hoạt lớp phủ tối
             latGiaySound.play().catch(e => console.log("Phát tiếng lật giấy thất bại:", e));
     
             // Lấy explanation từ câu hỏi hiện tại
@@ -1500,6 +1523,7 @@ totalTimeSpent += timeSpent;
        nextBtn.addEventListener('click', () => {
             clickSound.play();
             nextBtn.style.display = 'none';
+            dimOverlay.classList.remove('active'); // Ẩn lớp phủ tối
             
             // Ẩn overlay và reset các thông tin
             overlayAnswer.classList.remove('active');
@@ -1675,9 +1699,9 @@ infoButton.addEventListener('click', () => {
         } else if (correctAnswers >= 8 && correctAnswers <= 11) {
             evaluation = 'TẠM ỔN ĐẤY';
         } else if (correctAnswers >= 12 && correctAnswers <= 15) {
-            evaluation = 'RẤT TỐT';
+            evaluation = 'GẦN BẰNG KIỂM LÂM';
         } else if (correctAnswers >= 16 && correctAnswers <= 19) {
-            evaluation = 'TUYỆT VỜI';
+            evaluation = 'CHUYÊN GIA LUẬT RỪNG';
         } else if (correctAnswers === 20) {
             evaluation = 'XUẤT SẮC';
         }
